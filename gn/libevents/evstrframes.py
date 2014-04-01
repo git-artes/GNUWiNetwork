@@ -32,8 +32,9 @@ def mkevent(pnickname=None, pframe=None, pev_dc={}, payload=''):
         return if_events.mkevent(pnickname, ev_dc=pev_dc)
     if pframe:
         ev_dc = {}
-        try:        
-            nickname, ev_dc  = pframe.split(',',1)
+        try:
+            frame2, sep, payload = pframe.rpartition(',')
+            nickname, ev_dc  = frame2.split(',',1)
             # TODO: this function should adjust frame_length. How?
             #    frame_lenght must be set in ev_dc of Event. Is it used?
             ev = if_events.mkevent(nickname, frmpkt=pframe, ev_dc=eval(ev_dc))
@@ -80,7 +81,7 @@ def mkframe(ev_obj):
     #
     # frame_length cannot be included in packet, alters frame_length!
     #    other encoding must be used to inclue frame_length in packet
-    frame = '' + ev_obj.nickname + ',' + str(ev_obj.ev_dc)
+    frame = '' + ev_obj.nickname + ',' + str(ev_obj.ev_dc) + ',' + ev_obj.payload
     ev_obj.frmpkt = frame
     ev_obj.ev_dc['frame_length'] = len(ev_obj.frmpkt)
     return frame
