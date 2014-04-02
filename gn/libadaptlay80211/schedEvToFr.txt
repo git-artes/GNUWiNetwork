@@ -17,6 +17,7 @@ GN schedEvToFR.txt: doctest file
 ...     ev_q.put(ev, False)
 Event class name: EventFrameMgmt
   Nickname: 'MgmtBeacon'; Type: 'Mgmt'; SubType: 'Beacon'
+  retry: 0
   src_addr: 100
   peerlinkId: 0
   duration: 10
@@ -26,6 +27,7 @@ Event class name: EventFrameMgmt
   Payload: ''
 Event class name: EventFrame
   Nickname: 'CtrlRTS'; Type: 'Ctrl'; SubType: 'RTS'
+  retry: 0
   src_addr: 100
   peerlinkId: 0
   duration: 10
@@ -35,6 +37,7 @@ Event class name: EventFrame
   Payload: ''
 Event class name: EventFrame
   Nickname: 'CtrlCTS'; Type: 'Ctrl'; SubType: 'CTS'
+  retry: 0
   src_addr: 100
   peerlinkId: 0
   duration: 10
@@ -44,6 +47,7 @@ Event class name: EventFrame
   Payload: ''
 Event class name: EventFrame
   Nickname: 'DataData'; Type: 'Data'; SubType: 'Data'
+  retry: 0
   src_addr: 100
   peerlinkId: 0
   duration: 10

@@ -38,7 +38,7 @@ class SchedEvToFr(gnscheduler.Scheduler):
 
         out_queue = self.out_queues['frames']
         out_queue.put(frame, False)   # add to queue, don't block 
-        print "frame : ", repr(frame)
+        #print "frame : ", repr(frame)
         in_qu.task_done()
 
 

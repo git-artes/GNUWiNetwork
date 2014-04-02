@@ -50,15 +50,15 @@ Input queue size 4
 ...         print '    ', item.ev_dc
 Queue size: 2
    CtrlRTS Ctrl RTS
-     {'src_addr': '100\x00\x00\x00', 'peerlinkId': 0, 'duration': 10, 'frame_length': 20, 'dst_addr': '150\x00\x00\x00'}
+     {'retry': 0, 'src_addr': '100\x00\x00\x00', 'peerlinkId': 0, 'duration': 10, 'frame_length': 20, 'dst_addr': '150\x00\x00\x00'}
    CtrlCTS Ctrl CTS
-     {'src_addr': 'addr_1', 'peerlinkId': 0, 'duration': 10, 'frame_length': 14, 'dst_addr': '150\x00\x00\x00'}
+     {'retry': 0, 'src_addr': 'addr_1', 'peerlinkId': 0, 'duration': 10, 'frame_length': 14, 'dst_addr': '150\x00\x00\x00'}
 Queue size: 1
    MgmtBeacon Mgmt Beacon
-     {'src_addr': '100\x00\x00\x00', 'peerlinkId': 0, 'duration': 10, 'frame_length': 88, 'dst_addr': '150\x00\x00\x00'}
+     {'retry': 0, 'src_addr': '100\x00\x00\x00', 'peerlinkId': 0, 'duration': 10, 'frame_length': 88, 'dst_addr': '150\x00\x00\x00'}
 Queue size: 1
    DataData Data Data
-     {'src_addr': '100\x00\x00\x00', 'peerlinkId': 0, 'duration': 10, 'frame_length': 40, 'dst_addr': '150\x00\x00\x00'}
+     {'retry': 0, 'src_addr': '100\x00\x00\x00', 'peerlinkId': 0, 'duration': 10, 'frame_length': 40, 'dst_addr': '150\x00\x00\x00'}
 
 
 

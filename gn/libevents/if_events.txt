@@ -13,9 +13,10 @@ GN if_events.txt: doctest file
 >>> print ev_ob_frm
 Event class name: EventFrame
   Nickname: 'CtrlCTS'; Type: 'Ctrl'; SubType: 'CTS'
+  retry: 0
   src_addr: addr_1
-  duration: 10
   peerlinkId: 0
+  duration: 10
   frame_length: 0
   dst_addr: addr_1
   Frame packet: 
@@ -26,6 +27,7 @@ Event class name: EventFrame
 >>> print ev_mg
 Event class name: EventFrameMgmt
   Nickname: 'ActionOpen'; Type: 'Mgmt'; SubType: 'Action'
+  retry: 0
   src_addr: aaaa
   peerlinkId: 11
   duration: 10
@@ -71,6 +73,7 @@ Event class name: EventTimer
 >>> print ev_actconfirm
 Event class name: EventFrameMgmt
   Nickname: 'ActionConfirm'; Type: 'Mgmt'; SubType: 'Action'
+  retry: 0
   src_addr: ladir1
   peerlinkId: 27
   duration: 55
@@ -101,6 +104,7 @@ frame_body: bytes, no bitmask  24   31  False    !7s :  '\r\x02\x00\x00\x00\x00\
 >>> print ev_bcn
 Event class name: EventFrameMgmt
   Nickname: 'MgmtBeacon'; Type: 'Mgmt'; SubType: 'Beacon'
+  retry: 0
   src_addr: beac_1
   peerlinkId: 21
   duration: 20
@@ -133,6 +137,7 @@ frame_body: bytes, no bitmask  24   84  False   !60s :  '\x00\x00\x00\x00\x00\x0
 >>> print ev_data
 Event class name: EventFrame
   Nickname: 'DataData'; Type: 'Data'; SubType: 'Data'
+  retry: 0
   src_addr: data_1
   peerlinkId: 0
   duration: 55
@@ -171,6 +176,7 @@ frame_body: bytes, no bitmask  36   70  False   !34s :  'a DATA frame under test
 >>> print ev_obj
 Event class name: EventFrameMgmt
   Nickname: 'ActionConfirm'; Type: 'Mgmt'; SubType: 'Action'
+  retry: 0
   src_addr: ladir1
   peerlinkId: 27
   duration: 55

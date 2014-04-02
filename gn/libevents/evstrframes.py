@@ -6,6 +6,16 @@
 This module uses a simplified frame format based on strings, aimed at testing; a primary concern is legilibilty, though some packing is done to keep frame length short.
 
 This module defines two functions, mkevent() to make an Event object from a nickname or string frame, and mkframe() to make a string frame from an Event object.
+
+Packet format:
+
+    - nickname, a string.
+    - payload length in string format.
+    - dictionary of other fields in string format.
+    - payload, a string.
+
+Fields are separated by ','. Payload length is required to unpack, since ',' may be included in string format of dictionary or payload.
+
 '''
 
 import events
@@ -32,19 +42,29 @@ def mkevent(pnickname=None, pframe=None, pev_dc={}, payload=''):
         return if_events.mkevent(pnickname, ev_dc=pev_dc)
     if pframe:
         ev_dc = {}
+        ### unpack frame
+        nickname, sep, rest1 = pframe.partition(',')
+        strlen, sep, rest2 = rest1.partition(',')
+        if int(strlen) == 0:
+            str_ev_dc = rest2
+        else:
+            str_ev_dc, payload = rest2[:-int(strlen)], rest2[-int(strlen):]
+        ev_dc = eval(str_ev_dc)
+        # TODO: this function should adjust frame_length. How?
+        #    frame_lenght must be set in ev_dc of Event. Is it used?
+
         try:
-            frame2, sep, payload = pframe.rpartition(',')
-            nickname, ev_dc  = frame2.split(',',1)
-            # TODO: this function should adjust frame_length. How?
-            #    frame_lenght must be set in ev_dc of Event. Is it used?
-            ev = if_events.mkevent(nickname, frmpkt=pframe, ev_dc=eval(ev_dc))
+            ev = if_events.mkevent(nickname, frmpkt=pframe, ev_dc=ev_dc)
             ev.payload = payload
+            return  ev
         except:
             #raise events.EventNameException( \
-            #    'cannot generate event: malformed packet')
+            #    'cannot generate event: malformed packet\n' + \
+            #    pframe)
             print 'evstrframes: cannot generate event: malformed packet'
+            print pframe
             return None
-        return  ev
+
 
 
 def mkframe(ev_obj):
@@ -81,7 +101,9 @@ def mkframe(ev_obj):
     #
     # frame_length cannot be included in packet, alters frame_length!
     #    other encoding must be used to inclue frame_length in packet
-    frame = '' + ev_obj.nickname + ',' + str(ev_obj.ev_dc) + ',' + ev_obj.payload
+    ### pack frame
+    frame = '' + ev_obj.nickname + ',' + str(len(ev_obj.payload)) + ',' + \
+        str(ev_obj.ev_dc) + ev_obj.payload
     ev_obj.frmpkt = frame
     ev_obj.ev_dc['frame_length'] = len(ev_obj.frmpkt)
     return frame
