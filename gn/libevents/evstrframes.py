@@ -55,8 +55,8 @@ def mkevent(pnickname=None, pframe=None, pev_dc={}, payload=''):
             # TODO: this function should adjust frame_length. How?
             #    frame_lenght must be set in ev_dc of Event. Is it used?
         except:
-            print "mkevent unpack error : ",pframe
-            pass
+            print "mkevent unpack error : ",repr(pframe)
+            return None
         try:
             ev = if_events.mkevent(nickname, frmpkt=pframe, ev_dc=ev_dc)
             ev.payload = payload
@@ -66,7 +66,7 @@ def mkevent(pnickname=None, pframe=None, pev_dc={}, payload=''):
             #    'cannot generate event: malformed packet\n' + \
             #    pframe)
             print 'evstrframes: cannot generate event: malformed packet'
-            print pframe
+            print repr(pframe)
             return None
 
 
@@ -108,7 +108,7 @@ def mkframe(ev_obj):
     ### pack frame
     frame = '' + ev_obj.nickname + ',' + str(len(ev_obj.payload)) + ',' + \
         str(ev_obj.ev_dc) + ev_obj.payload
-    print "mkframe   ", frame
+    #print "mkframe   ", frame
     ev_obj.frmpkt = frame
     ev_obj.ev_dc['frame_length'] = len(ev_obj.frmpkt)
     return frame

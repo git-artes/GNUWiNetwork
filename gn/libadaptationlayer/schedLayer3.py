@@ -167,7 +167,10 @@ class ReadLayer2(threading.Thread):
             event = self.in_queue.get()
             payload = event.payload
             module_logger.debug(' Length of payload recieved from usrp  and send it to virtual interface: ' + str(len(payload)) )
-            os.write(self.tun_fd, payload)
+            try:
+                os.write(self.tun_fd, payload)
+            except:
+                print " OS payload error ", repr(payload)
         return
     def stop(self):
         self.finished = True
