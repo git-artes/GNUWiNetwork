@@ -43,16 +43,20 @@ def mkevent(pnickname=None, pframe=None, pev_dc={}, payload=''):
     if pframe:
         ev_dc = {}
         ### unpack frame
-        nickname, sep, rest1 = pframe.partition(',')
-        strlen, sep, rest2 = rest1.partition(',')
-        if int(strlen) == 0:
-            str_ev_dc = rest2
-        else:
-            str_ev_dc, payload = rest2[:-int(strlen)], rest2[-int(strlen):]
-        ev_dc = eval(str_ev_dc)
-        # TODO: this function should adjust frame_length. How?
-        #    frame_lenght must be set in ev_dc of Event. Is it used?
+        try:
+            nickname, sep, rest1 = pframe.partition(',')
+            strlen, sep, rest2 = rest1.partition(',')
+            if int(strlen) == 0:
+                str_ev_dc = rest2
+            else:
+                str_ev_dc, payload = rest2[:-int(strlen)], rest2[-int(strlen):]
+            ev_dc = eval(str_ev_dc)
 
+            # TODO: this function should adjust frame_length. How?
+            #    frame_lenght must be set in ev_dc of Event. Is it used?
+        except:
+            print "mkevent unpack error : ",pframe
+            pass
         try:
             ev = if_events.mkevent(nickname, frmpkt=pframe, ev_dc=ev_dc)
             ev.payload = payload
@@ -104,6 +108,7 @@ def mkframe(ev_obj):
     ### pack frame
     frame = '' + ev_obj.nickname + ',' + str(len(ev_obj.payload)) + ',' + \
         str(ev_obj.ev_dc) + ev_obj.payload
+    print "mkframe   ", frame
     ev_obj.frmpkt = frame
     ev_obj.ev_dc['frame_length'] = len(ev_obj.frmpkt)
     return frame
