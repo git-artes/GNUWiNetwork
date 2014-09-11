@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## Virtual Channel block
+###################################################
+ -->
+<block>
+	<name>Virtual Channel</name>
+	<key>virtualchannel</key>
+    <category>Interfaces</category>
+	<import>import blocks.simulators.channels.virtualchannel as channel</import>
+	<make>channel.GWNVirtualChannel($frame_loss)</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+
+	<param>
+		<name>Loss Probability</name>
+		<key>frame_loss</key>
+		<value>0.01</value>
+		<type>real</type>
+     </param>      
+
+	<sink>
+		<name>in</name>
+		<type>Event</type>            
+	</sink>
+
+   	<source>
+		<name>out</name>
+		<type>Event</type>
+	</source>
+
+     <doc>
+     A virtual channel with frame loss.
+     </doc>
+</block>

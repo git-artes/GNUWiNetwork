@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## IEEE802.11 MAC block
+###################################################
+ -->
+<block>
+	<name>IEEE 802.11</name>
+	<key>IEEE80211</key>
+     <category>MAC</category>
+	<import>import blocks.mac.ieee80211.ieee80211 as ieee80211</import>
+	<make>ieee80211.IEEE80211($nodeid)</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+
+	<param>
+		<name>Node Id</name>
+		<key>nodeid</key>
+		<value>100</value>
+		<type>string</type>
+     </param>      
+	<sink>
+		<name>From L1</name>
+		<type>Event</type>
+	</sink>
+	<sink>
+		<name>From L3</name>
+		<type>Event</type>
+	</sink>
+    <source>
+		<name>To L1</name>
+		<type>Event</type>
+	</source>
+    <source>
+		<name>To L3</name>
+		<type>Event</type>
+	</source>
+     <doc>
+     TODO:
+    </doc>
+</block>

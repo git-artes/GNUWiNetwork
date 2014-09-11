@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnblocks.gwntopblock.GWNTopBlock</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnblocks-module.html">Package&nbsp;gwnblocks</a> ::
+        <a href="gwn.gwnblocks.gwntopblock-module.html">Module&nbsp;gwntopblock</a> ::
+        Class&nbsp;GWNTopBlock
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnblocks.gwntopblock.GWNTopBlock-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class GWNTopBlock</h1><p class="nomargin-top"><span class="codelink"><a href="gwn.gwnblocks.gwntopblock-pysrc.html#GWNTopBlock">source&nbsp;code</a></span></p>
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="gwn.gwnblocks.gwntopblock.top_block_test-class.html">top_block_test</a></li>  </ul>
+</dd></dl>
+
+<hr />
+<p>Defines blocks and connections.</p>
+  <p>This class must be subclassed. The main program must create an object 
+  of a class that inherits from this class; blocks and connections are 
+  defined in that object. The main progam can be created with GWN 
+  Companion.</p>
+  <p>This class defines the function that connects two blocks. Blocks in 
+  GNU Wireles Network must inherit from class GWNBlock, because class 
+  GWNBlock defines the interface which this class calls to connect 
+  blocks.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">queues_size</span>=<span class="summary-sig-default">10</span>)</span><br />
+      Constructor.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnblocks.gwntopblock-pysrc.html#GWNTopBlock.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnblocks.gwntopblock.GWNTopBlock-class.html#connect" class="summary-sig-name">connect</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tp_source</span>,
+        <span class="summary-sig-arg">tp_sink</span>)</span><br />
+      Connects a source block to a sink block.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnblocks.gwntopblock-pysrc.html#GWNTopBlock.connect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="queues_size"></a><span class="summary-name">queues_size</span><br />
+      the maximum length of the queue (or other implementation) where 
+      events are input.
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="connect"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">connect</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tp_source</span>,
+        <span class="sig-arg">tp_sink</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnblocks.gwntopblock-pysrc.html#GWNTopBlock.connect">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Connects a source block to a sink block.</p>
+  <p>The source block ouputs events, the sink block inputs events. The 
+  source block writes to the Connector atttached to an InPort in the sink 
+  block.</p>
+  <p>The source output port is a position in a list of out ports in the 
+  source block. On connection, a reference to a sink input Connector object
+  is is placed in this position. A source object writes out an event an 
+  each and all of its out ports, i.e. on each and all of the Connector 
+  objects in the block's out ports list.</p>
+  <p>The sink input port is an InPort object attached to the sink block. 
+  The InPort object is attached to a unique Connector object. The sink 
+  input contains a list of InPort objects, each attached to a unique 
+  Connector object.</p>
+  <p>All events are put or got from Connector objects; Connector objects 
+  define functions put() and get() to this purpose.</p>
+  <p>This function tries to get a reference to the InPut port in the sink 
+  object input ports list, in the position indicated as a parameter. If 
+  there is a Connector object attached to this input, it obtained. If there
+  is no Connector object attached to this InPort, it is created and 
+  attached. In both cases, a reference to a Connector object is obtained. 
+  This reference is assigned to the list of ouput ports of the source 
+  block, in the position indicated by the parameter.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tp_source</code></strong> - a tuple (source, source_out) where source is a Block object, 
+          source_out is a position in its output ports list.</li>
+        <li><strong class="pname"><code>tp_sink</code></strong> - a tuple (sink, sink_in) where sink is a Block object, sink_in is 
+          a position in its input ports list.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Aug 31 10:36:26 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

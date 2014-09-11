@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Generic FDMA block
+###################################################
+ -->
+<block>
+	<name>Generic FDMA</name>
+	<key>genericfdma</key>
+     <category>MAC</category>
+	<import>import blocks.mac.generic_fdma.genericfdma as fdma</import>
+	<make>fdma.GenericFDMA()</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+	<param>
+		<name>Downlink Band (Hz)</name>
+		<key>bandDL1</key>
+		<value>851000000.0</value>
+		<type>real</type>
+     </param>      
+
+	<param>
+		<name>Uplink Band 1 (Hz)</name>
+		<key>bandUL1</key>
+		<value>850000000.0</value>
+		<type>real</type>
+     </param>      
+
+	<sink>
+		<name>in DL</name>
+		<type>Event</type>            
+	</sink>
+      <sink>
+		<name>in UL</name>
+		<type>Event</type>            
+	</sink>
+	<sink>
+		<name>Request(opt)</name>
+		<type>Request</type>
+           <optional>1</optional>            
+	</sink>
+     	<source>
+		<name>out DL</name>
+		<type>Event</type>
+	</source>
+     	<source>
+		<name>out UL</name>
+		<type>Event</type>
+	</source>
+     	<source>
+		<name>Info(opt)</name>
+		<type>Event</type>
+           <optional>1</optional>            
+	</source>
+
+
+     <doc>
+    TODO
+    </doc>
+</block>

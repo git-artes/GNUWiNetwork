@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## IEEE 802.11 Framer block
+###################################################
+ -->
+<block>
+	<name>802.11 Framer </name>
+	<key>framer80211</key>
+     <category>Framer</category>
+	<import>import blocks.framers.ieee80211.framer as framer</import>
+	<make>framer.Framer()</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+
+	<sink>
+		<name>in</name>
+		<type>Event</type>            
+	</sink>
+
+   	<source>
+		<name>out</name>
+		<type>Event</type>
+  	</source>
+
+    <doc>
+        Receives an event, makes an IEEE 802.11 frame, saves in event attribute.
+    </doc>
+</block>

@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnc.gui.Element.Element</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnc-module.html">Package&nbsp;gwnc</a> ::
+        <a href="gwn.gwnc.gui-module.html">Package&nbsp;gui</a> ::
+        <a href="gwn.gwnc.gui.Element-module.html">Module&nbsp;Element</a> ::
+        Class&nbsp;Element
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnc.gui.Element.Element-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Element</h1><p class="nomargin-top"><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">Element</strong>
+</pre>
+
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="gwn.gwnc.gui.Param.Param-class.html">Param.Param</a></li><li>, <a href="gwn.gwnc.gui.Port.Port-class.html">Port.Port</a></li><li>, <a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html">FlowGraph.FlowGraph</a></li><li>, <a href="gwn.gwnc.gui.Connection.Connection-class.html">Connection.Connection</a></li><li>, <a href="gwn.gwnc.gui.Platform.Platform-class.html">Platform.Platform</a></li><li>, <a href="gwn.gwnc.gui.Block.Block-class.html">Block.Block</a></li>  </ul>
+</dd></dl>
+
+<hr />
+<p>GraphicalElement is the base class for all graphical elements. It 
+  contains an X,Y coordinate, a list of rectangular areas that the element 
+  occupies, and methods to detect selection of those areas.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Make a new list of rectangular areas and lines, and set the 
+      coordinate and the rotation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#add_area" class="summary-sig-name">add_area</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rel_coor</span>,
+        <span class="summary-sig-arg">area</span>)</span><br />
+      Add an area to the area list.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.add_area">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#add_line" class="summary-sig-name">add_line</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rel_coor1</span>,
+        <span class="summary-sig-arg">rel_coor2</span>)</span><br />
+      Add a line to the line list.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.add_line">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clear"></a><span class="summary-sig-name">clear</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Empty the lines and areas.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.clear">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#create_labels" class="summary-sig-name">create_labels</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Create labels (if applicable) and call on all children.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.create_labels">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#create_shapes" class="summary-sig-name">create_shapes</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Create shapes (if applicable) and call on all children.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.create_shapes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#draw" class="summary-sig-name">draw</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gc</span>,
+        <span class="summary-sig-arg">window</span>,
+        <span class="summary-sig-arg">border_color</span>,
+        <span class="summary-sig-arg">bg_color</span>)</span><br />
+      Draw in the given window.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.draw">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#get_coordinate" class="summary-sig-name">get_coordinate</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the coordinate.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.get_coordinate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#get_parent" class="summary-sig-name">get_parent</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the parent of this element.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.get_parent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#get_rotation" class="summary-sig-name">get_rotation</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the rotation in degrees.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.get_rotation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#is_highlighted" class="summary-sig-name">is_highlighted</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the highlight status.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.is_highlighted">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#is_horizontal" class="summary-sig-name">is_horizontal</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rotation</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Is this element horizontal? If rotation is None, use this element's 
+      rotation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.is_horizontal">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#is_vertical" class="summary-sig-name">is_vertical</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rotation</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Is this element vertical? If rotation is None, use this element's 
+      rotation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.is_vertical">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#move" class="summary-sig-name">move</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">delta_coor</span>)</span><br />
+      Move the element by adding the delta_coor to the current coordinate.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.move">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#rotate" class="summary-sig-name">rotate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rotation</span>)</span><br />
+      Rotate all of the areas by 90 degrees.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.rotate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#set_coordinate" class="summary-sig-name">set_coordinate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">coor</span>)</span><br />
+      Set the reference coordinate.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.set_coordinate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#set_highlighted" class="summary-sig-name">set_highlighted</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">highlighted</span>)</span><br />
+      Set the highlight status.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.set_highlighted">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#set_rotation" class="summary-sig-name">set_rotation</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rotation</span>)</span><br />
+      Set the rotation in degrees.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.set_rotation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Element.Element-class.html#what_is_selected" class="summary-sig-name">what_is_selected</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">coor</span>,
+        <span class="summary-sig-arg">coor_m</span>=<span class="summary-sig-default">None</span>)</span><br />
+      One coordinate specified:
+        Is this element selected at given coordinate?
+        ie: is the coordinate encompassed by one of the areas or lines?
+Both coordinates specified:
+        Is this element within the rectangular region defined by both coordinates?
+        ie: do any area corners or line endpoints fall within the region?
+@param coor the selection coordinate, tuple x, y
+@param coor_m an additional selection coordinate.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.what_is_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Make a new list of rectangular areas and lines, and set the coordinate
+  and the rotation.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_area"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_area</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rel_coor</span>,
+        <span class="sig-arg">area</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.add_area">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add an area to the area list. An area is actually a coordinate 
+  relative to the main coordinate with a width/height pair relative to the 
+  area coordinate. A positive width is to the right of the coordinate. A 
+  positive height is above the coordinate. The area is associated with a 
+  rotation. @param rel_coor (x,y) offset from this element's coordinate 
+  @param area (width,height) tuple</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_line"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_line</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rel_coor1</span>,
+        <span class="sig-arg">rel_coor2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.add_line">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add a line to the line list. A line is defined by 2 relative 
+  coordinates. Lines must be horizontal or vertical. The line is associated
+  with a rotation. @param rel_coor1 relative (x1,y1) tuple @param rel_coor2
+  relative (x2,y2) tuple</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="create_labels"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">create_labels</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.create_labels">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create labels (if applicable) and call on all children. Call this base
+  method before creating labels in the element.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="create_shapes"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">create_shapes</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.create_shapes">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create shapes (if applicable) and call on all children. Call this base
+  method before creating shapes in the element.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="draw"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">draw</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gc</span>,
+        <span class="sig-arg">window</span>,
+        <span class="sig-arg">border_color</span>,
+        <span class="sig-arg">bg_color</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.draw">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Draw in the given window. @param gc the graphics context @param window
+  the gtk window to draw on @param border_color the color for lines and 
+  rectangle borders @param bg_color the color for the inside of the 
+  rectangle</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_coordinate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_coordinate</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.get_coordinate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the coordinate. @return the coordinate tuple (x,y)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_parent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_parent</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.get_parent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the parent of this element. @return the parent</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_rotation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_rotation</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.get_rotation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the rotation in degrees. @return the rotation</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="is_highlighted"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_highlighted</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.is_highlighted">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the highlight status. @return true if highlighted</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="is_horizontal"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_horizontal</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rotation</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.is_horizontal">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Is this element horizontal? If rotation is None, use this element's 
+  rotation. @param rotation the optional rotation @return true if rotation 
+  is horizontal</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="is_vertical"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_vertical</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rotation</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.is_vertical">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Is this element vertical? If rotation is None, use this element's 
+  rotation. @param rotation the optional rotation @return true if rotation 
+  is vertical</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="move"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">move</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">delta_coor</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.move">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Move the element by adding the delta_coor to the current coordinate. 
+  @param delta_coor (delta_x,delta_y) tuple</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="rotate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rotate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rotation</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.rotate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Rotate all of the areas by 90 degrees. @param rotation multiple of 90 
+  degrees</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="set_coordinate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_coordinate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">coor</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.set_coordinate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the reference coordinate. @param coor the coordinate tuple 
+  (x,y)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="set_highlighted"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_highlighted</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">highlighted</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.set_highlighted">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the highlight status. @param highlighted true to enable 
+  highlighting</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="set_rotation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_rotation</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rotation</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.set_rotation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the rotation in degrees. @param rotation the rotation</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="what_is_selected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">what_is_selected</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">coor</span>,
+        <span class="sig-arg">coor_m</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Element-pysrc.html#Element.what_is_selected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+One coordinate specified:
+        Is this element selected at given coordinate?
+        ie: is the coordinate encompassed by one of the areas or lines?
+Both coordinates specified:
+        Is this element within the rectangular region defined by both coordinates?
+        ie: do any area corners or line endpoints fall within the region?
+@param coor the selection coordinate, tuple x, y
+@param coor_m an additional selection coordinate.
+@return self if one of the areas/lines encompasses coor, else None.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 15:58:26 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

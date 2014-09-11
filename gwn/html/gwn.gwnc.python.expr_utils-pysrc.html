@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnc.python.expr_utils</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnc-module.html">Package&nbsp;gwnc</a> ::
+        <a href="gwn.gwnc.python-module.html">Package&nbsp;python</a> ::
+        Module&nbsp;expr_utils
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnc.python.expr_utils-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="gwn.gwnc.python.expr_utils-module.html">Module gwn.gwnc.python.expr_utils</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">Copyright 2008-2011 Free Software Foundation, Inc.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">This file is part of GNU Radio</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is free software; you can redistribute it and/or</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">modify it under the terms of the GNU General Public License</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">as published by the Free Software Foundation; either version 2</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">of the License, or (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">along with this program; if not, write to the Free Software</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">string</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable gwn.gwnc.python.expr_utils.VAR_CHARS=gwn.gwnc.python.expr_utils-module.html#VAR_CHARS"><a title="gwn.gwnc.python.expr_utils.VAR_CHARS" class="py-name" href="#" onclick="return doclink('link-0', 'VAR_CHARS', 'link-0');">VAR_CHARS</a></tt> <tt class="py-op">=</tt> <tt class="py-name">string</tt><tt class="py-op">.</tt><tt class="py-name">letters</tt> <tt class="py-op">+</tt> <tt class="py-name">string</tt><tt class="py-op">.</tt><tt class="py-name">digits</tt> <tt class="py-op">+</tt> <tt class="py-string">'_'</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="graph"></a><div id="graph-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="graph-toggle" onclick="return toggle('graph');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html">graph</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="graph-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="graph-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">        Simple graph structure held in a dictionary.</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="graph.__init__"></a><div id="graph.__init__-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="graph.__init__-toggle" onclick="return toggle('graph.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="graph.__str__"></a><div id="graph.__str__-def"><a name="L30"></a><tt class="py-lineno"> 30</tt> <a class="py-toggle" href="#" id="graph.__str__-toggle" onclick="return toggle('graph.__str__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html#__str__">__str__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="graph.add_node"></a><div id="graph.add_node-def"><a name="L32"></a><tt class="py-lineno"> 32</tt> <a class="py-toggle" href="#" id="graph.add_node-toggle" onclick="return toggle('graph.add_node');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html#add_node">add_node</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">node_key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="graph.add_node-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="graph.add_node-expanded"><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">.</tt><tt class="py-name">has_key</tt><tt class="py-op">(</tt><tt class="py-name">node_key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">[</tt><tt class="py-name">node_key</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"> </tt>
+<a name="graph.remove_node"></a><div id="graph.remove_node-def"><a name="L36"></a><tt class="py-lineno"> 36</tt> <a class="py-toggle" href="#" id="graph.remove_node-toggle" onclick="return toggle('graph.remove_node');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html#remove_node">remove_node</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">node_key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="graph.remove_node-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="graph.remove_node-expanded"><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">.</tt><tt class="py-name">has_key</tt><tt class="py-op">(</tt><tt class="py-name">node_key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">edges</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">.</tt><tt class="py-name">values</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt class="py-name">node_key</tt> <tt class="py-keyword">in</tt> <tt class="py-name">edges</tt><tt class="py-op">:</tt> <tt class="py-name">edges</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt class="py-name">node_key</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">.</tt><tt class="py-name">pop</tt><tt class="py-op">(</tt><tt class="py-name">node_key</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="graph.add_edge"></a><div id="graph.add_edge-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="graph.add_edge-toggle" onclick="return toggle('graph.add_edge');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html#add_edge">add_edge</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">src_node_key</tt><tt class="py-op">,</tt> <tt class="py-param">dest_node_key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="graph.add_edge-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="graph.add_edge-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">[</tt><tt class="py-name">src_node_key</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">add</tt><tt class="py-op">(</tt><tt class="py-name">dest_node_key</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="graph.remove_edge"></a><div id="graph.remove_edge-def"><a name="L45"></a><tt class="py-lineno"> 45</tt> <a class="py-toggle" href="#" id="graph.remove_edge-toggle" onclick="return toggle('graph.remove_edge');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html#remove_edge">remove_edge</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">src_node_key</tt><tt class="py-op">,</tt> <tt class="py-param">dest_node_key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="graph.remove_edge-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="graph.remove_edge-expanded"><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">[</tt><tt class="py-name">src_node_key</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt class="py-name">dest_node_key</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"> </tt>
+<a name="graph.get_nodes"></a><div id="graph.get_nodes-def"><a name="L48"></a><tt class="py-lineno"> 48</tt> <a class="py-toggle" href="#" id="graph.get_nodes-toggle" onclick="return toggle('graph.get_nodes');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html#get_nodes">get_nodes</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method gwn.gwnc.base.odict'.odict.keys()=gwn.gwnc.base.odict%27.odict-class.html#keys"><a title="gwn.gwnc.base.odict'.odict.keys" class="py-name" href="#" onclick="return doclink('link-1', 'keys', 'link-1');">keys</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="graph.get_edges"></a><div id="graph.get_edges-def"><a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="graph.get_edges-toggle" onclick="return toggle('graph.get_edges');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils.graph-class.html#get_edges">get_edges</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">node_key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_graph</tt><tt class="py-op">[</tt><tt class="py-name">node_key</tt><tt class="py-op">]</tt> </tt>
+</div></div><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="expr_split"></a><div id="expr_split-def"><a name="L52"></a><tt class="py-lineno"> 52</tt> <a class="py-toggle" href="#" id="expr_split-toggle" onclick="return toggle('expr_split');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils-module.html#expr_split">expr_split</a><tt class="py-op">(</tt><tt class="py-param">expr</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="expr_split-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="expr_split-expanded"><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-docstring">        Split up an expression by non alphanumeric characters, including underscore.</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">        Leave strings in-tact.</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">        #TODO ignore escaped quotes, use raw strings.</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">        @param expr an expression string</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">        @return a list of string tokens that form expr</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-name">toks</tt> <tt class="py-op">=</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">tok</tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-name">quote</tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">char</tt> <tt class="py-keyword">in</tt> <tt class="py-name">expr</tt><tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">quote</tt> <tt class="py-keyword">or</tt> <tt class="py-name">char</tt> <tt class="py-keyword">in</tt> <tt id="link-2" class="py-name"><a title="gwn.gwnc.python.expr_utils.VAR_CHARS" class="py-name" href="#" onclick="return doclink('link-2', 'VAR_CHARS', 'link-0');">VAR_CHARS</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt class="py-name">char</tt> <tt class="py-op">==</tt> <tt class="py-name">quote</tt><tt class="py-op">:</tt> <tt class="py-name">quote</tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                        <tt class="py-name">tok</tt> <tt class="py-op">+=</tt> <tt class="py-name">char</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                <tt class="py-keyword">elif</tt> <tt class="py-name">char</tt> <tt class="py-keyword">in</tt> <tt class="py-op">(</tt><tt class="py-string">"'"</tt><tt class="py-op">,</tt> <tt class="py-string">'"'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                        <tt class="py-name">toks</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">tok</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                        <tt class="py-name">tok</tt> <tt class="py-op">=</tt> <tt class="py-name">char</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                        <tt class="py-name">quote</tt> <tt class="py-op">=</tt> <tt class="py-name">char</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                        <tt class="py-name">toks</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">tok</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                        <tt class="py-name">toks</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">char</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                        <tt class="py-name">tok</tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-name">toks</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">tok</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">t</tt><tt class="py-op">:</tt> <tt class="py-name">t</tt><tt class="py-op">,</tt> <tt class="py-name">toks</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="expr_replace"></a><div id="expr_replace-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="expr_replace-toggle" onclick="return toggle('expr_replace');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils-module.html#expr_replace">expr_replace</a><tt class="py-op">(</tt><tt class="py-param">expr</tt><tt class="py-op">,</tt> <tt class="py-param">replace_dict</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="expr_replace-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="expr_replace-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">        Search for vars in the expression and add the prepend.</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">        @param expr an expression string</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">        @param replace_dict a dict of find:replace</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">        @return a new expression with the prepend</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-name">expr_splits</tt> <tt class="py-op">=</tt> <tt id="link-3" class="py-name" targets="Function gwn.gwnc.python.expr_utils.expr_split()=gwn.gwnc.python.expr_utils-module.html#expr_split"><a title="gwn.gwnc.python.expr_utils.expr_split" class="py-name" href="#" onclick="return doclink('link-3', 'expr_split', 'link-3');">expr_split</a></tt><tt class="py-op">(</tt><tt class="py-name">expr</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">i</tt><tt class="py-op">,</tt> <tt class="py-name">es</tt> <tt class="py-keyword">in</tt> <tt class="py-name">enumerate</tt><tt class="py-op">(</tt><tt class="py-name">expr_splits</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">es</tt> <tt class="py-keyword">in</tt> <tt class="py-name">replace_dict</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="gwn.gwnc.base.odict'.odict.keys" class="py-name" href="#" onclick="return doclink('link-4', 'keys', 'link-1');">keys</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                        <tt class="py-name">expr_splits</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">replace_dict</tt><tt class="py-op">[</tt><tt class="py-name">es</tt><tt class="py-op">]</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">''</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">expr_splits</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="get_variable_dependencies"></a><div id="get_variable_dependencies-def"><a name="L91"></a><tt class="py-lineno"> 91</tt> <a class="py-toggle" href="#" id="get_variable_dependencies-toggle" onclick="return toggle('get_variable_dependencies');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils-module.html#get_variable_dependencies">get_variable_dependencies</a><tt class="py-op">(</tt><tt class="py-param">expr</tt><tt class="py-op">,</tt> <tt class="py-param">vars</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_variable_dependencies-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_variable_dependencies-expanded"><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-docstring">        Return a set of variables used in this expression.</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring">        @param expr an expression string</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">        @param vars a list of variable names</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">        @return a subset of vars used in the expression</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-name">expr_toks</tt> <tt class="py-op">=</tt> <tt id="link-5" class="py-name"><a title="gwn.gwnc.python.expr_utils.expr_split" class="py-name" href="#" onclick="return doclink('link-5', 'expr_split', 'link-3');">expr_split</a></tt><tt class="py-op">(</tt><tt class="py-name">expr</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">v</tt><tt class="py-op">:</tt> <tt class="py-name">v</tt> <tt class="py-keyword">in</tt> <tt class="py-name">expr_toks</tt><tt class="py-op">,</tt> <tt class="py-name">vars</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="get_graph"></a><div id="get_graph-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="get_graph-toggle" onclick="return toggle('get_graph');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils-module.html#get_graph">get_graph</a><tt class="py-op">(</tt><tt class="py-param">exprs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_graph-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_graph-expanded"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">        Get a graph representing the variable dependencies</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">        @param exprs a mapping of variable name to expression</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">        @return a graph of variable deps</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-name">vars</tt> <tt class="py-op">=</tt> <tt class="py-name">exprs</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="gwn.gwnc.base.odict'.odict.keys" class="py-name" href="#" onclick="return doclink('link-6', 'keys', 'link-1');">keys</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-comment">#get dependencies for each expression, load into graph</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-name">var_graph</tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name" targets="Class gwn.gwnc.python.expr_utils.graph=gwn.gwnc.python.expr_utils.graph-class.html"><a title="gwn.gwnc.python.expr_utils.graph" class="py-name" href="#" onclick="return doclink('link-7', 'graph', 'link-7');">graph</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">var</tt> <tt class="py-keyword">in</tt> <tt class="py-name">vars</tt><tt class="py-op">:</tt> <tt class="py-name">var_graph</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method gwn.gwnc.python.expr_utils.graph.add_node()=gwn.gwnc.python.expr_utils.graph-class.html#add_node"><a title="gwn.gwnc.python.expr_utils.graph.add_node" class="py-name" href="#" onclick="return doclink('link-8', 'add_node', 'link-8');">add_node</a></tt><tt class="py-op">(</tt><tt class="py-name">var</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">var</tt><tt class="py-op">,</tt> <tt class="py-name">expr</tt> <tt class="py-keyword">in</tt> <tt class="py-name">exprs</tt><tt class="py-op">.</tt><tt class="py-name">iteritems</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">dep</tt> <tt class="py-keyword">in</tt> <tt id="link-9" class="py-name" targets="Function gwn.gwnc.python.expr_utils.get_variable_dependencies()=gwn.gwnc.python.expr_utils-module.html#get_variable_dependencies"><a title="gwn.gwnc.python.expr_utils.get_variable_dependencies" class="py-name" href="#" onclick="return doclink('link-9', 'get_variable_dependencies', 'link-9');">get_variable_dependencies</a></tt><tt class="py-op">(</tt><tt class="py-name">expr</tt><tt class="py-op">,</tt> <tt class="py-name">vars</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt class="py-name">dep</tt> <tt class="py-op">!=</tt> <tt class="py-name">var</tt><tt class="py-op">:</tt> <tt class="py-name">var_graph</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method gwn.gwnc.python.expr_utils.graph.add_edge()=gwn.gwnc.python.expr_utils.graph-class.html#add_edge"><a title="gwn.gwnc.python.expr_utils.graph.add_edge" class="py-name" href="#" onclick="return doclink('link-10', 'add_edge', 'link-10');">add_edge</a></tt><tt class="py-op">(</tt><tt class="py-name">dep</tt><tt class="py-op">,</tt> <tt class="py-name">var</tt><tt class="py-op">)</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">var_graph</tt> </tt>
+</div><a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"> </tt>
+<a name="sort_variables"></a><div id="sort_variables-def"><a name="L116"></a><tt class="py-lineno">116</tt> <a class="py-toggle" href="#" id="sort_variables-toggle" onclick="return toggle('sort_variables');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils-module.html#sort_variables">sort_variables</a><tt class="py-op">(</tt><tt class="py-param">exprs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="sort_variables-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="sort_variables-expanded"><a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">        Get a list of variables in order of dependencies.</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">        @param exprs a mapping of variable name to expression</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-docstring">        @return a list of variable names</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring">        @throws Exception circular dependencies</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">var_graph</tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name" targets="Function gwn.gwnc.python.expr_utils.get_graph()=gwn.gwnc.python.expr_utils-module.html#get_graph"><a title="gwn.gwnc.python.expr_utils.get_graph" class="py-name" href="#" onclick="return doclink('link-11', 'get_graph', 'link-11');">get_graph</a></tt><tt class="py-op">(</tt><tt class="py-name">exprs</tt><tt class="py-op">)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-name">sorted_vars</tt> <tt class="py-op">=</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-comment">#determine dependency order</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-keyword">while</tt> <tt class="py-name">var_graph</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method gwn.gwnc.python.expr_utils.graph.get_nodes()=gwn.gwnc.python.expr_utils.graph-class.html#get_nodes"><a title="gwn.gwnc.python.expr_utils.graph.get_nodes" class="py-name" href="#" onclick="return doclink('link-12', 'get_nodes', 'link-12');">get_nodes</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">                <tt class="py-comment">#get a list of nodes with no edges</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">                <tt class="py-name">indep_vars</tt> <tt class="py-op">=</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">var</tt><tt class="py-op">:</tt> <tt class="py-keyword">not</tt> <tt class="py-name">var_graph</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method gwn.gwnc.python.expr_utils.graph.get_edges()=gwn.gwnc.python.expr_utils.graph-class.html#get_edges"><a title="gwn.gwnc.python.expr_utils.graph.get_edges" class="py-name" href="#" onclick="return doclink('link-13', 'get_edges', 'link-13');">get_edges</a></tt><tt class="py-op">(</tt><tt class="py-name">var</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">var_graph</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="gwn.gwnc.python.expr_utils.graph.get_nodes" class="py-name" href="#" onclick="return doclink('link-14', 'get_nodes', 'link-12');">get_nodes</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">indep_vars</tt><tt class="py-op">:</tt> <tt class="py-keyword">raise</tt> <tt class="py-name">Exception</tt><tt class="py-op">(</tt><tt class="py-string">'circular dependency caught in sort_variables'</tt><tt class="py-op">)</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                <tt class="py-comment">#add the indep vars to the end of the list</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">                <tt class="py-name">sorted_vars</tt><tt class="py-op">.</tt><tt class="py-name">extend</tt><tt class="py-op">(</tt><tt class="py-name">sorted</tt><tt class="py-op">(</tt><tt class="py-name">indep_vars</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">                <tt class="py-comment">#remove each edge-less node from the graph</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">var</tt> <tt class="py-keyword">in</tt> <tt class="py-name">indep_vars</tt><tt class="py-op">:</tt> <tt class="py-name">var_graph</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method gwn.gwnc.python.expr_utils.graph.remove_node()=gwn.gwnc.python.expr_utils.graph-class.html#remove_node"><a title="gwn.gwnc.python.expr_utils.graph.remove_node" class="py-name" href="#" onclick="return doclink('link-15', 'remove_node', 'link-15');">remove_node</a></tt><tt class="py-op">(</tt><tt class="py-name">var</tt><tt class="py-op">)</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">reversed</tt><tt class="py-op">(</tt><tt class="py-name">sorted_vars</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"> </tt>
+<a name="sort_objects"></a><div id="sort_objects-def"><a name="L136"></a><tt class="py-lineno">136</tt> <a class="py-toggle" href="#" id="sort_objects-toggle" onclick="return toggle('sort_objects');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.expr_utils-module.html#sort_objects">sort_objects</a><tt class="py-op">(</tt><tt class="py-param">objects</tt><tt class="py-op">,</tt> <tt class="py-param">get_id</tt><tt class="py-op">,</tt> <tt class="py-param">get_expr</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="sort_objects-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="sort_objects-expanded"><a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-docstring">        Sort a list of objects according to their expressions.</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-docstring">        @param objects the list of objects to sort</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-docstring">        @param get_id the function to extract an id from the object</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"><tt class="py-docstring">        @param get_expr the function to extract an expression from the object</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-docstring">        @return a list of sorted objects</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt class="py-name">id2obj</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">(</tt><tt id="link-16" class="py-name" targets="Method gwn.gwnc.base.Block.Block.get_id()=gwn.gwnc.base.Block.Block-class.html#get_id"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-16', 'get_id', 'link-16');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-name">obj</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">obj</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">obj</tt> <tt class="py-keyword">in</tt> <tt class="py-name">objects</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-comment">#map obj id to expression code</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">        <tt class="py-name">id2expr</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">(</tt><tt id="link-17" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-17', 'get_id', 'link-16');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-name">obj</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">get_expr</tt><tt class="py-op">(</tt><tt class="py-name">obj</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">obj</tt> <tt class="py-keyword">in</tt> <tt class="py-name">objects</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">        <tt class="py-comment">#sort according to dependency</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt class="py-name">sorted_ids</tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name" targets="Function gwn.gwnc.python.expr_utils.sort_variables()=gwn.gwnc.python.expr_utils-module.html#sort_variables"><a title="gwn.gwnc.python.expr_utils.sort_variables" class="py-name" href="#" onclick="return doclink('link-18', 'sort_variables', 'link-18');">sort_variables</a></tt><tt class="py-op">(</tt><tt class="py-name">id2expr</tt><tt class="py-op">)</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-comment">#return list of sorted objects</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-name">id2obj</tt><tt class="py-op">[</tt><tt class="py-name">id</tt><tt class="py-op">]</tt> <tt class="py-keyword">for</tt> <tt class="py-name">id</tt> <tt class="py-keyword">in</tt> <tt class="py-name">sorted_ids</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt id="link-19" class="py-name"><a title="gwn.gwnc.python.expr_utils.sort_variables" class="py-name" href="#" onclick="return doclink('link-19', 'sort_variables', 'link-18');">sort_variables</a></tt><tt class="py-op">(</tt><tt class="py-op">{</tt><tt class="py-string">'x'</tt><tt class="py-op">:</tt><tt class="py-string">'1'</tt><tt class="py-op">,</tt> <tt class="py-string">'y'</tt><tt class="py-op">:</tt><tt class="py-string">'x+1'</tt><tt class="py-op">,</tt> <tt class="py-string">'a'</tt><tt class="py-op">:</tt><tt class="py-string">'x+y'</tt><tt class="py-op">,</tt> <tt class="py-string">'b'</tt><tt class="py-op">:</tt><tt class="py-string">'y+1'</tt><tt class="py-op">,</tt> <tt class="py-string">'c'</tt><tt class="py-op">:</tt><tt class="py-string">'a+b+x+y'</tt><tt class="py-op">}</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">print</tt> <tt class="py-name">i</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 15:58:32 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## DeFramer block
+###################################################
+ -->
+<block>
+	<name>802.11 DeFramer </name>
+	<key>deframer80211</key>
+     <category>Framer</category>
+	<import>import blocks.framers.ieee80211.deframer as deframer</import>
+	<make>deframer.Deframer()</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+
+	<sink>
+		<name>in</name>
+		<type>Event</type>            
+	</sink>
+
+  	<source>
+		<name>out</name>
+		<type>Event</type>
+  	</source>
+
+    <doc>
+        Receives an event with an IEEE 802.11 frame packet, unpacks frame, builds an event from the frame and sends it out.
+    </doc>
+</block>

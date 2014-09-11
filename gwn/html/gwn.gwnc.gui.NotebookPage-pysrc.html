@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnc.gui.NotebookPage</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnc-module.html">Package&nbsp;gwnc</a> ::
+        <a href="gwn.gwnc.gui-module.html">Package&nbsp;gui</a> ::
+        Module&nbsp;NotebookPage
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnc.gui.NotebookPage-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="gwn.gwnc.gui.NotebookPage-module.html">Module gwn.gwnc.gui.NotebookPage</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">Copyright 2008, 2009, 2011 Free Software Foundation, Inc.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">This file is part of GNU Radio</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is free software; you can redistribute it and/or</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">modify it under the terms of the GNU General Public License</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">as published by the Free Software Foundation; either version 2</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">of the License, or (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">along with this program; if not, write to the Free Software</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pygtk</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-name">pygtk</tt><tt class="py-op">.</tt><tt class="py-name">require</tt><tt class="py-op">(</tt><tt class="py-string">'2.0'</tt><tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">gtk</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module gwn.gwnc.gui.Actions=gwn.gwnc.gui.Actions-module.html"><a title="gwn.gwnc.gui.Actions" class="py-name" href="#" onclick="return doclink('link-0', 'Actions', 'link-0');">Actions</a></tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Module gwn.gwnc.gui.StateCache=gwn.gwnc.gui.StateCache-module.html,Class gwn.gwnc.gui.StateCache.StateCache=gwn.gwnc.gui.StateCache.StateCache-class.html"><a title="gwn.gwnc.gui.StateCache
+gwn.gwnc.gui.StateCache.StateCache" class="py-name" href="#" onclick="return doclink('link-1', 'StateCache', 'link-1');">StateCache</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name"><a title="gwn.gwnc.gui.StateCache
+gwn.gwnc.gui.StateCache.StateCache" class="py-name" href="#" onclick="return doclink('link-2', 'StateCache', 'link-1');">StateCache</a></tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Module gwn.gwnc.base.Constants=gwn.gwnc.base.Constants-module.html,Module gwn.gwnc.gui.Constants=gwn.gwnc.gui.Constants-module.html,Module gwn.gwnc.python.Constants=gwn.gwnc.python.Constants-module.html"><a title="gwn.gwnc.base.Constants
+gwn.gwnc.gui.Constants
+gwn.gwnc.python.Constants" class="py-name" href="#" onclick="return doclink('link-3', 'Constants', 'link-3');">Constants</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Variable gwn.gwnc.gui.Constants.MIN_WINDOW_WIDTH=gwn.gwnc.gui.Constants-module.html#MIN_WINDOW_WIDTH"><a title="gwn.gwnc.gui.Constants.MIN_WINDOW_WIDTH" class="py-name" href="#" onclick="return doclink('link-4', 'MIN_WINDOW_WIDTH', 'link-4');">MIN_WINDOW_WIDTH</a></tt><tt class="py-op">,</tt> <tt id="link-5" class="py-name" targets="Variable gwn.gwnc.gui.Constants.MIN_WINDOW_HEIGHT=gwn.gwnc.gui.Constants-module.html#MIN_WINDOW_HEIGHT"><a title="gwn.gwnc.gui.Constants.MIN_WINDOW_HEIGHT" class="py-name" href="#" onclick="return doclink('link-5', 'MIN_WINDOW_HEIGHT', 'link-5');">MIN_WINDOW_HEIGHT</a></tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name" targets="Module gwn.gwnc.gui.DrawingArea=gwn.gwnc.gui.DrawingArea-module.html,Class gwn.gwnc.gui.DrawingArea.DrawingArea=gwn.gwnc.gui.DrawingArea.DrawingArea-class.html"><a title="gwn.gwnc.gui.DrawingArea
+gwn.gwnc.gui.DrawingArea.DrawingArea" class="py-name" href="#" onclick="return doclink('link-6', 'DrawingArea', 'link-6');">DrawingArea</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name"><a title="gwn.gwnc.gui.DrawingArea
+gwn.gwnc.gui.DrawingArea.DrawingArea" class="py-name" href="#" onclick="return doclink('link-7', 'DrawingArea', 'link-6');">DrawingArea</a></tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-comment">############################################################</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-comment">## Notebook Page</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-comment">############################################################</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage"></a><div id="NotebookPage-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="NotebookPage-toggle" onclick="return toggle('NotebookPage');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html">NotebookPage</a><tt class="py-op">(</tt><tt class="py-base-class">gtk</tt><tt class="py-op">.</tt><tt class="py-base-class">HBox</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="NotebookPage-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-docstring">"""A page in the notebook."""</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.__init__"></a><div id="NotebookPage.__init__-def"><a name="L36"></a><tt class="py-lineno"> 36</tt> <a class="py-toggle" href="#" id="NotebookPage.__init__-toggle" onclick="return toggle('NotebookPage.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">main_window</tt><tt class="py-op">,</tt> <tt class="py-param">flow_graph</tt><tt class="py-op">,</tt> <tt class="py-param">file_path</tt><tt class="py-op">=</tt><tt class="py-string">''</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.__init__-expanded"><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">                Page constructor.</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">                @param main_window main window</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">                @param file_path path to a flow graph file</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_flow_graph</tt> <tt class="py-op">=</tt> <tt class="py-name">flow_graph</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method gwn.gwnc.gui.NotebookPage.NotebookPage.set_proc()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#set_proc"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage.set_proc" class="py-name" href="#" onclick="return doclink('link-8', 'set_proc', 'link-8');">set_proc</a></tt><tt class="py-op">(</tt><tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">                <tt class="py-comment">#import the file</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">main_window</tt> <tt class="py-op">=</tt> <tt class="py-name">main_window</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method gwn.gwnc.gui.NotebookPage.NotebookPage.set_file_path()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#set_file_path"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage.set_file_path" class="py-name" href="#" onclick="return doclink('link-9', 'set_file_path', 'link-9');">set_file_path</a></tt><tt class="py-op">(</tt><tt class="py-name">file_path</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">                <tt class="py-name">initial_state</tt> <tt class="py-op">=</tt> <tt class="py-name">flow_graph</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method gwn.gwnc.base.Element.Element.get_parent()=gwn.gwnc.base.Element.Element-class.html#get_parent,Method gwn.gwnc.gui.Element.Element.get_parent()=gwn.gwnc.gui.Element.Element-class.html#get_parent"><a title="gwn.gwnc.base.Element.Element.get_parent
+gwn.gwnc.gui.Element.Element.get_parent" class="py-name" href="#" onclick="return doclink('link-10', 'get_parent', 'link-10');">get_parent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method gwn.gwnc.base.Platform.Platform.parse_flow_graph()=gwn.gwnc.base.Platform.Platform-class.html#parse_flow_graph"><a title="gwn.gwnc.base.Platform.Platform.parse_flow_graph" class="py-name" href="#" onclick="return doclink('link-11', 'parse_flow_graph', 'link-11');">parse_flow_graph</a></tt><tt class="py-op">(</tt><tt class="py-name">file_path</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">state_cache</tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="gwn.gwnc.gui.StateCache
+gwn.gwnc.gui.StateCache.StateCache" class="py-name" href="#" onclick="return doclink('link-12', 'StateCache', 'link-1');">StateCache</a></tt><tt class="py-op">(</tt><tt class="py-name">initial_state</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method gwn.gwnc.gui.NotebookPage.NotebookPage.set_saved()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#set_saved"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage.set_saved" class="py-name" href="#" onclick="return doclink('link-13', 'set_saved', 'link-13');">set_saved</a></tt><tt class="py-op">(</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                <tt class="py-comment">#import the data to the flow graph</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method gwn.gwnc.gui.MainWindow.MainWindow.get_flow_graph()=gwn.gwnc.gui.MainWindow.MainWindow-class.html#get_flow_graph,Method gwn.gwnc.gui.NotebookPage.NotebookPage.get_flow_graph()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_flow_graph"><a title="gwn.gwnc.gui.MainWindow.MainWindow.get_flow_graph
+gwn.gwnc.gui.NotebookPage.NotebookPage.get_flow_graph" class="py-name" href="#" onclick="return doclink('link-14', 'get_flow_graph', 'link-14');">get_flow_graph</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method gwn.gwnc.base.Block.Block.import_data()=gwn.gwnc.base.Block.Block-class.html#import_data,Method gwn.gwnc.base.FlowGraph.FlowGraph.import_data()=gwn.gwnc.base.FlowGraph.FlowGraph-class.html#import_data"><a title="gwn.gwnc.base.Block.Block.import_data
+gwn.gwnc.base.FlowGraph.FlowGraph.import_data" class="py-name" href="#" onclick="return doclink('link-15', 'import_data', 'link-15');">import_data</a></tt><tt class="py-op">(</tt><tt class="py-name">initial_state</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                <tt class="py-comment">#initialize page gui</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">HBox</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method gwn.blocks.framers.ieee80211.deframer.Deframer.__init__()=gwn.blocks.framers.ieee80211.deframer.Deframer-class.html#__init__,Method gwn.blocks.framers.ieee80211.framer.Framer.__init__()=gwn.blocks.framers.ieee80211.framer.Framer-class.html#__init__,Method gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.__init__()=gwn.blocks.libio.tuntap.tuntap.ATunTapConnector-class.html#__init__,Method gwn.blocks.libio.tuntap.tuntap.TunTapInterface.__init__()=gwn.blocks.libio.tuntap.tuntap.TunTapInterface-class.html#__init__,Method gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA.__init__()=gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA-class.html#__init__,Method gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.__init__()=gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.MacTdma-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events-class.html#__init__,Method gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel.__init__()=gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel-class.html#__init__,Method gwn.blocks.simulators.consumers.eventconsumer.EventConsumer.__init__()=gwn.blocks.simulators.consumers.eventconsumer.EventConsumer-class.html#__init__,Method gwn.blocks.simulators.generators.eventsimulator.EventSimulator.__init__()=gwn.blocks.simulators.generators.eventsimulator.EventSimulator-class.html#__init__,Method gwn.blocks.utilblocks.timer.timer.Timer.__init__()=gwn.blocks.utilblocks.timer.timer.Timer-class.html#__init__,Method gwn.epydoc_doc.epydoc_example.ClassA.__init__()=gwn.epydoc_doc.epydoc_example.ClassA-class.html#__init__,Method gwn.gwnblocks.gwnblock.GWNBlock.__init__()=gwn.gwnblocks.gwnblock.GWNBlock-class.html#__init__,Method gwn.gwnblocks.gwninport.AListConnector.__init__()=gwn.gwnblocks.gwninport.AListConnector-class.html#__init__,Method gwn.gwnblocks.gwninport.AQueueConnector.__init__()=gwn.gwnblocks.gwninport.AQueueConnector-class.html#__init__,Method gwn.gwnblocks.gwninport.InPort.__init__()=gwn.gwnblocks.gwninport.InPort-class.html#__init__,Method gwn.gwnblocks.gwnintimer.InTimer.__init__()=gwn.gwnblocks.gwnintimer.InTimer-class.html#__init__,Method gwn.gwnblocks.gwntopblock.GWNTopBlock.__init__()=gwn.gwnblocks.gwntopblock.GWNTopBlock-class.html#__init__,Method gwn.gwnblocks.gwntopblock.top_block_test.__init__()=gwn.gwnblocks.gwntopblock.top_block_test-class.html#__init__,Method gwn.gwnc.base.Block.Block.__init__()=gwn.gwnc.base.Block.Block-class.html#__init__,Method gwn.gwnc.base.Block.TemplateArg.__init__()=gwn.gwnc.base.Block.TemplateArg-class.html#__init__,Method gwn.gwnc.base.Connection.Connection.__init__()=gwn.gwnc.base.Connection.Connection-class.html#__init__,Method gwn.gwnc.base.Element.Element.__init__()=gwn.gwnc.base.Element.Element-class.html#__init__,Method gwn.gwnc.base.FlowGraph.FlowGraph.__init__()=gwn.gwnc.base.FlowGraph.FlowGraph-class.html#__init__,Method gwn.gwnc.base.Param.Option.__init__()=gwn.gwnc.base.Param.Option-class.html#__init__,Method gwn.gwnc.base.Param.Param.__init__()=gwn.gwnc.base.Param.Param-class.html#__init__,Method gwn.gwnc.base.ParseXML.XMLSyntaxError.__init__()=gwn.gwnc.base.ParseXML.XMLSyntaxError-class.html#__init__,Method gwn.gwnc.base.Platform.Platform.__init__()=gwn.gwnc.base.Platform.Platform-class.html#__init__,Method gwn.gwnc.base.Port.Port.__init__()=gwn.gwnc.base.Port.Port-class.html#__init__,Method gwn.gwnc.base.odict'.odict.__init__()=gwn.gwnc.base.odict%27.odict-class.html#__init__,Method gwn.gwnc.gui.ActionHandler.ActionHandler.__init__()=gwn.gwnc.gui.ActionHandler.ActionHandler-class.html#__init__,Method gwn.gwnc.gui.ActionHandler.ExecFlowGraphThread.__init__()=gwn.gwnc.gui.ActionHandler.ExecFlowGraphThread-class.html#__init__,Method gwn.gwnc.gui.Actions.Action.__init__()=gwn.gwnc.gui.Actions.Action-class.html#__init__,Method gwn.gwnc.gui.Bars.MenuBar.__init__()=gwn.gwnc.gui.Bars.MenuBar-class.html#__init__,Method gwn.gwnc.gui.Bars.Toolbar.__init__()=gwn.gwnc.gui.Bars.Toolbar-class.html#__init__,Method gwn.gwnc.gui.Block.Block.__init__()=gwn.gwnc.gui.Block.Block-class.html#__init__,Method gwn.gwnc.gui.BlockTreeWindow.BlockTreeWindow.__init__()=gwn.gwnc.gui.BlockTreeWindow.BlockTreeWindow-class.html#__init__,Method gwn.gwnc.gui.Connection.Connection.__init__()=gwn.gwnc.gui.Connection.Connection-class.html#__init__,Method gwn.gwnc.gui.DrawingArea.DrawingArea.__init__()=gwn.gwnc.gui.DrawingArea.DrawingArea-class.html#__init__,Method gwn.gwnc.gui.Element.Element.__init__()=gwn.gwnc.gui.Element.Element-class.html#__init__,Method gwn.gwnc.gui.FlowGraph.FlowGraph.__init__()=gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#__init__,Method gwn.gwnc.gui.MainWindow.MainWindow.__init__()=gwn.gwnc.gui.MainWindow.MainWindow-class.html#__init__,Method gwn.gwnc.gui.NotebookPage.NotebookPage.__init__()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#__init__,Method gwn.gwnc.gui.Param.EntryParam.__init__()=gwn.gwnc.gui.Param.EntryParam-class.html#__init__,Method gwn.gwnc.gui.Param.EnumEntryParam.__init__()=gwn.gwnc.gui.Param.EnumEntryParam-class.html#__init__,Method gwn.gwnc.gui.Param.EnumParam.__init__()=gwn.gwnc.gui.Param.EnumParam-class.html#__init__,Method gwn.gwnc.gui.Param.InputParam.__init__()=gwn.gwnc.gui.Param.InputParam-class.html#__init__,Method gwn.gwnc.gui.Param.Param.__init__()=gwn.gwnc.gui.Param.Param-class.html#__init__,Method gwn.gwnc.gui.Platform.Platform.__init__()=gwn.gwnc.gui.Platform.Platform-class.html#__init__,Method gwn.gwnc.gui.Port.Port.__init__()=gwn.gwnc.gui.Port.Port-class.html#__init__,Method gwn.gwnc.gui.PropsDialog.PropsDialog.__init__()=gwn.gwnc.gui.PropsDialog.PropsDialog-class.html#__init__,Method gwn.gwnc.gui.StateCache.StateCache.__init__()=gwn.gwnc.gui.StateCache.StateCache-class.html#__init__,Method gwn.gwnc.python.Block.Block.__init__()=gwn.gwnc.python.Block.Block-class.html#__init__,Method gwn.gwnc.python.Connection.Connection.__init__()=gwn.gwnc.python.Connection.Connection-class.html#__init__,Method gwn.gwnc.python.FlowGraph.FlowGraph.__init__()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#__init__,Method gwn.gwnc.python.Generator.Generator.__init__()=gwn.gwnc.python.Generator.Generator-class.html#__init__,Method gwn.gwnc.python.Param.FileParam.__init__()=gwn.gwnc.python.Param.FileParam-class.html#__init__,Method gwn.gwnc.python.Param.Param.__init__()=gwn.gwnc.python.Param.Param-class.html#__init__,Method gwn.gwnc.python.Platform.Platform.__init__()=gwn.gwnc.python.Platform.Platform-class.html#__init__,Method gwn.gwnc.python.Port.Port.__init__()=gwn.gwnc.python.Port.Port-class.html#__init__,Method gwn.gwnc.python.expr_utils.graph.__init__()=gwn.gwnc.python.expr_utils.graph-class.html#__init__,Method gwn.gwnevents.events.Event.__init__()=gwn.gwnevents.events.Event-class.html#__init__,Method gwn.gwnevents.evframes80211.EventFrame.__init__()=gwn.gwnevents.evframes80211.EventFrame-class.html#__init__,Method gwn.gwnevents.evframes80211.EventFrameMgmt.__init__()=gwn.gwnevents.evframes80211.EventFrameMgmt-class.html#__init__,Method gwn.gwnevents.evrequest.EventRequest.__init__()=gwn.gwnevents.evrequest.EventRequest-class.html#__init__,Method gwn.gwnevents.evtimer.EventTimer.__init__()=gwn.gwnevents.evtimer.EventTimer-class.html#__init__,Method gwn.utils.framers.ieee80211.frames.Frame.__init__()=gwn.utils.framers.ieee80211.frames.Frame-class.html#__init__,Method gwn.utils.framers.ieee80211.frames.FrameException.__init__()=gwn.utils.framers.ieee80211.frames.FrameException-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrame.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrame-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException.__init__()=gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException-class.html#__init__,Method gwn.utils.libfsm.fsm.ExceptionFSM.__init__()=gwn.utils.libfsm.fsm.ExceptionFSM-class.html#__init__,Method gwn.utils.libfsm.fsm.FSM.__init__()=gwn.utils.libfsm.fsm.FSM-class.html#__init__,Method gwn.utils.logger.gnlogger_test.Auxiliary.__init__()=gwn.utils.logger.gnlogger_test.Auxiliary-class.html#__init__,Method gwn.utils.testing.exampletest.AClass.__init__()=gwn.utils.testing.exampletest.AClass-class.html#__init__"><a title="gwn.blocks.framers.ieee80211.deframer.Deframer.__init__
+gwn.blocks.framers.ieee80211.framer.Framer.__init__
+gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.__init__
+gwn.blocks.libio.tuntap.tuntap.TunTapInterface.__init__
+gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA.__init__
+gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.__init__
+gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel.__init__
+gwn.blocks.simulators.consumers.eventconsumer.EventConsumer.__init__
+gwn.blocks.simulators.generators.eventsimulator.EventSimulator.__init__
+gwn.blocks.utilblocks.timer.timer.Timer.__init__
+gwn.epydoc_doc.epydoc_example.ClassA.__init__
+gwn.gwnblocks.gwnblock.GWNBlock.__init__
+gwn.gwnblocks.gwninport.AListConnector.__init__
+gwn.gwnblocks.gwninport.AQueueConnector.__init__
+gwn.gwnblocks.gwninport.InPort.__init__
+gwn.gwnblocks.gwnintimer.InTimer.__init__
+gwn.gwnblocks.gwntopblock.GWNTopBlock.__init__
+gwn.gwnblocks.gwntopblock.top_block_test.__init__
+gwn.gwnc.base.Block.Block.__init__
+gwn.gwnc.base.Block.TemplateArg.__init__
+gwn.gwnc.base.Connection.Connection.__init__
+gwn.gwnc.base.Element.Element.__init__
+gwn.gwnc.base.FlowGraph.FlowGraph.__init__
+gwn.gwnc.base.Param.Option.__init__
+gwn.gwnc.base.Param.Param.__init__
+gwn.gwnc.base.ParseXML.XMLSyntaxError.__init__
+gwn.gwnc.base.Platform.Platform.__init__
+gwn.gwnc.base.Port.Port.__init__
+gwn.gwnc.base.odict'.odict.__init__
+gwn.gwnc.gui.ActionHandler.ActionHandler.__init__
+gwn.gwnc.gui.ActionHandler.ExecFlowGraphThread.__init__
+gwn.gwnc.gui.Actions.Action.__init__
+gwn.gwnc.gui.Bars.MenuBar.__init__
+gwn.gwnc.gui.Bars.Toolbar.__init__
+gwn.gwnc.gui.Block.Block.__init__
+gwn.gwnc.gui.BlockTreeWindow.BlockTreeWindow.__init__
+gwn.gwnc.gui.Connection.Connection.__init__
+gwn.gwnc.gui.DrawingArea.DrawingArea.__init__
+gwn.gwnc.gui.Element.Element.__init__
+gwn.gwnc.gui.FlowGraph.FlowGraph.__init__
+gwn.gwnc.gui.MainWindow.MainWindow.__init__
+gwn.gwnc.gui.NotebookPage.NotebookPage.__init__
+gwn.gwnc.gui.Param.EntryParam.__init__
+gwn.gwnc.gui.Param.EnumEntryParam.__init__
+gwn.gwnc.gui.Param.EnumParam.__init__
+gwn.gwnc.gui.Param.InputParam.__init__
+gwn.gwnc.gui.Param.Param.__init__
+gwn.gwnc.gui.Platform.Platform.__init__
+gwn.gwnc.gui.Port.Port.__init__
+gwn.gwnc.gui.PropsDialog.PropsDialog.__init__
+gwn.gwnc.gui.StateCache.StateCache.__init__
+gwn.gwnc.python.Block.Block.__init__
+gwn.gwnc.python.Connection.Connection.__init__
+gwn.gwnc.python.FlowGraph.FlowGraph.__init__
+gwn.gwnc.python.Generator.Generator.__init__
+gwn.gwnc.python.Param.FileParam.__init__
+gwn.gwnc.python.Param.Param.__init__
+gwn.gwnc.python.Platform.Platform.__init__
+gwn.gwnc.python.Port.Port.__init__
+gwn.gwnc.python.expr_utils.graph.__init__
+gwn.gwnevents.events.Event.__init__
+gwn.gwnevents.evframes80211.EventFrame.__init__
+gwn.gwnevents.evframes80211.EventFrameMgmt.__init__
+gwn.gwnevents.evrequest.EventRequest.__init__
+gwn.gwnevents.evtimer.EventTimer.__init__
+gwn.utils.framers.ieee80211.frames.Frame.__init__
+gwn.utils.framers.ieee80211.frames.FrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrame.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException.__init__
+gwn.utils.libfsm.fsm.ExceptionFSM.__init__
+gwn.utils.libfsm.fsm.FSM.__init__
+gwn.utils.logger.gnlogger_test.Auxiliary.__init__
+gwn.utils.testing.exampletest.AClass.__init__" class="py-name" href="#" onclick="return doclink('link-16', '__init__', 'link-16');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">show</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                <tt class="py-comment">#tab box to hold label and close button</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tab</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">HBox</tt><tt class="py-op">(</tt><tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">                <tt class="py-comment">#setup tab label</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">label</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">Label</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tab</tt><tt class="py-op">.</tt><tt class="py-name">pack_start</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">label</tt><tt class="py-op">,</tt> <tt class="py-name">False</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">                <tt class="py-comment">#setup button image</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">                <tt class="py-name">image</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">Image</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                <tt class="py-name">image</tt><tt class="py-op">.</tt><tt class="py-name">set_from_stock</tt><tt class="py-op">(</tt><tt class="py-string">'gtk-close'</tt><tt class="py-op">,</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">ICON_SIZE_MENU</tt><tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                <tt class="py-comment">#setup image box</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                <tt class="py-name">image_box</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">HBox</tt><tt class="py-op">(</tt><tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">                <tt class="py-name">image_box</tt><tt class="py-op">.</tt><tt class="py-name">pack_start</tt><tt class="py-op">(</tt><tt class="py-name">image</tt><tt class="py-op">,</tt> <tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                <tt class="py-comment">#setup the button</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                <tt class="py-name">button</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">Button</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                <tt class="py-name">button</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method gwn.gwnblocks.gwninport.InPort.connect()=gwn.gwnblocks.gwninport.InPort-class.html#connect,Method gwn.gwnblocks.gwntopblock.GWNTopBlock.connect()=gwn.gwnblocks.gwntopblock.GWNTopBlock-class.html#connect,Method gwn.gwnc.base.FlowGraph.FlowGraph.connect()=gwn.gwnc.base.FlowGraph.FlowGraph-class.html#connect"><a title="gwn.gwnblocks.gwninport.InPort.connect
+gwn.gwnblocks.gwntopblock.GWNTopBlock.connect
+gwn.gwnc.base.FlowGraph.FlowGraph.connect" class="py-name" href="#" onclick="return doclink('link-17', 'connect', 'link-17');">connect</a></tt><tt class="py-op">(</tt><tt class="py-string">"clicked"</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method gwn.gwnc.gui.NotebookPage.NotebookPage._handle_button()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#_handle_button"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage._handle_button" class="py-name" href="#" onclick="return doclink('link-18', '_handle_button', 'link-18');">_handle_button</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                <tt class="py-name">button</tt><tt class="py-op">.</tt><tt class="py-name">set_relief</tt><tt class="py-op">(</tt><tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">RELIEF_NONE</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                <tt class="py-name">button</tt><tt class="py-op">.</tt><tt class="py-name">add</tt><tt class="py-op">(</tt><tt class="py-name">image_box</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                <tt class="py-comment">#button size</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-name">w</tt><tt class="py-op">,</tt> <tt class="py-name">h</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">icon_size_lookup_for_settings</tt><tt class="py-op">(</tt><tt class="py-name">button</tt><tt class="py-op">.</tt><tt class="py-name">get_settings</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">ICON_SIZE_MENU</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                <tt class="py-name">button</tt><tt class="py-op">.</tt><tt class="py-name">set_size_request</tt><tt class="py-op">(</tt><tt class="py-name">w</tt><tt class="py-op">+</tt><tt class="py-number">6</tt><tt class="py-op">,</tt> <tt class="py-name">h</tt><tt class="py-op">+</tt><tt class="py-number">6</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tab</tt><tt class="py-op">.</tt><tt class="py-name">pack_start</tt><tt class="py-op">(</tt><tt class="py-name">button</tt><tt class="py-op">,</tt> <tt class="py-name">False</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tab</tt><tt class="py-op">.</tt><tt class="py-name">show_all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                <tt class="py-comment">#setup scroll window and drawing area</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">scrolled_window</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">ScrolledWindow</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">scrolled_window</tt><tt class="py-op">.</tt><tt class="py-name">set_size_request</tt><tt class="py-op">(</tt><tt id="link-19" class="py-name"><a title="gwn.gwnc.gui.Constants.MIN_WINDOW_WIDTH" class="py-name" href="#" onclick="return doclink('link-19', 'MIN_WINDOW_WIDTH', 'link-4');">MIN_WINDOW_WIDTH</a></tt><tt class="py-op">,</tt> <tt id="link-20" class="py-name"><a title="gwn.gwnc.gui.Constants.MIN_WINDOW_HEIGHT" class="py-name" href="#" onclick="return doclink('link-20', 'MIN_WINDOW_HEIGHT', 'link-5');">MIN_WINDOW_HEIGHT</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">scrolled_window</tt><tt class="py-op">.</tt><tt class="py-name">set_policy</tt><tt class="py-op">(</tt><tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">POLICY_AUTOMATIC</tt><tt class="py-op">,</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">POLICY_AUTOMATIC</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">drawing_area</tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="gwn.gwnc.gui.DrawingArea
+gwn.gwnc.gui.DrawingArea.DrawingArea" class="py-name" href="#" onclick="return doclink('link-21', 'DrawingArea', 'link-6');">DrawingArea</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="gwn.gwnc.gui.MainWindow.MainWindow.get_flow_graph
+gwn.gwnc.gui.NotebookPage.NotebookPage.get_flow_graph" class="py-name" href="#" onclick="return doclink('link-22', 'get_flow_graph', 'link-14');">get_flow_graph</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">scrolled_window</tt><tt class="py-op">.</tt><tt class="py-name">add_with_viewport</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method gwn.gwnc.gui.FlowGraph.FlowGraph.get_drawing_area()=gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#get_drawing_area,Method gwn.gwnc.gui.NotebookPage.NotebookPage.get_drawing_area()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_drawing_area"><a title="gwn.gwnc.gui.FlowGraph.FlowGraph.get_drawing_area
+gwn.gwnc.gui.NotebookPage.NotebookPage.get_drawing_area" class="py-name" href="#" onclick="return doclink('link-23', 'get_drawing_area', 'link-23');">get_drawing_area</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">pack_start</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">scrolled_window</tt><tt class="py-op">)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                <tt class="py-comment">#inject drawing area into flow graph</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="gwn.gwnc.gui.MainWindow.MainWindow.get_flow_graph
+gwn.gwnc.gui.NotebookPage.NotebookPage.get_flow_graph" class="py-name" href="#" onclick="return doclink('link-24', 'get_flow_graph', 'link-14');">get_flow_graph</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">drawing_area</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="gwn.gwnc.gui.FlowGraph.FlowGraph.get_drawing_area
+gwn.gwnc.gui.NotebookPage.NotebookPage.get_drawing_area" class="py-name" href="#" onclick="return doclink('link-25', 'get_drawing_area', 'link-23');">get_drawing_area</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">show_all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_drawing_area"></a><div id="NotebookPage.get_drawing_area-def"><a name="L87"></a><tt class="py-lineno"> 87</tt> <a class="py-toggle" href="#" id="NotebookPage.get_drawing_area-toggle" onclick="return toggle('NotebookPage.get_drawing_area');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_drawing_area">get_drawing_area</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">drawing_area</tt> </tt>
+</div><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_generator"></a><div id="NotebookPage.get_generator-def"><a name="L89"></a><tt class="py-lineno"> 89</tt> <a class="py-toggle" href="#" id="NotebookPage.get_generator-toggle" onclick="return toggle('NotebookPage.get_generator');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_generator">get_generator</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.get_generator-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.get_generator-expanded"><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">                Get the generator object for this flow graph.</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-docstring">                @return generator</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="gwn.gwnc.gui.MainWindow.MainWindow.get_flow_graph
+gwn.gwnc.gui.NotebookPage.NotebookPage.get_flow_graph" class="py-name" href="#" onclick="return doclink('link-26', 'get_flow_graph', 'link-14');">get_flow_graph</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="gwn.gwnc.base.Element.Element.get_parent
+gwn.gwnc.gui.Element.Element.get_parent" class="py-name" href="#" onclick="return doclink('link-27', 'get_parent', 'link-10');">get_parent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method gwn.gwnc.base.Platform.Platform.get_generator()=gwn.gwnc.base.Platform.Platform-class.html#get_generator,Method gwn.gwnc.gui.NotebookPage.NotebookPage.get_generator()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_generator"><a title="gwn.gwnc.base.Platform.Platform.get_generator
+gwn.gwnc.gui.NotebookPage.NotebookPage.get_generator" class="py-name" href="#" onclick="return doclink('link-28', 'get_generator', 'link-28');">get_generator</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">(</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="gwn.gwnc.gui.MainWindow.MainWindow.get_flow_graph
+gwn.gwnc.gui.NotebookPage.NotebookPage.get_flow_graph" class="py-name" href="#" onclick="return doclink('link-29', 'get_flow_graph', 'link-14');">get_flow_graph</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method gwn.gwnc.gui.NotebookPage.NotebookPage.get_file_path()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_file_path,Method gwn.gwnc.python.Generator.Generator.get_file_path()=gwn.gwnc.python.Generator.Generator-class.html#get_file_path"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage.get_file_path
+gwn.gwnc.python.Generator.Generator.get_file_path" class="py-name" href="#" onclick="return doclink('link-30', 'get_file_path', 'link-30');">get_file_path</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-op">)</tt> </tt>
+</div><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage._handle_button"></a><div id="NotebookPage._handle_button-def"><a name="L99"></a><tt class="py-lineno"> 99</tt> <a class="py-toggle" href="#" id="NotebookPage._handle_button-toggle" onclick="return toggle('NotebookPage._handle_button');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#_handle_button">_handle_button</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">button</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage._handle_button-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage._handle_button-expanded"><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">                The button was clicked.</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">                Make the current page selected, then close.</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">                @param the button</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">main_window</tt><tt class="py-op">.</tt><tt class="py-name">page_to_be_closed</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">                <tt id="link-31" class="py-name"><a title="gwn.gwnc.gui.Actions" class="py-name" href="#" onclick="return doclink('link-31', 'Actions', 'link-0');">Actions</a></tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Variable gwn.gwnc.gui.Actions.FLOW_GRAPH_CLOSE=gwn.gwnc.gui.Actions-module.html#FLOW_GRAPH_CLOSE"><a title="gwn.gwnc.gui.Actions.FLOW_GRAPH_CLOSE" class="py-name" href="#" onclick="return doclink('link-32', 'FLOW_GRAPH_CLOSE', 'link-32');">FLOW_GRAPH_CLOSE</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.set_markup"></a><div id="NotebookPage.set_markup-def"><a name="L108"></a><tt class="py-lineno">108</tt> <a class="py-toggle" href="#" id="NotebookPage.set_markup-toggle" onclick="return toggle('NotebookPage.set_markup');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#set_markup">set_markup</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">markup</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.set_markup-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.set_markup-expanded"><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">                Set the markup in this label.</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring">                @param markup the new markup text</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">label</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Method gwn.gwnc.gui.NotebookPage.NotebookPage.set_markup()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#set_markup"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage.set_markup" class="py-name" href="#" onclick="return doclink('link-33', 'set_markup', 'link-33');">set_markup</a></tt><tt class="py-op">(</tt><tt class="py-name">markup</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_tab"></a><div id="NotebookPage.get_tab-def"><a name="L115"></a><tt class="py-lineno">115</tt> <a class="py-toggle" href="#" id="NotebookPage.get_tab-toggle" onclick="return toggle('NotebookPage.get_tab');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_tab">get_tab</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.get_tab-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.get_tab-expanded"><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">                Get the gtk widget for this page's tab.</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">                @return gtk widget</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tab</tt> </tt>
+</div><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_proc"></a><div id="NotebookPage.get_proc-def"><a name="L122"></a><tt class="py-lineno">122</tt> <a class="py-toggle" href="#" id="NotebookPage.get_proc-toggle" onclick="return toggle('NotebookPage.get_proc');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_proc">get_proc</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.get_proc-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.get_proc-expanded"><a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">                Get the subprocess for the flow graph.</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">                @return the subprocess object</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Method gwn.utils.libfsm.fsm.FSM.process()=gwn.utils.libfsm.fsm.FSM-class.html#process"><a title="gwn.utils.libfsm.fsm.FSM.process" class="py-name" href="#" onclick="return doclink('link-34', 'process', 'link-34');">process</a></tt> </tt>
+</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.set_proc"></a><div id="NotebookPage.set_proc-def"><a name="L129"></a><tt class="py-lineno">129</tt> <a class="py-toggle" href="#" id="NotebookPage.set_proc-toggle" onclick="return toggle('NotebookPage.set_proc');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#set_proc">set_proc</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">process</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.set_proc-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.set_proc-expanded"><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-docstring">                Set the subprocess object.</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">                @param process the new subprocess</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="gwn.utils.libfsm.fsm.FSM.process" class="py-name" href="#" onclick="return doclink('link-35', 'process', 'link-34');">process</a></tt> <tt class="py-op">=</tt> <tt id="link-36" class="py-name"><a title="gwn.utils.libfsm.fsm.FSM.process" class="py-name" href="#" onclick="return doclink('link-36', 'process', 'link-34');">process</a></tt> </tt>
+</div><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_flow_graph"></a><div id="NotebookPage.get_flow_graph-def"><a name="L136"></a><tt class="py-lineno">136</tt> <a class="py-toggle" href="#" id="NotebookPage.get_flow_graph-toggle" onclick="return toggle('NotebookPage.get_flow_graph');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_flow_graph">get_flow_graph</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.get_flow_graph-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.get_flow_graph-expanded"><a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-docstring">                Get the flow graph.</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-docstring">                @return the flow graph</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_flow_graph</tt> </tt>
+</div><a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_read_only"></a><div id="NotebookPage.get_read_only-def"><a name="L143"></a><tt class="py-lineno">143</tt> <a class="py-toggle" href="#" id="NotebookPage.get_read_only-toggle" onclick="return toggle('NotebookPage.get_read_only');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_read_only">get_read_only</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.get_read_only-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.get_read_only-expanded"><a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-docstring">                Get the read-only state of the file.</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-docstring">                Always false for empty path.</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"><tt class="py-docstring">                @return true for read-only</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage.get_file_path
+gwn.gwnc.python.Generator.Generator.get_file_path" class="py-name" href="#" onclick="return doclink('link-37', 'get_file_path', 'link-30');">get_file_path</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage.get_file_path
+gwn.gwnc.python.Generator.Generator.get_file_path" class="py-name" href="#" onclick="return doclink('link-38', 'get_file_path', 'link-30');">get_file_path</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> \ </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                <tt class="py-keyword">not</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">access</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="gwn.gwnc.gui.NotebookPage.NotebookPage.get_file_path
+gwn.gwnc.python.Generator.Generator.get_file_path" class="py-name" href="#" onclick="return doclink('link-39', 'get_file_path', 'link-30');">get_file_path</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">W_OK</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_file_path"></a><div id="NotebookPage.get_file_path-def"><a name="L153"></a><tt class="py-lineno">153</tt> <a class="py-toggle" href="#" id="NotebookPage.get_file_path-toggle" onclick="return toggle('NotebookPage.get_file_path');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_file_path">get_file_path</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.get_file_path-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.get_file_path-expanded"><a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"><tt class="py-docstring">                Get the file path for the flow graph.</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"><tt class="py-docstring">                @return the file path or ''</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">file_path</tt> </tt>
+</div><a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.set_file_path"></a><div id="NotebookPage.set_file_path-def"><a name="L160"></a><tt class="py-lineno">160</tt> <a class="py-toggle" href="#" id="NotebookPage.set_file_path-toggle" onclick="return toggle('NotebookPage.set_file_path');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#set_file_path">set_file_path</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">file_path</tt><tt class="py-op">=</tt><tt class="py-string">''</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.set_file_path-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.set_file_path-expanded"><a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"><tt class="py-docstring">                Set the file path, '' for no file path.</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"><tt class="py-docstring">                @param file_path file path string</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">file_path</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">file_path</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">abspath</tt><tt class="py-op">(</tt><tt class="py-name">file_path</tt><tt class="py-op">)</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">file_path</tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+</div><a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_saved"></a><div id="NotebookPage.get_saved-def"><a name="L168"></a><tt class="py-lineno">168</tt> <a class="py-toggle" href="#" id="NotebookPage.get_saved-toggle" onclick="return toggle('NotebookPage.get_saved');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_saved">get_saved</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.get_saved-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.get_saved-expanded"><a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-docstring">                Get the saved status for the flow graph.</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-docstring">                @return true if saved</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">saved</tt> </tt>
+</div><a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.set_saved"></a><div id="NotebookPage.set_saved-def"><a name="L175"></a><tt class="py-lineno">175</tt> <a class="py-toggle" href="#" id="NotebookPage.set_saved-toggle" onclick="return toggle('NotebookPage.set_saved');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#set_saved">set_saved</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">saved</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.set_saved-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.set_saved-expanded"><a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"><tt class="py-docstring">                Set the saved status.</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"><tt class="py-docstring">                @param saved boolean status</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">saved</tt> <tt class="py-op">=</tt> <tt class="py-name">saved</tt> </tt>
+</div><a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"> </tt>
+<a name="NotebookPage.get_state_cache"></a><div id="NotebookPage.get_state_cache-def"><a name="L182"></a><tt class="py-lineno">182</tt> <a class="py-toggle" href="#" id="NotebookPage.get_state_cache-toggle" onclick="return toggle('NotebookPage.get_state_cache');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#get_state_cache">get_state_cache</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NotebookPage.get_state_cache-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="NotebookPage.get_state_cache-expanded"><a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"><tt class="py-docstring">                Get the state cache for the flow graph.</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line"><tt class="py-docstring">                @return the state cache</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">state_cache</tt> </tt>
+</div></div><a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 15:58:32 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnc.base.Element</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnc-module.html">Package&nbsp;gwnc</a> ::
+        <a href="gwn.gwnc.base-module.html">Package&nbsp;base</a> ::
+        Module&nbsp;Element
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnc.base.Element-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="gwn.gwnc.base.Element-module.html">Module gwn.gwnc.base.Element</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">Copyright 2008, 2009 Free Software Foundation, Inc.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">This file is part of GNU Radio</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is free software; you can redistribute it and/or</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">modify it under the terms of the GNU General Public License</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">as published by the Free Software Foundation; either version 2</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-docstring">of the License, or (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring">GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">along with this program; if not, write to the Free Software</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="Element"></a><div id="Element-def"><a name="L20"></a><tt class="py-lineno">20</tt> <a class="py-toggle" href="#" id="Element-toggle" onclick="return toggle('Element');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html">Element</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Element-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Element-expanded"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="Element.__init__"></a><div id="Element.__init__-def"><a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="Element.__init__-toggle" onclick="return toggle('Element.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Element.__init__-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Element.__init__-expanded"><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_parent</tt> <tt class="py-op">=</tt> <tt class="py-name">parent</tt> </tt>
+</div><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-comment">##################################################</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-comment"># Element Validation API</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt class="py-comment">##################################################</tt> </tt>
+<a name="Element.validate"></a><div id="Element.validate-def"><a name="L28"></a><tt class="py-lineno">28</tt> <a class="py-toggle" href="#" id="Element.validate-toggle" onclick="return toggle('Element.validate');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#validate">validate</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Element.validate-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Element.validate-expanded"><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-docstring">                Validate this element and call validate on all children.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-docstring">                Call this base method before adding error messages in the subclass.</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_error_messages</tt> <tt class="py-op">=</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">child</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Method gwn.gwnc.base.Block.Block.get_children()=gwn.gwnc.base.Block.Block-class.html#get_children,Method gwn.gwnc.base.Element.Element.get_children()=gwn.gwnc.base.Element.Element-class.html#get_children,Method gwn.gwnc.base.FlowGraph.FlowGraph.get_children()=gwn.gwnc.base.FlowGraph.FlowGraph-class.html#get_children"><a title="gwn.gwnc.base.Block.Block.get_children
+gwn.gwnc.base.Element.Element.get_children
+gwn.gwnc.base.FlowGraph.FlowGraph.get_children" class="py-name" href="#" onclick="return doclink('link-0', 'get_children', 'link-0');">get_children</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-name">child</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method gwn.gwnc.base.Connection.Connection.validate()=gwn.gwnc.base.Connection.Connection-class.html#validate,Method gwn.gwnc.base.Element.Element.validate()=gwn.gwnc.base.Element.Element-class.html#validate,Method gwn.gwnc.base.Param.Param.validate()=gwn.gwnc.base.Param.Param-class.html#validate,Method gwn.gwnc.base.Port.Port.validate()=gwn.gwnc.base.Port.Port-class.html#validate,Method gwn.gwnc.python.Block.Block.validate()=gwn.gwnc.python.Block.Block-class.html#validate,Method gwn.gwnc.python.Connection.Connection.validate()=gwn.gwnc.python.Connection.Connection-class.html#validate,Method gwn.gwnc.python.Param.Param.validate()=gwn.gwnc.python.Param.Param-class.html#validate,Method gwn.gwnc.python.Port.Port.validate()=gwn.gwnc.python.Port.Port-class.html#validate"><a title="gwn.gwnc.base.Connection.Connection.validate
+gwn.gwnc.base.Element.Element.validate
+gwn.gwnc.base.Param.Param.validate
+gwn.gwnc.base.Port.Port.validate
+gwn.gwnc.python.Block.Block.validate
+gwn.gwnc.python.Connection.Connection.validate
+gwn.gwnc.python.Param.Param.validate
+gwn.gwnc.python.Port.Port.validate" class="py-name" href="#" onclick="return doclink('link-1', 'validate', 'link-1');">validate</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="Element.is_valid"></a><div id="Element.is_valid-def"><a name="L36"></a><tt class="py-lineno">36</tt> <a class="py-toggle" href="#" id="Element.is_valid-toggle" onclick="return toggle('Element.is_valid');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_valid">is_valid</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Element.is_valid-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Element.is_valid-expanded"><a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"><tt class="py-docstring">                Is this element valid?</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"><tt class="py-docstring">                @return true when the element is enabled and has no error messages</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Method gwn.gwnc.base.Element.Element.get_error_messages()=gwn.gwnc.base.Element.Element-class.html#get_error_messages"><a title="gwn.gwnc.base.Element.Element.get_error_messages" class="py-name" href="#" onclick="return doclink('link-2', 'get_error_messages', 'link-2');">get_error_messages</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">or</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method gwn.gwnc.base.Block.Block.get_enabled()=gwn.gwnc.base.Block.Block-class.html#get_enabled,Method gwn.gwnc.base.Connection.Connection.get_enabled()=gwn.gwnc.base.Connection.Connection-class.html#get_enabled,Method gwn.gwnc.base.Element.Element.get_enabled()=gwn.gwnc.base.Element.Element-class.html#get_enabled"><a title="gwn.gwnc.base.Block.Block.get_enabled
+gwn.gwnc.base.Connection.Connection.get_enabled
+gwn.gwnc.base.Element.Element.get_enabled" class="py-name" href="#" onclick="return doclink('link-3', 'get_enabled', 'link-3');">get_enabled</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"> </tt>
+<a name="Element.add_error_message"></a><div id="Element.add_error_message-def"><a name="L43"></a><tt class="py-lineno">43</tt> <a class="py-toggle" href="#" id="Element.add_error_message-toggle" onclick="return toggle('Element.add_error_message');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#add_error_message">add_error_message</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">msg</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Element.add_error_message-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Element.add_error_message-expanded"><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-docstring">                Add an error message to the list of errors.</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-docstring">                @param msg the error message string</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_error_messages</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">msg</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="Element.get_error_messages"></a><div id="Element.get_error_messages-def"><a name="L50"></a><tt class="py-lineno">50</tt> <a class="py-toggle" href="#" id="Element.get_error_messages-toggle" onclick="return toggle('Element.get_error_messages');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#get_error_messages">get_error_messages</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Element.get_error_messages-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Element.get_error_messages-expanded"><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"><tt class="py-docstring">                Get the list of error messages from this element and all of its children.</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-docstring">                Do not include the error messages from disabled children.</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt class="py-docstring">                Cleverly indent the children error messages for printing purposes.</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"><tt class="py-docstring">                @return a list of error message strings</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">                <tt class="py-name">error_messages</tt> <tt class="py-op">=</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_error_messages</tt><tt class="py-op">)</tt> <tt class="py-comment">#make a copy</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">child</tt> <tt class="py-keyword">in</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">c</tt><tt class="py-op">:</tt> <tt class="py-name">c</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_enabled
+gwn.gwnc.base.Connection.Connection.get_enabled
+gwn.gwnc.base.Element.Element.get_enabled" class="py-name" href="#" onclick="return doclink('link-4', 'get_enabled', 'link-3');">get_enabled</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_children
+gwn.gwnc.base.Element.Element.get_children
+gwn.gwnc.base.FlowGraph.FlowGraph.get_children" class="py-name" href="#" onclick="return doclink('link-5', 'get_children', 'link-0');">get_children</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">msg</tt> <tt class="py-keyword">in</tt> <tt class="py-name">child</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="gwn.gwnc.base.Element.Element.get_error_messages" class="py-name" href="#" onclick="return doclink('link-6', 'get_error_messages', 'link-2');">get_error_messages</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">                                <tt class="py-name">error_messages</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-string">"%s:\n\t%s"</tt><tt class="py-op">%</tt><tt class="py-op">(</tt><tt class="py-name">child</tt><tt class="py-op">,</tt> <tt class="py-name">msg</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt><tt class="py-op">,</tt> <tt class="py-string">"\n\t"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">error_messages</tt> </tt>
+</div><a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"> </tt>
+<a name="Element.rewrite"></a><div id="Element.rewrite-def"><a name="L63"></a><tt class="py-lineno">63</tt> <a class="py-toggle" href="#" id="Element.rewrite-toggle" onclick="return toggle('Element.rewrite');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#rewrite">rewrite</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Element.rewrite-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Element.rewrite-expanded"><a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"><tt class="py-docstring">                Rewrite this element and call rewrite on all children.</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line"><tt class="py-docstring">                Call this base method before rewriting the element.</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">child</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_children
+gwn.gwnc.base.Element.Element.get_children
+gwn.gwnc.base.FlowGraph.FlowGraph.get_children" class="py-name" href="#" onclick="return doclink('link-7', 'get_children', 'link-0');">get_children</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-name">child</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method gwn.gwnc.base.Element.Element.rewrite()=gwn.gwnc.base.Element.Element-class.html#rewrite,Method gwn.gwnc.python.Block.Block.rewrite()=gwn.gwnc.python.Block.Block-class.html#rewrite,Method gwn.gwnc.python.FlowGraph.FlowGraph.rewrite()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#rewrite,Method gwn.gwnc.python.Port.Port.rewrite()=gwn.gwnc.python.Port.Port-class.html#rewrite"><a title="gwn.gwnc.base.Element.Element.rewrite
+gwn.gwnc.python.Block.Block.rewrite
+gwn.gwnc.python.FlowGraph.FlowGraph.rewrite
+gwn.gwnc.python.Port.Port.rewrite" class="py-name" href="#" onclick="return doclink('link-8', 'rewrite', 'link-8');">rewrite</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line"> </tt>
+<a name="Element.get_enabled"></a><div id="Element.get_enabled-def"><a name="L70"></a><tt class="py-lineno">70</tt> <a class="py-toggle" href="#" id="Element.get_enabled-toggle" onclick="return toggle('Element.get_enabled');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#get_enabled">get_enabled</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">        <tt class="py-comment">##############################################</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">        <tt class="py-comment">## Tree-like API</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">        <tt class="py-comment">##############################################</tt> </tt>
+<a name="Element.get_parent"></a><div id="Element.get_parent-def"><a name="L75"></a><tt class="py-lineno">75</tt> <a class="py-toggle" href="#" id="Element.get_parent-toggle" onclick="return toggle('Element.get_parent');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#get_parent">get_parent</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_parent</tt> </tt>
+</div><a name="Element.get_children"></a><div id="Element.get_children-def"><a name="L76"></a><tt class="py-lineno">76</tt> <a class="py-toggle" href="#" id="Element.get_children-toggle" onclick="return toggle('Element.get_children');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#get_children">get_children</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line"> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">        <tt class="py-comment">##############################################</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt class="py-comment">## Type testing methods</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">        <tt class="py-comment">##############################################</tt> </tt>
+<a name="Element.is_element"></a><div id="Element.is_element-def"><a name="L81"></a><tt class="py-lineno">81</tt> <a class="py-toggle" href="#" id="Element.is_element-toggle" onclick="return toggle('Element.is_element');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_element">is_element</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="Element.is_platform"></a><div id="Element.is_platform-def"><a name="L82"></a><tt class="py-lineno">82</tt> <a class="py-toggle" href="#" id="Element.is_platform-toggle" onclick="return toggle('Element.is_platform');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_platform">is_platform</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="Element.is_flow_graph"></a><div id="Element.is_flow_graph-def"><a name="L83"></a><tt class="py-lineno">83</tt> <a class="py-toggle" href="#" id="Element.is_flow_graph-toggle" onclick="return toggle('Element.is_flow_graph');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_flow_graph">is_flow_graph</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="Element.is_connection"></a><div id="Element.is_connection-def"><a name="L84"></a><tt class="py-lineno">84</tt> <a class="py-toggle" href="#" id="Element.is_connection-toggle" onclick="return toggle('Element.is_connection');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_connection">is_connection</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="Element.is_block"></a><div id="Element.is_block-def"><a name="L85"></a><tt class="py-lineno">85</tt> <a class="py-toggle" href="#" id="Element.is_block-toggle" onclick="return toggle('Element.is_block');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_block">is_block</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="Element.is_source"></a><div id="Element.is_source-def"><a name="L86"></a><tt class="py-lineno">86</tt> <a class="py-toggle" href="#" id="Element.is_source-toggle" onclick="return toggle('Element.is_source');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_source">is_source</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="Element.is_sink"></a><div id="Element.is_sink-def"><a name="L87"></a><tt class="py-lineno">87</tt> <a class="py-toggle" href="#" id="Element.is_sink-toggle" onclick="return toggle('Element.is_sink');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_sink">is_sink</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="Element.is_port"></a><div id="Element.is_port-def"><a name="L88"></a><tt class="py-lineno">88</tt> <a class="py-toggle" href="#" id="Element.is_port-toggle" onclick="return toggle('Element.is_port');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_port">is_port</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="Element.is_param"></a><div id="Element.is_param-def"><a name="L89"></a><tt class="py-lineno">89</tt> <a class="py-toggle" href="#" id="Element.is_param-toggle" onclick="return toggle('Element.is_param');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.base.Element.Element-class.html#is_param">is_param</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div></div><a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 15:58:31 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

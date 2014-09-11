@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## Tun/Tap Interface block block
+###################################################
+ -->
+<block>
+	<name>Tun/Tap Interface</name>
+	<key>tun_tap</key>
+     <category>Interfaces</category>
+	<import>import blocks.libio.tuntap.tuntap as tun_tap</import>
+	<make>tun_tap.TunTapInterface($device, $myaddr, $dstaddr)</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+
+	<param>
+		<name>Device Name</name>
+		<key>device</key>
+        <value>"/dev/net/tun"</value>
+		<type>string</type>
+	</param>
+
+	<param>
+		<name>My MAC Address</name>
+		<key>myaddr</key>
+		<type>string</type>
+	</param>
+
+	<param>
+		<name>Destination Address</name>
+		<key>dstaddr</key>
+		<type>string</type>
+	</param>
+
+	<sink>
+		<name>To L3</name>
+		<type>Data</type>            
+	</sink>
+
+   	<source>
+		<name>From L3 </name>
+		<type>Data</type>
+  	</source>
+
+    <doc>
+        A layer 3 to layer 2 Interface.
+        
+        Gets a payload from a Layer 3 operating system, generates the corresponding event, and puts it into the Layer 2 port.
+        Gets an event from a Layer 2 input port, extracts the payload, and puts it into the Layer 2 event port.
+        Uses the TUN/TAP Interface.
+        Uses the Universal TUN/TAP device driver to move packets to/from kernel.
+        See /usr/src/linux/Documentation/networking/tuntap.txt.
+    </doc>
+</block>

@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnc.gui.Actions</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnc-module.html">Package&nbsp;gwnc</a> ::
+        <a href="gwn.gwnc.gui-module.html">Package&nbsp;gui</a> ::
+        Module&nbsp;Actions
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnc.gui.Actions-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module Actions</h1><p class="nomargin-top"><span class="codelink"><a href="gwn.gwnc.gui.Actions-pysrc.html">source&nbsp;code</a></span></p>
+<p>Copyright 2007-2011 Free Software Foundation, Inc. This file is part 
+  of GNU Radio</p>
+  <p>GNU Radio Companion is free software; you can redistribute it and/or 
+  modify it under the terms of the GNU General Public License as published 
+  by the Free Software Foundation; either version 2 of the License, or (at 
+  your option) any later version.</p>
+  <p>GNU Radio Companion is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of 
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+  Public License for more details.</p>
+  <p>You should have received a copy of the GNU General Public License 
+  along with this program; if not, write to the Free Software Foundation, 
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</p>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="gwn.gwnc.gui.Actions.Action-class.html" class="summary-name">Action</a><br />
+      A custom Action class based on gtk.Action.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.Actions-module.html#handle_key_press" class="summary-sig-name">handle_key_press</a>(<span class="summary-sig-arg">event</span>)</span><br />
+      Call the action associated with the key press event.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Actions-pysrc.html#handle_key_press">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_all_actions"></a><span class="summary-sig-name">get_all_actions</span>()</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Actions-pysrc.html#get_all_actions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_accel_group"></a><span class="summary-sig-name">get_accel_group</span>()</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.Actions-pysrc.html#get_accel_group">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="NO_MODS_MASK"></a><span class="summary-name">NO_MODS_MASK</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="gwn.gwnc.gui.Actions-module.html#_actions_keypress_dict" class="summary-name" onclick="show_private();">_actions_keypress_dict</a> = <code title="{(43, 0): PORT_CONTROLLER_INC,
+ (45, 0): PORT_CONTROLLER_DEC,
+ (99, 0): BLOCK_CREATE_HIER,
+ (99, &lt;flags GDK_CONTROL_MASK of type GdkModifierType&gt;): BLOCK_COPY,
+ (100, 0): BLOCK_DISABLE,
+ (101, 0): BLOCK_ENABLE,
+ (110, &lt;flags GDK_CONTROL_MASK of type GdkModifierType&gt;): FLOW_GRAPH_N\
+EW,
+..."><code class="variable-group">{</code><code class="variable-group">(</code>43<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-op">: </code>PORT_CONTROLLER_INC<code class="variable-op">, </code><code class="variable-group">(</code>45<code class="variable-op">, </code>0<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="gwn.gwnc.gui.Actions-module.html#_keymap" class="summary-name" onclick="show_private();">_keymap</a> = <code title="&lt;gtk.gdk.KeymapX11 object at 0xb530abbc (GdkKeymapX11 at 0x9b8c0b8)&gt;">&lt;gtk.gdk.KeymapX11 object at 0xb530abbc (GdkKeymapX1<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_used_mods_mask"></a><span class="summary-name">_used_mods_mask</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="gwn.gwnc.gui.Actions-module.html#_all_actions_list" class="summary-name" onclick="show_private();">_all_actions_list</a> = <code title="[PAGE_CHANGE,
+ FLOW_GRAPH_NEW,
+ FLOW_GRAPH_OPEN,
+ FLOW_GRAPH_SAVE,
+ FLOW_GRAPH_SAVE_AS,
+ FLOW_GRAPH_CLOSE,
+ APPLICATION_INITIALIZE,
+ APPLICATION_QUIT,
+..."><code class="variable-group">[</code>PAGE_CHANGE<code class="variable-op">, </code>FLOW_GRAPH_NEW<code class="variable-op">, </code>FLOW_GRAPH_O<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="gwn.gwnc.gui.Actions-module.html#_accel_group" class="summary-name" onclick="show_private();">_accel_group</a> = <code title="&lt;gtk.AccelGroup object at 0xb530abe4 (GtkAccelGroup at 0x9b18700)&gt;">&lt;gtk.AccelGroup object at 0xb530abe4 (GtkAccelG<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PAGE_CHANGE"></a><span class="summary-name">PAGE_CHANGE</span> = <code title="PAGE_CHANGE">PAGE_CHANGE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_NEW"></a><span class="summary-name">FLOW_GRAPH_NEW</span> = <code title="FLOW_GRAPH_NEW">FLOW_GRAPH_NEW</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_OPEN"></a><span class="summary-name">FLOW_GRAPH_OPEN</span> = <code title="FLOW_GRAPH_OPEN">FLOW_GRAPH_OPEN</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_SAVE"></a><span class="summary-name">FLOW_GRAPH_SAVE</span> = <code title="FLOW_GRAPH_SAVE">FLOW_GRAPH_SAVE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_SAVE_AS"></a><span class="summary-name">FLOW_GRAPH_SAVE_AS</span> = <code title="FLOW_GRAPH_SAVE_AS">FLOW_GRAPH_SAVE_AS</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_CLOSE"></a><span class="summary-name">FLOW_GRAPH_CLOSE</span> = <code title="FLOW_GRAPH_CLOSE">FLOW_GRAPH_CLOSE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="APPLICATION_INITIALIZE"></a><span class="summary-name">APPLICATION_INITIALIZE</span> = <code title="APPLICATION_INITIALIZE">APPLICATION_INITIALIZE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="APPLICATION_QUIT"></a><span class="summary-name">APPLICATION_QUIT</span> = <code title="APPLICATION_QUIT">APPLICATION_QUIT</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_UNDO"></a><span class="summary-name">FLOW_GRAPH_UNDO</span> = <code title="FLOW_GRAPH_UNDO">FLOW_GRAPH_UNDO</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_REDO"></a><span class="summary-name">FLOW_GRAPH_REDO</span> = <code title="FLOW_GRAPH_REDO">FLOW_GRAPH_REDO</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="NOTHING_SELECT"></a><span class="summary-name">NOTHING_SELECT</span> = <code title="NOTHING_SELECT">NOTHING_SELECT</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ELEMENT_SELECT"></a><span class="summary-name">ELEMENT_SELECT</span> = <code title="ELEMENT_SELECT">ELEMENT_SELECT</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ELEMENT_CREATE"></a><span class="summary-name">ELEMENT_CREATE</span> = <code title="ELEMENT_CREATE">ELEMENT_CREATE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ELEMENT_DELETE"></a><span class="summary-name">ELEMENT_DELETE</span> = <code title="ELEMENT_DELETE">ELEMENT_DELETE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_MOVE"></a><span class="summary-name">BLOCK_MOVE</span> = <code title="BLOCK_MOVE">BLOCK_MOVE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_ROTATE_CCW"></a><span class="summary-name">BLOCK_ROTATE_CCW</span> = <code title="BLOCK_ROTATE_CCW">BLOCK_ROTATE_CCW</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_ROTATE_CW"></a><span class="summary-name">BLOCK_ROTATE_CW</span> = <code title="BLOCK_ROTATE_CW">BLOCK_ROTATE_CW</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_PARAM_MODIFY"></a><span class="summary-name">BLOCK_PARAM_MODIFY</span> = <code title="BLOCK_PARAM_MODIFY">BLOCK_PARAM_MODIFY</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_ENABLE"></a><span class="summary-name">BLOCK_ENABLE</span> = <code title="BLOCK_ENABLE">BLOCK_ENABLE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_DISABLE"></a><span class="summary-name">BLOCK_DISABLE</span> = <code title="BLOCK_DISABLE">BLOCK_DISABLE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_CREATE_HIER"></a><span class="summary-name">BLOCK_CREATE_HIER</span> = <code title="BLOCK_CREATE_HIER">BLOCK_CREATE_HIER</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_CUT"></a><span class="summary-name">BLOCK_CUT</span> = <code title="BLOCK_CUT">BLOCK_CUT</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_COPY"></a><span class="summary-name">BLOCK_COPY</span> = <code title="BLOCK_COPY">BLOCK_COPY</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_PASTE"></a><span class="summary-name">BLOCK_PASTE</span> = <code title="BLOCK_PASTE">BLOCK_PASTE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ERRORS_WINDOW_DISPLAY"></a><span class="summary-name">ERRORS_WINDOW_DISPLAY</span> = <code title="ERRORS_WINDOW_DISPLAY">ERRORS_WINDOW_DISPLAY</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ABOUT_WINDOW_DISPLAY"></a><span class="summary-name">ABOUT_WINDOW_DISPLAY</span> = <code title="ABOUT_WINDOW_DISPLAY">ABOUT_WINDOW_DISPLAY</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="HELP_WINDOW_DISPLAY"></a><span class="summary-name">HELP_WINDOW_DISPLAY</span> = <code title="HELP_WINDOW_DISPLAY">HELP_WINDOW_DISPLAY</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="TYPES_WINDOW_DISPLAY"></a><span class="summary-name">TYPES_WINDOW_DISPLAY</span> = <code title="TYPES_WINDOW_DISPLAY">TYPES_WINDOW_DISPLAY</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_GEN"></a><span class="summary-name">FLOW_GRAPH_GEN</span> = <code title="FLOW_GRAPH_GEN">FLOW_GRAPH_GEN</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_EXEC"></a><span class="summary-name">FLOW_GRAPH_EXEC</span> = <code title="FLOW_GRAPH_EXEC">FLOW_GRAPH_EXEC</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_KILL"></a><span class="summary-name">FLOW_GRAPH_KILL</span> = <code title="FLOW_GRAPH_KILL">FLOW_GRAPH_KILL</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="FLOW_GRAPH_SCREEN_CAPTURE"></a><span class="summary-name">FLOW_GRAPH_SCREEN_CAPTURE</span> = <code title="FLOW_GRAPH_SCREEN_CAPTURE">FLOW_GRAPH_SCREEN_CAPTURE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PORT_CONTROLLER_DEC"></a><span class="summary-name">PORT_CONTROLLER_DEC</span> = <code title="PORT_CONTROLLER_DEC">PORT_CONTROLLER_DEC</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PORT_CONTROLLER_INC"></a><span class="summary-name">PORT_CONTROLLER_INC</span> = <code title="PORT_CONTROLLER_INC">PORT_CONTROLLER_INC</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_INC_TYPE"></a><span class="summary-name">BLOCK_INC_TYPE</span> = <code title="BLOCK_INC_TYPE">BLOCK_INC_TYPE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BLOCK_DEC_TYPE"></a><span class="summary-name">BLOCK_DEC_TYPE</span> = <code title="BLOCK_DEC_TYPE">BLOCK_DEC_TYPE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="RELOAD_BLOCKS"></a><span class="summary-name">RELOAD_BLOCKS</span> = <code title="RELOAD_BLOCKS">RELOAD_BLOCKS</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OPEN_HIER"></a><span class="summary-name">OPEN_HIER</span> = <code title="OPEN_HIER">OPEN_HIER</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'gwn.gwnc.gui'"><code class="variable-quote">'</code><code class="variable-string">gwn.gwnc.gui</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="handle_key_press"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">handle_key_press</span>(<span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.Actions-pysrc.html#handle_key_press">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Call the action associated with the key press event. Both the key 
+  value and the mask must have a match. @param event a gtk key press event 
+  @return true if handled</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_actions_keypress_dict"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_actions_keypress_dict</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">{</code><code class="variable-group">(</code>43<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-op">: </code>PORT_CONTROLLER_INC<code class="variable-op">,</code>
+ <code class="variable-group">(</code>45<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-op">: </code>PORT_CONTROLLER_DEC<code class="variable-op">,</code>
+ <code class="variable-group">(</code>99<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-op">: </code>BLOCK_CREATE_HIER<code class="variable-op">,</code>
+ <code class="variable-group">(</code>99<code class="variable-op">, </code>&lt;flags GDK_CONTROL_MASK of type GdkModifierType&gt;<code class="variable-group">)</code><code class="variable-op">: </code>BLOCK_COPY<code class="variable-op">,</code>
+ <code class="variable-group">(</code>100<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-op">: </code>BLOCK_DISABLE<code class="variable-op">,</code>
+ <code class="variable-group">(</code>101<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-op">: </code>BLOCK_ENABLE<code class="variable-op">,</code>
+ <code class="variable-group">(</code>110<code class="variable-op">, </code>&lt;flags GDK_CONTROL_MASK of type GdkModifierType&gt;<code class="variable-group">)</code><code class="variable-op">: </code>FLOW_GRAPH_N<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+EW<code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_keymap"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_keymap</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;gtk.gdk.KeymapX11 object at 0xb530abbc (GdkKeymapX11 at 0x9b8c0b8)&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_all_actions_list"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_all_actions_list</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">[</code>PAGE_CHANGE<code class="variable-op">,</code>
+ FLOW_GRAPH_NEW<code class="variable-op">,</code>
+ FLOW_GRAPH_OPEN<code class="variable-op">,</code>
+ FLOW_GRAPH_SAVE<code class="variable-op">,</code>
+ FLOW_GRAPH_SAVE_AS<code class="variable-op">,</code>
+ FLOW_GRAPH_CLOSE<code class="variable-op">,</code>
+ APPLICATION_INITIALIZE<code class="variable-op">,</code>
+ APPLICATION_QUIT<code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_accel_group"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_accel_group</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;gtk.AccelGroup object at 0xb530abe4 (GtkAccelGroup at 0x9b18700)&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 15:58:23 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

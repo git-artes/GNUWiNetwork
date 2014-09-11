@@ -1,0 +1,60 @@
+GWN events.txt: doctest file
+
+>>> import api_events as events
+
+
+
+=====         ===== 
+===== mkevent =====
+=====         ===== 
+
+--- a CTS event ---
+>>> ev_ob_frm = events.mkevent('CtrlCTS')
+>>> print ev_ob_frm
+Event class name: EventFrame
+  Nickname: 'CtrlCTS'; Type: 'Ctrl'; SubType: 'CTS'
+  retry: 0
+  src_addr: addr_1
+  peerlinkId: 0
+  duration: 10
+  frame_length: 0
+  dst_addr: addr_1
+  Frame packet: ''
+  Payload: ''
+
+--- an ActionOpen event ---
+>>> ev_mg = events.mkevent('ActionOpen', ev_dc={'src_addr':'aaaa', 'dst_addr':'bbbb', 'peerlinkId':11})
+>>> print ev_mg
+Event class name: EventFrameMgmt
+  Nickname: 'ActionOpen'; Type: 'Mgmt'; SubType: 'Action'
+  retry: 0
+  src_addr: aaaa
+  peerlinkId: 11
+  duration: 10
+  frame_length: 0
+  dst_addr: bbbb
+  Frame packet: ''
+  Payload: ''
+
+--- a TimerTOH event
+>>> ev_ob_tmr = events.mkevent('TimerTOH')
+>>> print ev_ob_tmr
+Event class name: EventTimer
+  Nickname: 'TimerTOH'; Type: 'Timer'; SubType: 'TOH'
+  add_info: None
+  frame_length: 0
+>>> ev_ob_tmr = events.mkevent('TimerTOH', ev_dc={'add_info':'additional info, testing'})
+>>> print ev_ob_tmr
+Event class name: EventTimer
+  Nickname: 'TimerTOH'; Type: 'Timer'; SubType: 'TOH'
+  add_info: additional info, testing
+  frame_length: 0
+
+--- events test for equality
+>>> ac1 = events.mkevent('ActionConfirm')
+>>> ac2 = events.mkevent('ActionConfirm')
+>>> ac3 = events.mkevent('ActionConfirm', ev_dc={'peerlinkId':55})
+>>> be1 = events.mkevent('MgmtBeacon')
+>>> ac1 == ac2, ac2 == ac3, be1 == ac3
+(True, False, False)
+

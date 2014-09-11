@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnc.gui.FlowGraph.FlowGraph</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnc-module.html">Package&nbsp;gwnc</a> ::
+        <a href="gwn.gwnc.gui-module.html">Package&nbsp;gui</a> ::
+        <a href="gwn.gwnc.gui.FlowGraph-module.html">Module&nbsp;FlowGraph</a> ::
+        Class&nbsp;FlowGraph
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class FlowGraph</h1><p class="nomargin-top"><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+     object --+    
+              |    
+<a href="gwn.gwnc.gui.Element.Element-class.html">Element.Element</a> --+
+                  |
+                 <strong class="uidshort">FlowGraph</strong>
+</pre>
+
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html">python.FlowGraph.FlowGraph</a></li>  </ul>
+</dd></dl>
+
+<hr />
+<p>FlowGraph is the data structure to store graphical signal blocks, 
+  graphical inputs and outputs, and the connections between inputs and 
+  outputs.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      FlowGraph contructor.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#add_new_block" class="summary-sig-name">add_new_block</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">coor</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Add a block of the given key to this flow graph.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.add_new_block">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#copy_to_clipboard" class="summary-sig-name">copy_to_clipboard</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Copy the selected blocks and connections into the clipboard.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.copy_to_clipboard">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#draw" class="summary-sig-name">draw</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gc</span>,
+        <span class="summary-sig-arg">window</span>)</span><br />
+      Draw the background and grid if enabled.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.draw">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#enable_selected" class="summary-sig-name">enable_selected</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">enable</span>)</span><br />
+      Enable/disable the selected blocks.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.enable_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_ctrl_mask"></a><span class="summary-sig-name">get_ctrl_mask</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_ctrl_mask">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_drawing_area"></a><span class="summary-sig-name">get_drawing_area</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_drawing_area">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_scroll_pane"></a><span class="summary-sig-name">get_scroll_pane</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_scroll_pane">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#get_selected_block" class="summary-sig-name">get_selected_block</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the selected block when a block or port is selected.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_block">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#get_selected_blocks" class="summary-sig-name">get_selected_blocks</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get a group of selected blocks.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_blocks">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#get_selected_connections" class="summary-sig-name">get_selected_connections</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get a group of selected connections.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_connections">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#get_selected_element" class="summary-sig-name">get_selected_element</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the selected element.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_element">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#get_selected_elements" class="summary-sig-name">get_selected_elements</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the group of selected elements.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_elements">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_size"></a><span class="summary-sig-name">get_size</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_size">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#handle_mouse_context_press" class="summary-sig-name">handle_mouse_context_press</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">coordinate</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      The context mouse button was pressed: If no elements were selected, 
+      perform re-selection at this coordinate.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.handle_mouse_context_press">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#handle_mouse_motion" class="summary-sig-name">handle_mouse_motion</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">coordinate</span>)</span><br />
+      The mouse has moved, respond to mouse dragging.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.handle_mouse_motion">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#handle_mouse_selector_press" class="summary-sig-name">handle_mouse_selector_press</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">double_click</span>,
+        <span class="summary-sig-arg">coordinate</span>)</span><br />
+      The selector mouse button was pressed: Find the selected element.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.handle_mouse_selector_press">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#handle_mouse_selector_release" class="summary-sig-name">handle_mouse_selector_release</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">coordinate</span>)</span><br />
+      The selector mouse button was released: Update the state, handle 
+      motion (dragging).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.handle_mouse_selector_release">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#move_selected" class="summary-sig-name">move_selected</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">delta_coordinate</span>)</span><br />
+      Move the element and by the change in coordinates.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.move_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="new_pixmap"></a><span class="summary-sig-name">new_pixmap</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.new_pixmap">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#paste_from_clipboard" class="summary-sig-name">paste_from_clipboard</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">clipboard</span>)</span><br />
+      Paste the blocks and connections from the clipboard.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.paste_from_clipboard">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#port_controller_modify_selected" class="summary-sig-name">port_controller_modify_selected</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">direction</span>)</span><br />
+      Change port controller for the selected signal blocks.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.port_controller_modify_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="queue_draw"></a><span class="summary-sig-name">queue_draw</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.queue_draw">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="remove_selected"></a><span class="summary-sig-name">remove_selected</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Remove selected elements @return true if changed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.remove_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#rotate_selected" class="summary-sig-name">rotate_selected</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rotation</span>)</span><br />
+      Rotate the selected blocks by multiples of 90 degrees.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.rotate_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_size"></a><span class="summary-sig-name">set_size</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.set_size">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#type_controller_modify_selected" class="summary-sig-name">type_controller_modify_selected</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">direction</span>)</span><br />
+      Change the registered type controller for the selected signal blocks.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.type_controller_modify_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="unselect"></a><span class="summary-sig-name">unselect</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set selected elements to an empty set.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.unselect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#update" class="summary-sig-name">update</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Call the top level rewrite and validate.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.update">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#update_selected" class="summary-sig-name">update_selected</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Remove deleted elements from the selected elements list.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.update_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#update_selected_elements" class="summary-sig-name">update_selected_elements</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Update the selected elements.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.update_selected_elements">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#what_is_selected" class="summary-sig-name">what_is_selected</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">coor</span>,
+        <span class="summary-sig-arg">coor_m</span>=<span class="summary-sig-default">None</span>)</span><br />
+      What is selected? At the given coordinate, return the elements found 
+      to be selected.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.what_is_selected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="gwn.gwnc.gui.Element.Element-class.html">Element.Element</a></code></b>:
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#add_area">add_area</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#add_line">add_line</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#clear">clear</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#create_labels">create_labels</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#create_shapes">create_shapes</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#get_coordinate">get_coordinate</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#get_parent">get_parent</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#get_rotation">get_rotation</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#is_highlighted">is_highlighted</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#is_horizontal">is_horizontal</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#is_vertical">is_vertical</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#move">move</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#rotate">rotate</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#set_coordinate">set_coordinate</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#set_highlighted">set_highlighted</a></code>,
+      <code><a href="gwn.gwnc.gui.Element.Element-class.html#set_rotation">set_rotation</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>FlowGraph contructor. Create a list for signal blocks and connections.
+  Connect mouse handlers.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_new_block"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_new_block</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key</span>,
+        <span class="sig-arg">coor</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.add_new_block">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add a block of the given key to this flow graph. @param key the block 
+  key @param coor an optional coordinate or None for random</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="copy_to_clipboard"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">copy_to_clipboard</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.copy_to_clipboard">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Copy the selected blocks and connections into the clipboard. @return 
+  the clipboard</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="draw"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">draw</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gc</span>,
+        <span class="sig-arg">window</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.draw">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Draw the background and grid if enabled. Draw all of the elements in 
+  this flow graph onto the pixmap. Draw the pixmap to the drawable window 
+  of this flow graph.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="gwn.gwnc.gui.Element.Element-class.html#draw">Element.Element.draw</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="enable_selected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">enable_selected</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">enable</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.enable_selected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Enable/disable the selected blocks. @param enable true to enable 
+  @return true if changed</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_selected_block"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_selected_block</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_block">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the selected block when a block or port is selected. @return a 
+  block or None</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_selected_blocks"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_selected_blocks</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_blocks">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get a group of selected blocks. @return sub set of blocks in this flow
+  graph</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_selected_connections"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_selected_connections</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_connections">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get a group of selected connections. @return sub set of connections in
+  this flow graph</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_selected_element"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_selected_element</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_element">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the selected element. @return a block, port, or connection or 
+  None</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_selected_elements"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_selected_elements</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.get_selected_elements">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the group of selected elements. @return sub set of elements in 
+  this flow graph</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="handle_mouse_context_press"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">handle_mouse_context_press</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">coordinate</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.handle_mouse_context_press">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The context mouse button was pressed: If no elements were selected, 
+  perform re-selection at this coordinate. Then, show the context menu at 
+  the mouse click location.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="handle_mouse_motion"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">handle_mouse_motion</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">coordinate</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.handle_mouse_motion">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The mouse has moved, respond to mouse dragging. Move a selected 
+  element to the new coordinate. Auto-scroll the scroll bars at the 
+  boundaries.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="handle_mouse_selector_press"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">handle_mouse_selector_press</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">double_click</span>,
+        <span class="sig-arg">coordinate</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.handle_mouse_selector_press">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The selector mouse button was pressed: Find the selected element. 
+  Attempt a new connection if possible. Open the block params window on a 
+  double click. Update the selection state of the flow graph.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="handle_mouse_selector_release"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">handle_mouse_selector_release</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">coordinate</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.handle_mouse_selector_release">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The selector mouse button was released: Update the state, handle 
+  motion (dragging). And update the selected flowgraph elements.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="move_selected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">move_selected</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">delta_coordinate</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.move_selected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Move the element and by the change in coordinates. @param 
+  delta_coordinate the change in coordinates</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="paste_from_clipboard"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">paste_from_clipboard</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">clipboard</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.paste_from_clipboard">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Paste the blocks and connections from the clipboard. @param clipboard 
+  the nested data of blocks, connections</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="port_controller_modify_selected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">port_controller_modify_selected</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">direction</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.port_controller_modify_selected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Change port controller for the selected signal blocks. @param 
+  direction +1 or -1 @return true for changed</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="rotate_selected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rotate_selected</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rotation</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.rotate_selected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Rotate the selected blocks by multiples of 90 degrees. @param rotation
+  the rotation in degrees @return true if changed, otherwise false.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="type_controller_modify_selected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">type_controller_modify_selected</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">direction</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.type_controller_modify_selected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Change the registered type controller for the selected signal blocks. 
+  @param direction +1 or -1 @return true for change</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="update"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.update">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Call the top level rewrite and validate. Call the top level create 
+  labels and shapes.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="update_selected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_selected</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.update_selected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Remove deleted elements from the selected elements list. Update 
+  highlighting so only the selected are highlighted.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="update_selected_elements"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_selected_elements</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.update_selected_elements">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Update the selected elements. The update behavior depends on the state
+  of the mouse button. When the mouse button pressed the selection will 
+  change when the control mask is set or the new selection is not in the 
+  current group. When the mouse button is released the selection will 
+  change when the mouse has moved and the control mask is set or the 
+  current group is empty. Attempt to make a new connection if the old and 
+  ports are filled. If the control mask is set, merge with the current 
+  elements.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="what_is_selected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">what_is_selected</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">coor</span>,
+        <span class="sig-arg">coor_m</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="gwn.gwnc.gui.FlowGraph-pysrc.html#FlowGraph.what_is_selected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>What is selected? At the given coordinate, return the elements found 
+  to be selected. If coor_m is unspecified, return a list of only the first
+  element found to be selected: Iterate though the elements backwards since
+  top elements are at the end of the list. If an element is selected, place
+  it at the end of the list so that is is drawn last, and hence on top. 
+  Update the selected port information. @param coor the coordinate of the 
+  mouse click @param coor_m the coordinate for multi select @return the 
+  selected blocks and connections or an empty list</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="gwn.gwnc.gui.Element.Element-class.html#what_is_selected">Element.Element.what_is_selected</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 15:58:26 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

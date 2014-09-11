@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><title>StyleGuidePEP8summary</title></head><body>
+<h2>GNUWiNetwork Code Style Guide</h2>
+Reference: PEP 8, Style Guide for Python Code.<br><a href="http://legacy.python.org/dev/peps/pep-0008/">http://legacy.python.org/dev/peps/pep-0008/</a><br>
+<br>
+Table of contents<br>
+
+<ol id="mozToc"><!--mozToc h3 1 h4 2 h3 3--><li><a href="#mozTocId386288">Application</a></li><li><a href="#mozTocId113568">Code lay-out</a><ol><li><a href="#mozTocId899474">Indentation</a></li><li><a href="#mozTocId23832">Maximum line length</a></li><li><a href="#mozTocId280901">Blank lines</a></li><li><a href="#mozTocId174707">Source file encoding</a></li><li><a href="#mozTocId4192">Imports</a></li></ol></li><li><a href="#mozTocId353593">Whitespace in expressions and statements</a></li><li><a href="#mozTocId18195">Other recommendations</a></li><li><a href="#mozTocId876864">Comments</a></li><li><a href="#mozTocId651102">Naming Conventions</a></li><li><a href="#mozTocId7584">Epydoc documentation</a></li><li><a href="#mozTocId502538">Other points and notes</a></li></ol>
+<br>
+<h3><a class="mozTocH3" name="mozTocId386288"></a>Application</h3>Style guide is about consistency. In some cases, inconsistence is justfied, e.g. not to break backwards compatibility.<br>
+<h3><a class="mozTocH3" name="mozTocId113568"></a>Code lay-out</h3>
+<h4><a class="mozTocH4" name="mozTocId899474"></a>Indentation</h4>
+<ul>
+  <li>use 4 spaces; do not use tabs.</li>
+  <li>continuation lines should be indented; use 2 or 4 spaces.</li>
+  <li>closing brace/bracket/parenthesis in multi-line construct goes in its own line.</li>
+  <li>closing
+brace/bracket/parenthesis may align with first non-blank character in
+previous line or with first non-blank character in the line that starts
+the multi-line construct.<br>
+  </li>
+</ul>
+Indentation examples:<code><br>
+</code>
+<table style="text-align: left; width: 401px; height: 149px;" border="1" cellpadding="6" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <pre class="literal-block"><code>my_list = [<br>    1, 2, 3,<br>    4, 5, 6,<br>    ]</code></pre>
+      </td>
+      <td style="vertical-align: top;">
+      <pre class="literal-block"><code>result = some_function_that_takes_arguments(<br>    'a', 'b', 'c',<br>    'd', 'e', 'f',<br>    )</code></pre>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">
+      <pre class="literal-block"><code>my_list = [<br>    1, 2, 3,<br>    4, 5, 6,<br>]</code></pre>
+
+      </td>
+      <td style="vertical-align: top;">
+      <pre class="literal-block"><code>result = some_function_that_takes_arguments(<br>    'a', 'b', 'c',<br>    'd', 'e', 'f',<br></code>)</pre>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h4><a class="mozTocH4" name="mozTocId23832"></a>Maximum line length</h4>
+<ul>
+  <li>79 characters for code, 72 characters for comments and docstrings.</li>
+  <li>implicit continuation: expressions within
+brace/brackets/parenthesis may span over several lines; this is the
+preferred method for wrapping long lines, enclosing them within
+braces/brackets/parenthesis.</li>
+  <li>use continuation character "/" when implicit continuation is not possible, e.g. multiple <code>with</code> statements, <code>assert</code> statements.</li>
+  <li>binary operators: preferred place to break is <span style="font-style: italic;">after</span> binary operator.</li>
+</ul>
+<h4><a class="mozTocH4" name="mozTocId280901"></a>Blank lines</h4>
+<ul>
+  <li>separate top-level function and class statements with two blank lines.</li>
+  <li>separate method definitions inside a class with one blank line.</li>
+  <li>within functions, blank lines may be used (sparingly) to separate logical sections.</li>
+</ul>
+<h4><a class="mozTocH4" name="mozTocId174707"></a>Source file encoding</h4>
+<ul>
+  <li>use UTF-8.</li>
+  <li>using<code> <tt class="docutils literal">\x</tt>,
+    <tt class="docutils literal">\u</tt>, <tt class="docutils literal">\U</tt>, </code>or<code> <tt class="docutils literal">\N</tt> </code>escapes is the preferred way to include
+non-ASCII data in string literals.</li>
+</ul>
+<h4><a class="mozTocH4" name="mozTocId4192"></a>Imports</h4>
+<ul>
+  <li>place each <code>import</code> statement on a separate line.</li>
+  <li>this is correct, though:<br>
+    <code><span style="font-family: monospace;">&nbsp;&nbsp; </span>from subprocess import Popen, PIPE</code></li>
+  <li>do not use wildcard<code> "*"&nbsp;</code> imports.</li>
+  <li>absolute imports are recommended, e.g.<br>
+    <code>&nbsp;&nbsp; from mypkg.sibling import example</code></li>
+</ul>
+<h3><a class="mozTocH3" name="mozTocId353593"></a>Whitespace in expressions and statements</h3>
+<ul>
+  <li>Avoid extraneous whitespace:</li>
+</ul>
+<ul>
+  <ul>
+    <li>immediately inside parenthesis/brackets/braces.</li>
+  </ul>
+  <ul>
+    <li>immediately before comma (,), semicolon (;) or colon (:).</li>
+  </ul>
+  <ul>
+    <li>immediately before the open parenthesis that starts the argument list of a function, an indexing or slicing.</li></ul>
+  <li>Surround assignment operators with a single space:<code>&nbsp;&nbsp; a == b</code></li>
+  <li>Do not use spaces around<code> = </code>when used in keyword arguments or defaul value in parameters.</li></ul>This is correct:<code><br>
+&nbsp;&nbsp;&nbsp; def fn(par1, par2='alpha'):</code><br>
+
+
+  <code>&nbsp; &nbsp; &nbsp; &nbsp; self.fld1 = par1 * (2 - math.pi)</code>
+<h3><a class="mozTocH3" name="mozTocId18195"></a>Other recommendations</h3>
+<ul>
+  <li>avoid compound statements (more than one statement in a single line).</li>
+  <li>do not put an if/for/while body in the same line of if/for/while keyword, except perhaps if body is a single line.</li>
+  <li>do not put try/except bodies in same line as try or except keywords.</li>
+  <li>do not call several functions in a line.</li>
+</ul>This is correct:<code><br>
+&nbsp;&nbsp; if val &gt;= 15:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.fld1 = afun1()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; afun2(self.fld1)<br>
+&nbsp;&nbsp;&nbsp; else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.fld1 = None</code><br>
+
+<h3><a class="mozTocH3" name="mozTocId876864"></a>Comments</h3>
+<ul>
+  <li>comments that contradict the code are worse than no comments. Keep comments up to date!</li>
+  <li>comments should be complete sentences, start with a capital, and end with a period.</li>
+  <li>always keep case of identifiers!<br>
+  </li>
+</ul>
+Block comments:<br>
+<ul>
+  <li>block comments apply to a block of code that follows.</li>
+  <li>use # and a single space to start each comment line.</li>
+</ul>
+Inline comments:<br>
+<ul>
+  <li>an inline comment is a comment included in a statement, from # to the end of the line.</li>
+  <li>use inline comments sparingly.</li>
+</ul>
+<h3><a class="mozTocH3" name="mozTocId651102"></a>Naming Conventions</h3>
+<ul>
+  <li>Names in the public part of an API should reflect usage rather than implementation.</li>
+  <li>conventions for underscores:</li>
+  <ul>
+    <li>_single_leading_underscore: for internal objects, <code>from M import *</code> does not import them.</li>
+    <li>single_trailing_underscore: to avoid conflict with Python keyword, e.g. <code>class_</code>.</li>
+    <li>__double_leading_underscore: when naming a class attribute, invokes name mangling: inside <code>class FooBar</code>, <code>__boo</code> becomes <code>_FooBar__boo</code>.</li>
+    <li>__double_leading_and_trailing_underscore__: objects or attributes that live in user-controlled namespaces, e.g.<code> __init__, __import__, __file__.</code> Never invent such names, use as documented.</li>
+  </ul>
+  <li>never
+use characters l, O, I (el, oh, eye) as single character variable
+names; in some fonts they are indistinguishable from numerals zero and
+one.</li>
+</ul>
+Package and Module names<br>
+<ul>
+  <li>modules should have short, all-lowercase names. Underscores can be used for readability.</li>
+  <li>packates should have short, all-lowercase names. Underscores are discouraged.</li>
+</ul>
+Class names, Exception names<br>
+<ul>
+  <li>Class names should use CapWords convention (CamelCase convention).</li>
+  <li>Exceptions are classes, use class name convention plus Error, like this:<code> InvalidCodeError</code>.</li>
+</ul>
+Global variable names<br>
+<ul>
+  <li>for use only inside a module.</li>
+  <li>use<code> __all__ </code>mechanism to prevent their import, or name them starting with an underscore, like this: <code>_a_global_variable</code>.</li>
+  <li>use function name convention (lowercase, and underscores).</li>
+</ul>
+Functions and methods, arguments<br>
+<ul>
+  <li>function names should be lowercase, with words separated by underscores to improve readability.</li>
+  <li>mixedCase allowed only for backwards compatibility.</li>
+  <li>always use<code> self </code>for first argument to instance methods.</li>
+  <li>always use<code> cls </code>as first argument to class methods.</li>
+  <li>in function arguments, avoid clashes with keywords by using a trailing underscore, like this: <code>class_</code>.</li>
+  <li>for method names and instance variables, follow function naming rules: lowercase, and underscores.</li>
+  <li>use one leading underscore for non-public methods and non-public instance variables.</li>
+</ul>
+Constants<br>
+<ul>
+  <li>define constants at module level.</li>
+  <li>name constants in all capital letters with underscores separating words.</li>
+</ul>
+<h3><a class="mozTocH3" name="mozTocId7584"></a>Epydoc documentation</h3>
+Intra code documentation is written in the Epytext markup language from Epydoc:<br>
+<ul>
+  <li>example docstrings may be seen in package <a href="gn/doc">gn.doc</a>, see files <a href="gn/doc/__init__.py">__init__.py</a> and <a href="gn/doc/epydoc_example.py">epydoc_example.py</a></li>
+  <li>generated documentation can be seen in <a href="gn/html/index.html">gn/html/index.html</a>.</li>
+</ul>
+References:
+<ul>
+  <li><a href="http://epydoc.sourceforge.net/manual-epytext.html">The Epytext markup language</a></li>
+  <li><a href="http://epydoc.sourceforge.net/manual-fields.html">Epydoc fields</a></li>
+  <li><a href="http://epydoc.sourceforge.net">The epydoc homepage</a></li>
+</ul>
+
+
+
+<h3><a class="mozTocH3" name="mozTocId502538"></a>Other points and notes</h3>
+<ul>
+  <li>versioning, see Version Bookkeeping in PEP 8.</li>
+  <li>preface, identification of project, institution, authors.</li>
+  <li>preface, license.</li>
+  <li>docstrings in PEP 257 Docstring Conventions; examples adopted from Epydoc instead.</li>
+  <li>see<code> __all__ </code>attribute to declare names in public API.</li>
+  <li>
+see Programming recommendations in PEP 8, select.</li>
+</ul><br>
+</body></html>

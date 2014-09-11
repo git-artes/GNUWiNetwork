@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Timer block
+###################################################
+ -->
+<block>
+	<name>Event Type Classifier</name>
+	<key>evtype_classifier</key>
+     <category>Schedulers</category>
+	<import>import libutils.gwnEvtypeClassifier2 as classifier</import>
+	<make>classifier.EvtypeClassifier(5,["$typeo1","$typeo2","$typeo3","$typeo4","$typeo5"])</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+	<param>
+		<name>Output 1 Event Type</name>
+		<key>typeo1</key>
+		<type>enum</type>
+                <option>
+        			<name>Timer</name>
+        			<key>Timer</key>
+            	</option>
+                <option>
+        			<name>Data</name>
+        			<key>Data</key>
+        		</option>
+                <option>
+        			<name>Ctrl</name>
+        			<key>Ctrl</key>
+        		</option>
+                <option>
+        			<name>Mgmt</name>
+        			<key>Mgmt</key>
+        	     </option>
+                <option>
+        			<name>Request</name>
+        			<key>Request</key>
+        	     </option>
+	</param>
+	<param>
+		<name>Output 2 Event Type</name>
+		<key>typeo2</key>
+		<type>enum</type>
+                <option>
+        			<name>Timer</name>
+        			<key>Timer</key>
+            	</option>
+                <option>
+        			<name>Data</name>
+        			<key>Data</key>
+        		</option>
+                <option>
+        			<name>Ctrl</name>
+        			<key>Ctrl</key>
+        		</option>
+                <option>
+        			<name>Mgmt</name>
+        			<key>Mgmt</key>
+        	     </option>
+                <option>
+        			<name>Request</name>
+        			<key>Request</key>
+        	     </option>
+	</param>
+	<param>
+		<name>Output 3 Event Type</name>
+		<key>typeo3</key>
+		<type>enum</type>
+                <option>
+        			<name>Timer</name>
+        			<key>Timer</key>
+            	</option>
+                <option>
+        			<name>Data</name>
+        			<key>Data</key>
+        		</option>
+                <option>
+        			<name>Ctrl</name>
+        			<key>Ctrl</key>
+        		</option>
+                <option>
+        			<name>Mgmt</name>
+        			<key>Mgmt</key>
+        	     </option>
+                <option>
+        			<name>Request</name>
+        			<key>Request</key>
+        	     </option>
+	</param>
+	<param>
+		<name>Output 4 Event Type</name>
+		<key>typeo4</key>
+		<type>enum</type>
+                <option>
+        			<name>Timer</name>
+        			<key>Timer</key>
+            	</option>
+                <option>
+        			<name>Data</name>
+        			<key>Data</key>
+        		</option>
+                <option>
+        			<name>Ctrl</name>
+        			<key>Ctrl</key>
+        		</option>
+                <option>
+        			<name>Mgmt</name>
+        			<key>Mgmt</key>
+        	     </option>
+                <option>
+        			<name>Request</name>
+        			<key>Request</key>
+        	     </option>
+
+	</param>
+	<param>
+		<name>Output 5 Event Type</name>
+		<key>typeo5</key>
+		<type>enum</type>
+                <option>
+        			<name>Timer</name>
+        			<key>Timer</key>
+            	</option>
+                <option>
+        			<name>Data</name>
+        			<key>Data</key>
+        		</option>
+                <option>
+        			<name>Ctrl</name>
+        			<key>Ctrl</key>
+        		</option>
+                <option>
+        			<name>Mgmt</name>
+        			<key>Mgmt</key>
+        	     </option>
+                <option>
+        			<name>Request</name>
+        			<key>Request</key>
+        	     </option>
+	</param>
+
+	<sink>
+		<name>in</name>
+		<type>Event</type>            
+	</sink>
+     	<source>
+		<name>o1 </name>
+		<type>$typeo1</type>
+	</source>
+     	<source>
+		<name>o2 </name>
+		<type>$typeo2</type>
+           <optional> 1 </optional>
+	</source>
+     	<source>
+		<name>o3 </name>
+		<type>$typeo3</type>
+           <optional> 2 </optional>
+	</source>
+     	<source>
+		<name>o4 </name>
+		<type>$typeo4</type>
+           <optional> 3 </optional>
+	</source>
+     	<source>
+		<name>o5 </name>
+		<type>$typeo5</type>
+           <optional> 4 </optional>
+	</source>
+
+
+     <doc>
+     Event type classifier:
+     This block classifies the input events according with it type.
+     The user can select for each of the five outputs the type of the
+     events that the classifier sends to this output.
+     The first output must always be connected. The other outputs can be connected or not.
+     If the output is not connected this output is not used.
+     The events that have a type that does not match with the types of the connected outputs are discarded.
+   
+    </doc>
+</block>

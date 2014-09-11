@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnc.python.FlowGraph</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnc-module.html">Package&nbsp;gwnc</a> ::
+        <a href="gwn.gwnc.python-module.html">Package&nbsp;python</a> ::
+        Module&nbsp;FlowGraph
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnc.python.FlowGraph-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="gwn.gwnc.python.FlowGraph-module.html">Module gwn.gwnc.python.FlowGraph</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">Copyright 2008-2011 Free Software Foundation, Inc.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">This file is part of GNU Radio</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is free software; you can redistribute it and/or</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">modify it under the terms of the GNU General Public License</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">as published by the Free Software Foundation; either version 2</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">of the License, or (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">along with this program; if not, write to the Free Software</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module gwn.gwnc.python.expr_utils=gwn.gwnc.python.expr_utils-module.html"><a title="gwn.gwnc.python.expr_utils" class="py-name" href="#" onclick="return doclink('link-0', 'expr_utils', 'link-0');">expr_utils</a></tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-op">.</tt><tt class="py-op">.</tt> <tt id="link-1" class="py-name" targets="Package gwn.gwnc.base=gwn.gwnc.base-module.html"><a title="gwn.gwnc.base" class="py-name" href="#" onclick="return doclink('link-1', 'base', 'link-1');">base</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module gwn.gwnc.base.FlowGraph=gwn.gwnc.base.FlowGraph-module.html,Class gwn.gwnc.base.FlowGraph.FlowGraph=gwn.gwnc.base.FlowGraph.FlowGraph-class.html,Module gwn.gwnc.gui.FlowGraph=gwn.gwnc.gui.FlowGraph-module.html,Class gwn.gwnc.gui.FlowGraph.FlowGraph=gwn.gwnc.gui.FlowGraph.FlowGraph-class.html,Module gwn.gwnc.python.FlowGraph=gwn.gwnc.python.FlowGraph-module.html,Class gwn.gwnc.python.FlowGraph.FlowGraph=gwn.gwnc.python.FlowGraph.FlowGraph-class.html"><a title="gwn.gwnc.base.FlowGraph
+gwn.gwnc.base.FlowGraph.FlowGraph
+gwn.gwnc.gui.FlowGraph
+gwn.gwnc.gui.FlowGraph.FlowGraph
+gwn.gwnc.python.FlowGraph
+gwn.gwnc.python.FlowGraph.FlowGraph" class="py-name" href="#" onclick="return doclink('link-2', 'FlowGraph', 'link-2');">FlowGraph</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name"><a title="gwn.gwnc.base.FlowGraph
+gwn.gwnc.base.FlowGraph.FlowGraph
+gwn.gwnc.gui.FlowGraph
+gwn.gwnc.gui.FlowGraph.FlowGraph
+gwn.gwnc.python.FlowGraph
+gwn.gwnc.python.FlowGraph.FlowGraph" class="py-name" href="#" onclick="return doclink('link-3', 'FlowGraph', 'link-2');">FlowGraph</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">_FlowGraph</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-op">.</tt><tt class="py-op">.</tt> <tt id="link-4" class="py-name" targets="Package gwn.gwnc.gui=gwn.gwnc.gui-module.html"><a title="gwn.gwnc.gui" class="py-name" href="#" onclick="return doclink('link-4', 'gui', 'link-4');">gui</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="gwn.gwnc.base.FlowGraph
+gwn.gwnc.base.FlowGraph.FlowGraph
+gwn.gwnc.gui.FlowGraph
+gwn.gwnc.gui.FlowGraph.FlowGraph
+gwn.gwnc.python.FlowGraph
+gwn.gwnc.python.FlowGraph.FlowGraph" class="py-name" href="#" onclick="return doclink('link-5', 'FlowGraph', 'link-2');">FlowGraph</a></tt> <tt class="py-keyword">import</tt> <tt id="link-6" class="py-name"><a title="gwn.gwnc.base.FlowGraph
+gwn.gwnc.base.FlowGraph.FlowGraph
+gwn.gwnc.gui.FlowGraph
+gwn.gwnc.gui.FlowGraph.FlowGraph
+gwn.gwnc.python.FlowGraph
+gwn.gwnc.python.FlowGraph.FlowGraph" class="py-name" href="#" onclick="return doclink('link-6', 'FlowGraph', 'link-2');">FlowGraph</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">_GUIFlowGraph</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable gwn.gwnc.python.FlowGraph._variable_matcher=gwn.gwnc.python.FlowGraph-module.html#_variable_matcher"><a title="gwn.gwnc.python.FlowGraph._variable_matcher" class="py-name" href="#" onclick="return doclink('link-7', '_variable_matcher', 'link-7');">_variable_matcher</a></tt> <tt class="py-op">=</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">compile</tt><tt class="py-op">(</tt><tt class="py-string">'^(variable\w*)$'</tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt id="link-8" class="py-name" targets="Variable gwn.gwnc.python.FlowGraph._parameter_matcher=gwn.gwnc.python.FlowGraph-module.html#_parameter_matcher"><a title="gwn.gwnc.python.FlowGraph._parameter_matcher" class="py-name" href="#" onclick="return doclink('link-8', '_parameter_matcher', 'link-8');">_parameter_matcher</a></tt> <tt class="py-op">=</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">compile</tt><tt class="py-op">(</tt><tt class="py-string">'^(parameter)$'</tt><tt class="py-op">)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph"></a><div id="FlowGraph-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="FlowGraph-toggle" onclick="return toggle('FlowGraph');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html">FlowGraph</a><tt class="py-op">(</tt><tt class="py-base-class">_FlowGraph</tt><tt class="py-op">,</tt> <tt class="py-base-class">_GUIFlowGraph</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FlowGraph-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.__init__"></a><div id="FlowGraph.__init__-def"><a name="L30"></a><tt class="py-lineno"> 30</tt> <a class="py-toggle" href="#" id="FlowGraph.__init__-toggle" onclick="return toggle('FlowGraph.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.__init__-expanded"><a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">                <tt class="py-name">_FlowGraph</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method gwn.blocks.framers.ieee80211.deframer.Deframer.__init__()=gwn.blocks.framers.ieee80211.deframer.Deframer-class.html#__init__,Method gwn.blocks.framers.ieee80211.framer.Framer.__init__()=gwn.blocks.framers.ieee80211.framer.Framer-class.html#__init__,Method gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.__init__()=gwn.blocks.libio.tuntap.tuntap.ATunTapConnector-class.html#__init__,Method gwn.blocks.libio.tuntap.tuntap.TunTapInterface.__init__()=gwn.blocks.libio.tuntap.tuntap.TunTapInterface-class.html#__init__,Method gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA.__init__()=gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA-class.html#__init__,Method gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.__init__()=gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.MacTdma-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events-class.html#__init__,Method gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel.__init__()=gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel-class.html#__init__,Method gwn.blocks.simulators.consumers.eventconsumer.EventConsumer.__init__()=gwn.blocks.simulators.consumers.eventconsumer.EventConsumer-class.html#__init__,Method gwn.blocks.simulators.generators.eventsimulator.EventSimulator.__init__()=gwn.blocks.simulators.generators.eventsimulator.EventSimulator-class.html#__init__,Method gwn.blocks.utilblocks.timer.timer.Timer.__init__()=gwn.blocks.utilblocks.timer.timer.Timer-class.html#__init__,Method gwn.epydoc_doc.epydoc_example.ClassA.__init__()=gwn.epydoc_doc.epydoc_example.ClassA-class.html#__init__,Method gwn.gwnblocks.gwnblock.GWNBlock.__init__()=gwn.gwnblocks.gwnblock.GWNBlock-class.html#__init__,Method gwn.gwnblocks.gwninport.AListConnector.__init__()=gwn.gwnblocks.gwninport.AListConnector-class.html#__init__,Method gwn.gwnblocks.gwninport.AQueueConnector.__init__()=gwn.gwnblocks.gwninport.AQueueConnector-class.html#__init__,Method gwn.gwnblocks.gwninport.InPort.__init__()=gwn.gwnblocks.gwninport.InPort-class.html#__init__,Method gwn.gwnblocks.gwnintimer.InTimer.__init__()=gwn.gwnblocks.gwnintimer.InTimer-class.html#__init__,Method gwn.gwnblocks.gwntopblock.GWNTopBlock.__init__()=gwn.gwnblocks.gwntopblock.GWNTopBlock-class.html#__init__,Method gwn.gwnblocks.gwntopblock.top_block_test.__init__()=gwn.gwnblocks.gwntopblock.top_block_test-class.html#__init__,Method gwn.gwnc.base.Block.Block.__init__()=gwn.gwnc.base.Block.Block-class.html#__init__,Method gwn.gwnc.base.Block.TemplateArg.__init__()=gwn.gwnc.base.Block.TemplateArg-class.html#__init__,Method gwn.gwnc.base.Connection.Connection.__init__()=gwn.gwnc.base.Connection.Connection-class.html#__init__,Method gwn.gwnc.base.Element.Element.__init__()=gwn.gwnc.base.Element.Element-class.html#__init__,Method gwn.gwnc.base.FlowGraph.FlowGraph.__init__()=gwn.gwnc.base.FlowGraph.FlowGraph-class.html#__init__,Method gwn.gwnc.base.Param.Option.__init__()=gwn.gwnc.base.Param.Option-class.html#__init__,Method gwn.gwnc.base.Param.Param.__init__()=gwn.gwnc.base.Param.Param-class.html#__init__,Method gwn.gwnc.base.ParseXML.XMLSyntaxError.__init__()=gwn.gwnc.base.ParseXML.XMLSyntaxError-class.html#__init__,Method gwn.gwnc.base.Platform.Platform.__init__()=gwn.gwnc.base.Platform.Platform-class.html#__init__,Method gwn.gwnc.base.Port.Port.__init__()=gwn.gwnc.base.Port.Port-class.html#__init__,Method gwn.gwnc.base.odict'.odict.__init__()=gwn.gwnc.base.odict%27.odict-class.html#__init__,Method gwn.gwnc.gui.ActionHandler.ActionHandler.__init__()=gwn.gwnc.gui.ActionHandler.ActionHandler-class.html#__init__,Method gwn.gwnc.gui.ActionHandler.ExecFlowGraphThread.__init__()=gwn.gwnc.gui.ActionHandler.ExecFlowGraphThread-class.html#__init__,Method gwn.gwnc.gui.Actions.Action.__init__()=gwn.gwnc.gui.Actions.Action-class.html#__init__,Method gwn.gwnc.gui.Bars.MenuBar.__init__()=gwn.gwnc.gui.Bars.MenuBar-class.html#__init__,Method gwn.gwnc.gui.Bars.Toolbar.__init__()=gwn.gwnc.gui.Bars.Toolbar-class.html#__init__,Method gwn.gwnc.gui.Block.Block.__init__()=gwn.gwnc.gui.Block.Block-class.html#__init__,Method gwn.gwnc.gui.BlockTreeWindow.BlockTreeWindow.__init__()=gwn.gwnc.gui.BlockTreeWindow.BlockTreeWindow-class.html#__init__,Method gwn.gwnc.gui.Connection.Connection.__init__()=gwn.gwnc.gui.Connection.Connection-class.html#__init__,Method gwn.gwnc.gui.DrawingArea.DrawingArea.__init__()=gwn.gwnc.gui.DrawingArea.DrawingArea-class.html#__init__,Method gwn.gwnc.gui.Element.Element.__init__()=gwn.gwnc.gui.Element.Element-class.html#__init__,Method gwn.gwnc.gui.FlowGraph.FlowGraph.__init__()=gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#__init__,Method gwn.gwnc.gui.MainWindow.MainWindow.__init__()=gwn.gwnc.gui.MainWindow.MainWindow-class.html#__init__,Method gwn.gwnc.gui.NotebookPage.NotebookPage.__init__()=gwn.gwnc.gui.NotebookPage.NotebookPage-class.html#__init__,Method gwn.gwnc.gui.Param.EntryParam.__init__()=gwn.gwnc.gui.Param.EntryParam-class.html#__init__,Method gwn.gwnc.gui.Param.EnumEntryParam.__init__()=gwn.gwnc.gui.Param.EnumEntryParam-class.html#__init__,Method gwn.gwnc.gui.Param.EnumParam.__init__()=gwn.gwnc.gui.Param.EnumParam-class.html#__init__,Method gwn.gwnc.gui.Param.InputParam.__init__()=gwn.gwnc.gui.Param.InputParam-class.html#__init__,Method gwn.gwnc.gui.Param.Param.__init__()=gwn.gwnc.gui.Param.Param-class.html#__init__,Method gwn.gwnc.gui.Platform.Platform.__init__()=gwn.gwnc.gui.Platform.Platform-class.html#__init__,Method gwn.gwnc.gui.Port.Port.__init__()=gwn.gwnc.gui.Port.Port-class.html#__init__,Method gwn.gwnc.gui.PropsDialog.PropsDialog.__init__()=gwn.gwnc.gui.PropsDialog.PropsDialog-class.html#__init__,Method gwn.gwnc.gui.StateCache.StateCache.__init__()=gwn.gwnc.gui.StateCache.StateCache-class.html#__init__,Method gwn.gwnc.python.Block.Block.__init__()=gwn.gwnc.python.Block.Block-class.html#__init__,Method gwn.gwnc.python.Connection.Connection.__init__()=gwn.gwnc.python.Connection.Connection-class.html#__init__,Method gwn.gwnc.python.FlowGraph.FlowGraph.__init__()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#__init__,Method gwn.gwnc.python.Generator.Generator.__init__()=gwn.gwnc.python.Generator.Generator-class.html#__init__,Method gwn.gwnc.python.Param.FileParam.__init__()=gwn.gwnc.python.Param.FileParam-class.html#__init__,Method gwn.gwnc.python.Param.Param.__init__()=gwn.gwnc.python.Param.Param-class.html#__init__,Method gwn.gwnc.python.Platform.Platform.__init__()=gwn.gwnc.python.Platform.Platform-class.html#__init__,Method gwn.gwnc.python.Port.Port.__init__()=gwn.gwnc.python.Port.Port-class.html#__init__,Method gwn.gwnc.python.expr_utils.graph.__init__()=gwn.gwnc.python.expr_utils.graph-class.html#__init__,Method gwn.gwnevents.events.Event.__init__()=gwn.gwnevents.events.Event-class.html#__init__,Method gwn.gwnevents.evframes80211.EventFrame.__init__()=gwn.gwnevents.evframes80211.EventFrame-class.html#__init__,Method gwn.gwnevents.evframes80211.EventFrameMgmt.__init__()=gwn.gwnevents.evframes80211.EventFrameMgmt-class.html#__init__,Method gwn.gwnevents.evrequest.EventRequest.__init__()=gwn.gwnevents.evrequest.EventRequest-class.html#__init__,Method gwn.gwnevents.evtimer.EventTimer.__init__()=gwn.gwnevents.evtimer.EventTimer-class.html#__init__,Method gwn.utils.framers.ieee80211.frames.Frame.__init__()=gwn.utils.framers.ieee80211.frames.Frame-class.html#__init__,Method gwn.utils.framers.ieee80211.frames.FrameException.__init__()=gwn.utils.framers.ieee80211.frames.FrameException-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrame.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrame-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException.__init__()=gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException-class.html#__init__,Method gwn.utils.libfsm.fsm.ExceptionFSM.__init__()=gwn.utils.libfsm.fsm.ExceptionFSM-class.html#__init__,Method gwn.utils.libfsm.fsm.FSM.__init__()=gwn.utils.libfsm.fsm.FSM-class.html#__init__,Method gwn.utils.logger.gnlogger_test.Auxiliary.__init__()=gwn.utils.logger.gnlogger_test.Auxiliary-class.html#__init__,Method gwn.utils.testing.exampletest.AClass.__init__()=gwn.utils.testing.exampletest.AClass-class.html#__init__"><a title="gwn.blocks.framers.ieee80211.deframer.Deframer.__init__
+gwn.blocks.framers.ieee80211.framer.Framer.__init__
+gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.__init__
+gwn.blocks.libio.tuntap.tuntap.TunTapInterface.__init__
+gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA.__init__
+gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.__init__
+gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel.__init__
+gwn.blocks.simulators.consumers.eventconsumer.EventConsumer.__init__
+gwn.blocks.simulators.generators.eventsimulator.EventSimulator.__init__
+gwn.blocks.utilblocks.timer.timer.Timer.__init__
+gwn.epydoc_doc.epydoc_example.ClassA.__init__
+gwn.gwnblocks.gwnblock.GWNBlock.__init__
+gwn.gwnblocks.gwninport.AListConnector.__init__
+gwn.gwnblocks.gwninport.AQueueConnector.__init__
+gwn.gwnblocks.gwninport.InPort.__init__
+gwn.gwnblocks.gwnintimer.InTimer.__init__
+gwn.gwnblocks.gwntopblock.GWNTopBlock.__init__
+gwn.gwnblocks.gwntopblock.top_block_test.__init__
+gwn.gwnc.base.Block.Block.__init__
+gwn.gwnc.base.Block.TemplateArg.__init__
+gwn.gwnc.base.Connection.Connection.__init__
+gwn.gwnc.base.Element.Element.__init__
+gwn.gwnc.base.FlowGraph.FlowGraph.__init__
+gwn.gwnc.base.Param.Option.__init__
+gwn.gwnc.base.Param.Param.__init__
+gwn.gwnc.base.ParseXML.XMLSyntaxError.__init__
+gwn.gwnc.base.Platform.Platform.__init__
+gwn.gwnc.base.Port.Port.__init__
+gwn.gwnc.base.odict'.odict.__init__
+gwn.gwnc.gui.ActionHandler.ActionHandler.__init__
+gwn.gwnc.gui.ActionHandler.ExecFlowGraphThread.__init__
+gwn.gwnc.gui.Actions.Action.__init__
+gwn.gwnc.gui.Bars.MenuBar.__init__
+gwn.gwnc.gui.Bars.Toolbar.__init__
+gwn.gwnc.gui.Block.Block.__init__
+gwn.gwnc.gui.BlockTreeWindow.BlockTreeWindow.__init__
+gwn.gwnc.gui.Connection.Connection.__init__
+gwn.gwnc.gui.DrawingArea.DrawingArea.__init__
+gwn.gwnc.gui.Element.Element.__init__
+gwn.gwnc.gui.FlowGraph.FlowGraph.__init__
+gwn.gwnc.gui.MainWindow.MainWindow.__init__
+gwn.gwnc.gui.NotebookPage.NotebookPage.__init__
+gwn.gwnc.gui.Param.EntryParam.__init__
+gwn.gwnc.gui.Param.EnumEntryParam.__init__
+gwn.gwnc.gui.Param.EnumParam.__init__
+gwn.gwnc.gui.Param.InputParam.__init__
+gwn.gwnc.gui.Param.Param.__init__
+gwn.gwnc.gui.Platform.Platform.__init__
+gwn.gwnc.gui.Port.Port.__init__
+gwn.gwnc.gui.PropsDialog.PropsDialog.__init__
+gwn.gwnc.gui.StateCache.StateCache.__init__
+gwn.gwnc.python.Block.Block.__init__
+gwn.gwnc.python.Connection.Connection.__init__
+gwn.gwnc.python.FlowGraph.FlowGraph.__init__
+gwn.gwnc.python.Generator.Generator.__init__
+gwn.gwnc.python.Param.FileParam.__init__
+gwn.gwnc.python.Param.Param.__init__
+gwn.gwnc.python.Platform.Platform.__init__
+gwn.gwnc.python.Port.Port.__init__
+gwn.gwnc.python.expr_utils.graph.__init__
+gwn.gwnevents.events.Event.__init__
+gwn.gwnevents.evframes80211.EventFrame.__init__
+gwn.gwnevents.evframes80211.EventFrameMgmt.__init__
+gwn.gwnevents.evrequest.EventRequest.__init__
+gwn.gwnevents.evtimer.EventTimer.__init__
+gwn.utils.framers.ieee80211.frames.Frame.__init__
+gwn.utils.framers.ieee80211.frames.FrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrame.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException.__init__
+gwn.utils.libfsm.fsm.ExceptionFSM.__init__
+gwn.utils.libfsm.fsm.FSM.__init__
+gwn.utils.logger.gnlogger_test.Auxiliary.__init__
+gwn.utils.testing.exampletest.AClass.__init__" class="py-name" href="#" onclick="return doclink('link-9', '__init__', 'link-9');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">                <tt class="py-name">_GUIFlowGraph</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="gwn.blocks.framers.ieee80211.deframer.Deframer.__init__
+gwn.blocks.framers.ieee80211.framer.Framer.__init__
+gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.__init__
+gwn.blocks.libio.tuntap.tuntap.TunTapInterface.__init__
+gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA.__init__
+gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.__init__
+gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel.__init__
+gwn.blocks.simulators.consumers.eventconsumer.EventConsumer.__init__
+gwn.blocks.simulators.generators.eventsimulator.EventSimulator.__init__
+gwn.blocks.utilblocks.timer.timer.Timer.__init__
+gwn.epydoc_doc.epydoc_example.ClassA.__init__
+gwn.gwnblocks.gwnblock.GWNBlock.__init__
+gwn.gwnblocks.gwninport.AListConnector.__init__
+gwn.gwnblocks.gwninport.AQueueConnector.__init__
+gwn.gwnblocks.gwninport.InPort.__init__
+gwn.gwnblocks.gwnintimer.InTimer.__init__
+gwn.gwnblocks.gwntopblock.GWNTopBlock.__init__
+gwn.gwnblocks.gwntopblock.top_block_test.__init__
+gwn.gwnc.base.Block.Block.__init__
+gwn.gwnc.base.Block.TemplateArg.__init__
+gwn.gwnc.base.Connection.Connection.__init__
+gwn.gwnc.base.Element.Element.__init__
+gwn.gwnc.base.FlowGraph.FlowGraph.__init__
+gwn.gwnc.base.Param.Option.__init__
+gwn.gwnc.base.Param.Param.__init__
+gwn.gwnc.base.ParseXML.XMLSyntaxError.__init__
+gwn.gwnc.base.Platform.Platform.__init__
+gwn.gwnc.base.Port.Port.__init__
+gwn.gwnc.base.odict'.odict.__init__
+gwn.gwnc.gui.ActionHandler.ActionHandler.__init__
+gwn.gwnc.gui.ActionHandler.ExecFlowGraphThread.__init__
+gwn.gwnc.gui.Actions.Action.__init__
+gwn.gwnc.gui.Bars.MenuBar.__init__
+gwn.gwnc.gui.Bars.Toolbar.__init__
+gwn.gwnc.gui.Block.Block.__init__
+gwn.gwnc.gui.BlockTreeWindow.BlockTreeWindow.__init__
+gwn.gwnc.gui.Connection.Connection.__init__
+gwn.gwnc.gui.DrawingArea.DrawingArea.__init__
+gwn.gwnc.gui.Element.Element.__init__
+gwn.gwnc.gui.FlowGraph.FlowGraph.__init__
+gwn.gwnc.gui.MainWindow.MainWindow.__init__
+gwn.gwnc.gui.NotebookPage.NotebookPage.__init__
+gwn.gwnc.gui.Param.EntryParam.__init__
+gwn.gwnc.gui.Param.EnumEntryParam.__init__
+gwn.gwnc.gui.Param.EnumParam.__init__
+gwn.gwnc.gui.Param.InputParam.__init__
+gwn.gwnc.gui.Param.Param.__init__
+gwn.gwnc.gui.Platform.Platform.__init__
+gwn.gwnc.gui.Port.Port.__init__
+gwn.gwnc.gui.PropsDialog.PropsDialog.__init__
+gwn.gwnc.gui.StateCache.StateCache.__init__
+gwn.gwnc.python.Block.Block.__init__
+gwn.gwnc.python.Connection.Connection.__init__
+gwn.gwnc.python.FlowGraph.FlowGraph.__init__
+gwn.gwnc.python.Generator.Generator.__init__
+gwn.gwnc.python.Param.FileParam.__init__
+gwn.gwnc.python.Param.Param.__init__
+gwn.gwnc.python.Platform.Platform.__init__
+gwn.gwnc.python.Port.Port.__init__
+gwn.gwnc.python.expr_utils.graph.__init__
+gwn.gwnevents.events.Event.__init__
+gwn.gwnevents.evframes80211.EventFrame.__init__
+gwn.gwnevents.evframes80211.EventFrameMgmt.__init__
+gwn.gwnevents.evrequest.EventRequest.__init__
+gwn.gwnevents.evtimer.EventTimer.__init__
+gwn.utils.framers.ieee80211.frames.Frame.__init__
+gwn.utils.framers.ieee80211.frames.FrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrame.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException.__init__
+gwn.utils.libfsm.fsm.ExceptionFSM.__init__
+gwn.utils.libfsm.fsm.FSM.__init__
+gwn.utils.logger.gnlogger_test.Auxiliary.__init__
+gwn.utils.testing.exampletest.AClass.__init__" class="py-name" href="#" onclick="return doclink('link-10', '__init__', 'link-9');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_eval_cache</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph._eval"></a><div id="FlowGraph._eval-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="FlowGraph._eval-toggle" onclick="return toggle('FlowGraph._eval');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#_eval">_eval</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code</tt><tt class="py-op">,</tt> <tt class="py-param">namespace</tt><tt class="py-op">,</tt> <tt class="py-param">namespace_hash</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph._eval-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph._eval-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">                Evaluate the code with the given namespace.</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">                @param code a string with python code</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">                @param namespace a dict representing the namespace</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">                @param namespace_hash a unique hash for the namespace</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">                @return the resultant object</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">code</tt><tt class="py-op">:</tt> <tt class="py-keyword">raise</tt> <tt class="py-name">Exception</tt><tt class="py-op">,</tt> <tt class="py-string">'Cannot evaluate empty statement.'</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">                <tt class="py-name">my_hash</tt> <tt class="py-op">=</tt> <tt class="py-name">hash</tt><tt class="py-op">(</tt><tt class="py-name">code</tt><tt class="py-op">)</tt> <tt class="py-op">^</tt> <tt class="py-name">namespace_hash</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">                <tt class="py-comment">#cache if does not exist</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_eval_cache</tt><tt class="py-op">.</tt><tt class="py-name">has_key</tt><tt class="py-op">(</tt><tt class="py-name">my_hash</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_eval_cache</tt><tt class="py-op">[</tt><tt class="py-name">my_hash</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">eval</tt><tt class="py-op">(</tt><tt class="py-name">code</tt><tt class="py-op">,</tt> <tt class="py-name">namespace</tt><tt class="py-op">,</tt> <tt class="py-name">namespace</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">                <tt class="py-comment">#return from cache</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_eval_cache</tt><tt class="py-op">[</tt><tt class="py-name">my_hash</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.get_io_signaturev"></a><div id="FlowGraph.get_io_signaturev-def"><a name="L51"></a><tt class="py-lineno"> 51</tt> <a class="py-toggle" href="#" id="FlowGraph.get_io_signaturev-toggle" onclick="return toggle('FlowGraph.get_io_signaturev');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_io_signaturev">get_io_signaturev</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">direction</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.get_io_signaturev-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.get_io_signaturev-expanded"><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-docstring">                Get a list of io signatures for this flow graph.</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-docstring">                @param direction a string of 'in' or 'out'</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">                @return a list of dicts with: type, label, vlen, size</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">                <tt class="py-name">sorted_pads</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">                        <tt class="py-string">'in'</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method gwn.gwnc.python.FlowGraph.FlowGraph.get_pad_sources()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_pad_sources"><a title="gwn.gwnc.python.FlowGraph.FlowGraph.get_pad_sources" class="py-name" href="#" onclick="return doclink('link-11', 'get_pad_sources', 'link-11');">get_pad_sources</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                        <tt class="py-string">'out'</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method gwn.gwnc.python.FlowGraph.FlowGraph.get_pad_sinks()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_pad_sinks"><a title="gwn.gwnc.python.FlowGraph.FlowGraph.get_pad_sinks" class="py-name" href="#" onclick="return doclink('link-12', 'get_pad_sinks', 'link-12');">get_pad_sinks</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">                <tt class="py-op">}</tt><tt class="py-op">[</tt><tt class="py-name">direction</tt><tt class="py-op">]</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-comment"># we only want stream ports</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                <tt class="py-name">sorted_pads</tt> <tt class="py-op">=</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">b</tt><tt class="py-op">:</tt> <tt class="py-name">b</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method gwn.gwnc.base.Block.Block.get_param()=gwn.gwnc.base.Block.Block-class.html#get_param"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-13', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'type'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method gwn.gwnc.base.Param.Param.get_evaluated()=gwn.gwnc.base.Param.Param-class.html#get_evaluated,Method gwn.gwnc.python.Param.Param.get_evaluated()=gwn.gwnc.python.Param.Param-class.html#get_evaluated"><a title="gwn.gwnc.base.Param.Param.get_evaluated
+gwn.gwnc.python.Param.Param.get_evaluated" class="py-name" href="#" onclick="return doclink('link-14', 'get_evaluated', 'link-14');">get_evaluated</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">!=</tt> <tt class="py-string">'message'</tt><tt class="py-op">,</tt> <tt class="py-name">sorted_pads</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                <tt class="py-comment">#load io signature</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-op">{</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">                        <tt class="py-string">'label'</tt><tt class="py-op">:</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">pad</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-15', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'label'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="gwn.gwnc.base.Param.Param.get_evaluated
+gwn.gwnc.python.Param.Param.get_evaluated" class="py-name" href="#" onclick="return doclink('link-16', 'get_evaluated', 'link-14');">get_evaluated</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                        <tt class="py-string">'type'</tt><tt class="py-op">:</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">pad</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-17', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'type'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="gwn.gwnc.base.Param.Param.get_evaluated
+gwn.gwnc.python.Param.Param.get_evaluated" class="py-name" href="#" onclick="return doclink('link-18', 'get_evaluated', 'link-14');">get_evaluated</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                        <tt class="py-string">'vlen'</tt><tt class="py-op">:</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">pad</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-19', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'vlen'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="gwn.gwnc.base.Param.Param.get_evaluated
+gwn.gwnc.python.Param.Param.get_evaluated" class="py-name" href="#" onclick="return doclink('link-20', 'get_evaluated', 'link-14');">get_evaluated</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                        <tt class="py-string">'size'</tt><tt class="py-op">:</tt> <tt class="py-name">pad</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-21', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'type'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method gwn.gwnc.base.Param.Option.get_opt()=gwn.gwnc.base.Param.Option-class.html#get_opt,Method gwn.gwnc.base.Param.Param.get_opt()=gwn.gwnc.base.Param.Param-class.html#get_opt"><a title="gwn.gwnc.base.Param.Option.get_opt
+gwn.gwnc.base.Param.Param.get_opt" class="py-name" href="#" onclick="return doclink('link-22', 'get_opt', 'link-22');">get_opt</a></tt><tt class="py-op">(</tt><tt class="py-string">'size'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                        <tt class="py-string">'optional'</tt><tt class="py-op">:</tt> <tt class="py-name">bool</tt><tt class="py-op">(</tt><tt class="py-name">pad</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-23', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'optional'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="gwn.gwnc.base.Param.Param.get_evaluated
+gwn.gwnc.python.Param.Param.get_evaluated" class="py-name" href="#" onclick="return doclink('link-24', 'get_evaluated', 'link-14');">get_evaluated</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                <tt class="py-op">}</tt> <tt class="py-keyword">for</tt> <tt class="py-name">pad</tt> <tt class="py-keyword">in</tt> <tt class="py-name">sorted_pads</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.get_pad_sources"></a><div id="FlowGraph.get_pad_sources-def"><a name="L72"></a><tt class="py-lineno"> 72</tt> <a class="py-toggle" href="#" id="FlowGraph.get_pad_sources-toggle" onclick="return toggle('FlowGraph.get_pad_sources');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_pad_sources">get_pad_sources</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.get_pad_sources-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.get_pad_sources-expanded"><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-docstring">                Get a list of pad source blocks sorted by id order.</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-docstring">                @return a list of pad source blocks in this flow graph</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-name">pads</tt> <tt class="py-op">=</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">b</tt><tt class="py-op">:</tt> <tt class="py-name">b</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method gwn.gwnc.base.Block.Block.get_key()=gwn.gwnc.base.Block.Block-class.html#get_key,Method gwn.gwnc.base.Param.Option.get_key()=gwn.gwnc.base.Param.Option-class.html#get_key,Method gwn.gwnc.base.Param.Param.get_key()=gwn.gwnc.base.Param.Param-class.html#get_key,Method gwn.gwnc.base.Platform.Platform.get_key()=gwn.gwnc.base.Platform.Platform-class.html#get_key,Method gwn.gwnc.base.Port.Port.get_key()=gwn.gwnc.base.Port.Port-class.html#get_key"><a title="gwn.gwnc.base.Block.Block.get_key
+gwn.gwnc.base.Param.Option.get_key
+gwn.gwnc.base.Param.Param.get_key
+gwn.gwnc.base.Platform.Platform.get_key
+gwn.gwnc.base.Port.Port.get_key" class="py-name" href="#" onclick="return doclink('link-25', 'get_key', 'link-25');">get_key</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-string">'pad_source'</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method gwn.gwnc.base.FlowGraph.FlowGraph.get_enabled_blocks()=gwn.gwnc.base.FlowGraph.FlowGraph-class.html#get_enabled_blocks"><a title="gwn.gwnc.base.FlowGraph.FlowGraph.get_enabled_blocks" class="py-name" href="#" onclick="return doclink('link-26', 'get_enabled_blocks', 'link-26');">get_enabled_blocks</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">sorted</tt><tt class="py-op">(</tt><tt class="py-name">pads</tt><tt class="py-op">,</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">:</tt> <tt class="py-name">cmp</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method gwn.gwnc.base.Block.Block.get_id()=gwn.gwnc.base.Block.Block-class.html#get_id"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-27', 'get_id', 'link-27');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-28', 'get_id', 'link-27');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.get_pad_sinks"></a><div id="FlowGraph.get_pad_sinks-def"><a name="L80"></a><tt class="py-lineno"> 80</tt> <a class="py-toggle" href="#" id="FlowGraph.get_pad_sinks-toggle" onclick="return toggle('FlowGraph.get_pad_sinks');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_pad_sinks">get_pad_sinks</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.get_pad_sinks-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.get_pad_sinks-expanded"><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">                Get a list of pad sink blocks sorted by id order.</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">                @return a list of pad sink blocks in this flow graph</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                <tt class="py-name">pads</tt> <tt class="py-op">=</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">b</tt><tt class="py-op">:</tt> <tt class="py-name">b</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_key
+gwn.gwnc.base.Param.Option.get_key
+gwn.gwnc.base.Param.Param.get_key
+gwn.gwnc.base.Platform.Platform.get_key
+gwn.gwnc.base.Port.Port.get_key" class="py-name" href="#" onclick="return doclink('link-29', 'get_key', 'link-25');">get_key</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-string">'pad_sink'</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="gwn.gwnc.base.FlowGraph.FlowGraph.get_enabled_blocks" class="py-name" href="#" onclick="return doclink('link-30', 'get_enabled_blocks', 'link-26');">get_enabled_blocks</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">sorted</tt><tt class="py-op">(</tt><tt class="py-name">pads</tt><tt class="py-op">,</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">:</tt> <tt class="py-name">cmp</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-31', 'get_id', 'link-27');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-32', 'get_id', 'link-27');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.get_msg_pad_sources"></a><div id="FlowGraph.get_msg_pad_sources-def"><a name="L88"></a><tt class="py-lineno"> 88</tt> <a class="py-toggle" href="#" id="FlowGraph.get_msg_pad_sources-toggle" onclick="return toggle('FlowGraph.get_msg_pad_sources');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_msg_pad_sources">get_msg_pad_sources</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.get_msg_pad_sources-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.get_msg_pad_sources-expanded"><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                <tt class="py-name">ps</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="gwn.gwnc.python.FlowGraph.FlowGraph.get_pad_sources" class="py-name" href="#" onclick="return doclink('link-33', 'get_pad_sources', 'link-11');">get_pad_sources</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">b</tt><tt class="py-op">:</tt> <tt class="py-name">b</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-34', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'type'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="gwn.gwnc.base.Param.Param.get_evaluated
+gwn.gwnc.python.Param.Param.get_evaluated" class="py-name" href="#" onclick="return doclink('link-35', 'get_evaluated', 'link-14');">get_evaluated</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-string">'message'</tt><tt class="py-op">,</tt> <tt class="py-name">ps</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.get_msg_pad_sinks"></a><div id="FlowGraph.get_msg_pad_sinks-def"><a name="L92"></a><tt class="py-lineno"> 92</tt> <a class="py-toggle" href="#" id="FlowGraph.get_msg_pad_sinks-toggle" onclick="return toggle('FlowGraph.get_msg_pad_sinks');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_msg_pad_sinks">get_msg_pad_sinks</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.get_msg_pad_sinks-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.get_msg_pad_sinks-expanded"><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                <tt class="py-name">ps</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="gwn.gwnc.python.FlowGraph.FlowGraph.get_pad_sinks" class="py-name" href="#" onclick="return doclink('link-36', 'get_pad_sinks', 'link-12');">get_pad_sinks</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">b</tt><tt class="py-op">:</tt> <tt class="py-name">b</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-37', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'type'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="gwn.gwnc.base.Param.Param.get_evaluated
+gwn.gwnc.python.Param.Param.get_evaluated" class="py-name" href="#" onclick="return doclink('link-38', 'get_evaluated', 'link-14');">get_evaluated</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-string">'message'</tt><tt class="py-op">,</tt> <tt class="py-name">ps</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.get_imports"></a><div id="FlowGraph.get_imports-def"><a name="L96"></a><tt class="py-lineno"> 96</tt> <a class="py-toggle" href="#" id="FlowGraph.get_imports-toggle" onclick="return toggle('FlowGraph.get_imports');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_imports">get_imports</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.get_imports-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.get_imports-expanded"><a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">                Get a set of all import statments in this flow graph namespace.</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">                @return a set of import statements</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                <tt class="py-name">imports</tt> <tt class="py-op">=</tt> <tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">block</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Method gwn.gwnc.python.Block.Block.get_imports()=gwn.gwnc.python.Block.Block-class.html#get_imports,Method gwn.gwnc.python.FlowGraph.FlowGraph.get_imports()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_imports"><a title="gwn.gwnc.python.Block.Block.get_imports
+gwn.gwnc.python.FlowGraph.FlowGraph.get_imports" class="py-name" href="#" onclick="return doclink('link-39', 'get_imports', 'link-39');">get_imports</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">block</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="gwn.gwnc.base.FlowGraph.FlowGraph.get_enabled_blocks" class="py-name" href="#" onclick="return doclink('link-40', 'get_enabled_blocks', 'link-26');">get_enabled_blocks</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                <tt class="py-name">imports</tt> <tt class="py-op">=</tt> <tt class="py-name">sorted</tt><tt class="py-op">(</tt><tt class="py-name">set</tt><tt class="py-op">(</tt><tt class="py-name">imports</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">imports</tt> </tt>
+</div><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.get_variables"></a><div id="FlowGraph.get_variables-def"><a name="L105"></a><tt class="py-lineno">105</tt> <a class="py-toggle" href="#" id="FlowGraph.get_variables-toggle" onclick="return toggle('FlowGraph.get_variables');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_variables">get_variables</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.get_variables-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.get_variables-expanded"><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-docstring">                Get a list of all variables in this flow graph namespace.</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring">                Exclude paramterized variables.</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">                @return a sorted list of variable blocks in order of dependency (indep -&gt; dep)</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">                <tt class="py-name">variables</tt> <tt class="py-op">=</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">b</tt><tt class="py-op">:</tt> <tt id="link-41" class="py-name"><a title="gwn.gwnc.python.FlowGraph._variable_matcher" class="py-name" href="#" onclick="return doclink('link-41', '_variable_matcher', 'link-7');">_variable_matcher</a></tt><tt class="py-op">.</tt><tt class="py-name">match</tt><tt class="py-op">(</tt><tt class="py-name">b</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_key
+gwn.gwnc.base.Param.Option.get_key
+gwn.gwnc.base.Param.Param.get_key
+gwn.gwnc.base.Platform.Platform.get_key
+gwn.gwnc.base.Port.Port.get_key" class="py-name" href="#" onclick="return doclink('link-42', 'get_key', 'link-25');">get_key</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="gwn.gwnc.base.FlowGraph.FlowGraph.get_enabled_blocks" class="py-name" href="#" onclick="return doclink('link-43', 'get_enabled_blocks', 'link-26');">get_enabled_blocks</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt id="link-44" class="py-name"><a title="gwn.gwnc.python.expr_utils" class="py-name" href="#" onclick="return doclink('link-44', 'expr_utils', 'link-0');">expr_utils</a></tt><tt class="py-op">.</tt><tt id="link-45" class="py-name" targets="Function gwn.gwnc.python.expr_utils.sort_objects()=gwn.gwnc.python.expr_utils-module.html#sort_objects"><a title="gwn.gwnc.python.expr_utils.sort_objects" class="py-name" href="#" onclick="return doclink('link-45', 'sort_objects', 'link-45');">sort_objects</a></tt><tt class="py-op">(</tt><tt class="py-name">variables</tt><tt class="py-op">,</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">v</tt><tt class="py-op">:</tt> <tt class="py-name">v</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-46', 'get_id', 'link-27');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">v</tt><tt class="py-op">:</tt> <tt class="py-name">v</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name" targets="Method gwn.gwnc.python.Block.Block.get_var_make()=gwn.gwnc.python.Block.Block-class.html#get_var_make"><a title="gwn.gwnc.python.Block.Block.get_var_make" class="py-name" href="#" onclick="return doclink('link-47', 'get_var_make', 'link-47');">get_var_make</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.get_parameters"></a><div id="FlowGraph.get_parameters-def"><a name="L114"></a><tt class="py-lineno">114</tt> <a class="py-toggle" href="#" id="FlowGraph.get_parameters-toggle" onclick="return toggle('FlowGraph.get_parameters');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_parameters">get_parameters</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.get_parameters-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.get_parameters-expanded"><a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">                Get a list of all paramterized variables in this flow graph namespace.</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">                @return a list of paramterized variables</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                <tt class="py-name">parameters</tt> <tt class="py-op">=</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">b</tt><tt class="py-op">:</tt> <tt id="link-48" class="py-name"><a title="gwn.gwnc.python.FlowGraph._parameter_matcher" class="py-name" href="#" onclick="return doclink('link-48', '_parameter_matcher', 'link-8');">_parameter_matcher</a></tt><tt class="py-op">.</tt><tt class="py-name">match</tt><tt class="py-op">(</tt><tt class="py-name">b</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_key
+gwn.gwnc.base.Param.Option.get_key
+gwn.gwnc.base.Param.Param.get_key
+gwn.gwnc.base.Platform.Platform.get_key
+gwn.gwnc.base.Port.Port.get_key" class="py-name" href="#" onclick="return doclink('link-49', 'get_key', 'link-25');">get_key</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name"><a title="gwn.gwnc.base.FlowGraph.FlowGraph.get_enabled_blocks" class="py-name" href="#" onclick="return doclink('link-50', 'get_enabled_blocks', 'link-26');">get_enabled_blocks</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">parameters</tt> </tt>
+</div><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.rewrite"></a><div id="FlowGraph.rewrite-def"><a name="L122"></a><tt class="py-lineno">122</tt> <a class="py-toggle" href="#" id="FlowGraph.rewrite-toggle" onclick="return toggle('FlowGraph.rewrite');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#rewrite">rewrite</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.rewrite-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.rewrite-expanded"><a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">                Flag the namespace to be renewed.</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_renew_eval_ns</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">                <tt class="py-name">_FlowGraph</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name" targets="Method gwn.gwnc.base.Element.Element.rewrite()=gwn.gwnc.base.Element.Element-class.html#rewrite,Method gwn.gwnc.python.Block.Block.rewrite()=gwn.gwnc.python.Block.Block-class.html#rewrite,Method gwn.gwnc.python.FlowGraph.FlowGraph.rewrite()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#rewrite,Method gwn.gwnc.python.Port.Port.rewrite()=gwn.gwnc.python.Port.Port-class.html#rewrite"><a title="gwn.gwnc.base.Element.Element.rewrite
+gwn.gwnc.python.Block.Block.rewrite
+gwn.gwnc.python.FlowGraph.FlowGraph.rewrite
+gwn.gwnc.python.Port.Port.rewrite" class="py-name" href="#" onclick="return doclink('link-51', 'rewrite', 'link-51');">rewrite</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="FlowGraph.evaluate"></a><div id="FlowGraph.evaluate-def"><a name="L129"></a><tt class="py-lineno">129</tt> <a class="py-toggle" href="#" id="FlowGraph.evaluate-toggle" onclick="return toggle('FlowGraph.evaluate');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.python.FlowGraph.FlowGraph-class.html#evaluate">evaluate</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">expr</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FlowGraph.evaluate-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="FlowGraph.evaluate-expanded"><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-docstring">                Evaluate the expression.</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">                @param expr the string expression</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring">                @throw Exception bad expression</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring">                @return the evaluated data</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_renew_eval_ns</tt><tt class="py-op">:</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_renew_eval_ns</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">                        <tt class="py-comment">#reload namespace</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                        <tt class="py-name">n</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">                        <tt class="py-comment">#load imports</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">imp</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="gwn.gwnc.python.Block.Block.get_imports
+gwn.gwnc.python.FlowGraph.FlowGraph.get_imports" class="py-name" href="#" onclick="return doclink('link-52', 'get_imports', 'link-39');">get_imports</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">                                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> <tt class="py-keyword">exec</tt> <tt class="py-name">imp</tt> <tt class="py-keyword">in</tt> <tt class="py-name">n</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">                                <tt class="py-keyword">except</tt><tt class="py-op">:</tt> <tt class="py-keyword">pass</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                        <tt class="py-comment">#load parameters</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                        <tt class="py-name">np</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">parameter</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name" targets="Method gwn.gwnc.python.FlowGraph.FlowGraph.get_parameters()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_parameters"><a title="gwn.gwnc.python.FlowGraph.FlowGraph.get_parameters" class="py-name" href="#" onclick="return doclink('link-53', 'get_parameters', 'link-53');">get_parameters</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">                                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">                                        <tt class="py-name">e</tt> <tt class="py-op">=</tt> <tt class="py-name">eval</tt><tt class="py-op">(</tt><tt class="py-name">parameter</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-54', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'value'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-55" class="py-name" targets="Method gwn.gwnc.base.Param.Param.to_code()=gwn.gwnc.base.Param.Param-class.html#to_code,Method gwn.gwnc.python.Param.Param.to_code()=gwn.gwnc.python.Param.Param-class.html#to_code"><a title="gwn.gwnc.base.Param.Param.to_code
+gwn.gwnc.python.Param.Param.to_code" class="py-name" href="#" onclick="return doclink('link-55', 'to_code', 'link-55');">to_code</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">n</tt><tt class="py-op">,</tt> <tt class="py-name">n</tt><tt class="py-op">)</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">                                        <tt class="py-name">np</tt><tt class="py-op">[</tt><tt class="py-name">parameter</tt><tt class="py-op">.</tt><tt id="link-56" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-56', 'get_id', 'link-27');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">e</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">                                <tt class="py-keyword">except</tt><tt class="py-op">:</tt> <tt class="py-keyword">pass</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                        <tt class="py-name">n</tt><tt class="py-op">.</tt><tt id="link-57" class="py-name" targets="Method gwn.gwnc.gui.FlowGraph.FlowGraph.update()=gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#update,Method gwn.gwnc.gui.MainWindow.MainWindow.update()=gwn.gwnc.gui.MainWindow.MainWindow-class.html#update"><a title="gwn.gwnc.gui.FlowGraph.FlowGraph.update
+gwn.gwnc.gui.MainWindow.MainWindow.update" class="py-name" href="#" onclick="return doclink('link-57', 'update', 'link-57');">update</a></tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">)</tt> <tt class="py-comment">#merge param namespace</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">                        <tt class="py-comment">#load variables</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">variable</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-58" class="py-name" targets="Method gwn.gwnc.python.FlowGraph.FlowGraph.get_variables()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#get_variables"><a title="gwn.gwnc.python.FlowGraph.FlowGraph.get_variables" class="py-name" href="#" onclick="return doclink('link-58', 'get_variables', 'link-58');">get_variables</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">                                        <tt class="py-name">e</tt> <tt class="py-op">=</tt> <tt class="py-name">eval</tt><tt class="py-op">(</tt><tt class="py-name">variable</tt><tt class="py-op">.</tt><tt id="link-59" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_param" class="py-name" href="#" onclick="return doclink('link-59', 'get_param', 'link-13');">get_param</a></tt><tt class="py-op">(</tt><tt class="py-string">'value'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-60" class="py-name"><a title="gwn.gwnc.base.Param.Param.to_code
+gwn.gwnc.python.Param.Param.to_code" class="py-name" href="#" onclick="return doclink('link-60', 'to_code', 'link-55');">to_code</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">n</tt><tt class="py-op">,</tt> <tt class="py-name">n</tt><tt class="py-op">)</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">                                        <tt class="py-name">n</tt><tt class="py-op">[</tt><tt class="py-name">variable</tt><tt class="py-op">.</tt><tt id="link-61" class="py-name"><a title="gwn.gwnc.base.Block.Block.get_id" class="py-name" href="#" onclick="return doclink('link-61', 'get_id', 'link-27');">get_id</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">e</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">                                <tt class="py-keyword">except</tt><tt class="py-op">:</tt> <tt class="py-keyword">pass</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">                        <tt class="py-comment">#make namespace public</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">n</tt> <tt class="py-op">=</tt> <tt class="py-name">n</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">n_hash</tt> <tt class="py-op">=</tt> <tt class="py-name">hash</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">n</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">                <tt class="py-comment">#evaluate</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">                <tt class="py-name">e</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-62" class="py-name" targets="Method gwn.gwnc.python.FlowGraph.FlowGraph._eval()=gwn.gwnc.python.FlowGraph.FlowGraph-class.html#_eval"><a title="gwn.gwnc.python.FlowGraph.FlowGraph._eval" class="py-name" href="#" onclick="return doclink('link-62', '_eval', 'link-62');">_eval</a></tt><tt class="py-op">(</tt><tt class="py-name">expr</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">n</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">n_hash</tt><tt class="py-op">)</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">e</tt> </tt>
+</div></div><a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 15:58:30 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

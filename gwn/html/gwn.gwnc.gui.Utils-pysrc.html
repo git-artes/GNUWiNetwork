@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.gwnc.gui.Utils</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.gwnc-module.html">Package&nbsp;gwnc</a> ::
+        <a href="gwn.gwnc.gui-module.html">Package&nbsp;gui</a> ::
+        Module&nbsp;Utils
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.gwnc.gui.Utils-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="gwn.gwnc.gui.Utils-module.html">Module gwn.gwnc.gui.Utils</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">Copyright 2008-2011 Free Software Foundation, Inc.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">This file is part of GNU Radio</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is free software; you can redistribute it and/or</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">modify it under the terms of the GNU General Public License</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">as published by the Free Software Foundation; either version 2</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-docstring">of the License, or (at your option) any later version.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">GNU Radio Companion is distributed in the hope that it will be useful,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">but WITHOUT ANY WARRANTY; without even the implied warranty of</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring">GNU General Public License for more details.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">You should have received a copy of the GNU General Public License</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">along with this program; if not, write to the Free Software</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module gwn.gwnc.base.Constants=gwn.gwnc.base.Constants-module.html,Module gwn.gwnc.gui.Constants=gwn.gwnc.gui.Constants-module.html,Module gwn.gwnc.python.Constants=gwn.gwnc.python.Constants-module.html"><a title="gwn.gwnc.base.Constants
+gwn.gwnc.gui.Constants
+gwn.gwnc.python.Constants" class="py-name" href="#" onclick="return doclink('link-0', 'Constants', 'link-0');">Constants</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Variable gwn.gwnc.gui.Constants.POSSIBLE_ROTATIONS=gwn.gwnc.gui.Constants-module.html#POSSIBLE_ROTATIONS"><a title="gwn.gwnc.gui.Constants.POSSIBLE_ROTATIONS" class="py-name" href="#" onclick="return doclink('link-1', 'POSSIBLE_ROTATIONS', 'link-1');">POSSIBLE_ROTATIONS</a></tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">Cheetah</tt><tt class="py-op">.</tt><tt class="py-name">Template</tt> <tt class="py-keyword">import</tt> <tt class="py-name">Template</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pygtk</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-name">pygtk</tt><tt class="py-op">.</tt><tt class="py-name">require</tt><tt class="py-op">(</tt><tt class="py-string">'2.0'</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">gtk</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">gobject</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="rotate_pixmap"></a><div id="rotate_pixmap-def"><a name="L27"></a><tt class="py-lineno">27</tt> <a class="py-toggle" href="#" id="rotate_pixmap-toggle" onclick="return toggle('rotate_pixmap');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.Utils-module.html#rotate_pixmap">rotate_pixmap</a><tt class="py-op">(</tt><tt class="py-param">gc</tt><tt class="py-op">,</tt> <tt class="py-param">src_pixmap</tt><tt class="py-op">,</tt> <tt class="py-param">dst_pixmap</tt><tt class="py-op">,</tt> <tt class="py-param">angle</tt><tt class="py-op">=</tt><tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">PIXBUF_ROTATE_COUNTERCLOCKWISE</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="rotate_pixmap-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="rotate_pixmap-expanded"><a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-docstring">        Load the destination pixmap with a rotated version of the source pixmap.</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-docstring">        The source pixmap will be loaded into a pixbuf, rotated, and drawn to the destination pixmap.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-docstring">        The pixbuf is a client-side drawable, where a pixmap is a server-side drawable.</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-docstring">        @param gc the graphics context</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-docstring">        @param src_pixmap the source pixmap</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-docstring">        @param dst_pixmap the destination pixmap</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-docstring">        @param angle the angle to rotate by</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-name">width</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt> <tt class="py-op">=</tt> <tt class="py-name">src_pixmap</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Method gwn.gwnc.gui.FlowGraph.FlowGraph.get_size()=gwn.gwnc.gui.FlowGraph.FlowGraph-class.html#get_size"><a title="gwn.gwnc.gui.FlowGraph.FlowGraph.get_size" class="py-name" href="#" onclick="return doclink('link-2', 'get_size', 'link-2');">get_size</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-name">pixbuf</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">Pixbuf</tt><tt class="py-op">(</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">                <tt class="py-name">colorspace</tt><tt class="py-op">=</tt><tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">COLORSPACE_RGB</tt><tt class="py-op">,</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">                <tt class="py-name">has_alpha</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-name">bits_per_sample</tt><tt class="py-op">=</tt><tt class="py-number">8</tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                <tt class="py-name">width</tt><tt class="py-op">=</tt><tt class="py-name">width</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">=</tt><tt class="py-name">height</tt><tt class="py-op">,</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">        <tt class="py-name">pixbuf</tt><tt class="py-op">.</tt><tt class="py-name">get_from_drawable</tt><tt class="py-op">(</tt><tt class="py-name">src_pixmap</tt><tt class="py-op">,</tt> <tt class="py-name">src_pixmap</tt><tt class="py-op">.</tt><tt class="py-name">get_colormap</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">        <tt class="py-name">pixbuf</tt> <tt class="py-op">=</tt> <tt class="py-name">pixbuf</tt><tt class="py-op">.</tt><tt class="py-name">rotate_simple</tt><tt class="py-op">(</tt><tt class="py-name">angle</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">        <tt class="py-name">dst_pixmap</tt><tt class="py-op">.</tt><tt class="py-name">draw_pixbuf</tt><tt class="py-op">(</tt><tt class="py-name">gc</tt><tt class="py-op">,</tt> <tt class="py-name">pixbuf</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"> </tt>
+<a name="get_rotated_coordinate"></a><div id="get_rotated_coordinate-def"><a name="L47"></a><tt class="py-lineno">47</tt> <a class="py-toggle" href="#" id="get_rotated_coordinate-toggle" onclick="return toggle('get_rotated_coordinate');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.Utils-module.html#get_rotated_coordinate">get_rotated_coordinate</a><tt class="py-op">(</tt><tt class="py-param">coor</tt><tt class="py-op">,</tt> <tt class="py-param">rotation</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_rotated_coordinate-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_rotated_coordinate-expanded"><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"><tt class="py-docstring">        Rotate the coordinate by the given rotation.</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"><tt class="py-docstring">        @param coor the coordinate x, y tuple</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"><tt class="py-docstring">        @param rotation the angle in degrees</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"><tt class="py-docstring">        @return the rotated coordinates</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-comment">#handles negative angles</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">        <tt class="py-name">rotation</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">rotation</tt> <tt class="py-op">+</tt> <tt class="py-number">360</tt><tt class="py-op">)</tt><tt class="py-op">%</tt><tt class="py-number">360</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">rotation</tt> <tt class="py-keyword">not</tt> <tt class="py-keyword">in</tt> <tt id="link-3" class="py-name"><a title="gwn.gwnc.gui.Constants.POSSIBLE_ROTATIONS" class="py-name" href="#" onclick="return doclink('link-3', 'POSSIBLE_ROTATIONS', 'link-1');">POSSIBLE_ROTATIONS</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">                <tt class="py-keyword">raise</tt> <tt class="py-name">ValueError</tt><tt class="py-op">(</tt><tt class="py-string">'unusable rotation angle "%s"'</tt><tt class="py-op">%</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">rotation</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">        <tt class="py-comment">#determine the number of degrees to rotate</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">        <tt class="py-name">cos_r</tt><tt class="py-op">,</tt> <tt class="py-name">sin_r</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">                <tt class="py-number">0</tt><tt class="py-op">:</tt> <tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">                <tt class="py-number">90</tt><tt class="py-op">:</tt> <tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">                <tt class="py-number">180</tt><tt class="py-op">:</tt> <tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">                <tt class="py-number">270</tt><tt class="py-op">:</tt> <tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">        <tt class="py-op">}</tt><tt class="py-op">[</tt><tt class="py-name">rotation</tt><tt class="py-op">]</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">        <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt> <tt class="py-op">=</tt> <tt class="py-name">coor</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">*</tt><tt class="py-name">cos_r</tt> <tt class="py-op">+</tt> <tt class="py-name">y</tt><tt class="py-op">*</tt><tt class="py-name">sin_r</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-name">x</tt><tt class="py-op">*</tt><tt class="py-name">sin_r</tt> <tt class="py-op">+</tt> <tt class="py-name">y</tt><tt class="py-op">*</tt><tt class="py-name">cos_r</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"> </tt>
+<a name="get_angle_from_coordinates"></a><div id="get_angle_from_coordinates-def"><a name="L68"></a><tt class="py-lineno">68</tt> <a class="py-toggle" href="#" id="get_angle_from_coordinates-toggle" onclick="return toggle('get_angle_from_coordinates');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.Utils-module.html#get_angle_from_coordinates">get_angle_from_coordinates</a><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-param">x1</tt><tt class="py-op">,</tt><tt class="py-param">y1</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-param">x2</tt><tt class="py-op">,</tt><tt class="py-param">y2</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_angle_from_coordinates-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="get_angle_from_coordinates-expanded"><a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"><tt class="py-docstring">        Given two points, calculate the vector direction from point1 to point2, directions are multiples of 90 degrees.</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"><tt class="py-docstring">        @param (x1,y1) the coordinate of point 1</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"><tt class="py-docstring">        @param (x2,y2) the coordinate of point 2</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"><tt class="py-docstring">        @return the direction in degrees</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">y1</tt> <tt class="py-op">==</tt> <tt class="py-name">y2</tt><tt class="py-op">:</tt><tt class="py-comment">#0 or 180</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">x2</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">x1</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-number">0</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-number">180</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt><tt class="py-comment">#90 or 270</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">y2</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">y1</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-number">270</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-number">90</tt> </tt>
+</div><a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line"> </tt>
+<a name="parse_template"></a><div id="parse_template-def"><a name="L82"></a><tt class="py-lineno">82</tt> <a class="py-toggle" href="#" id="parse_template-toggle" onclick="return toggle('parse_template');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.gwnc.gui.Utils-module.html#parse_template">parse_template</a><tt class="py-op">(</tt><tt class="py-param">tmpl_str</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="parse_template-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="parse_template-expanded"><a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line"><tt class="py-docstring">        Parse the template string with the given args.</tt> </tt>
+<a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line"><tt class="py-docstring">        Pass in the xml encode method for pango escape chars.</tt> </tt>
+<a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line"><tt class="py-docstring">        @param tmpl_str the template as a string</tt> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line"><tt class="py-docstring">        @return a string of the parsed template</tt> </tt>
+<a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line">        <tt class="py-name">kwargs</tt><tt class="py-op">[</tt><tt class="py-string">'encode'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">gobject</tt><tt class="py-op">.</tt><tt class="py-name">markup_escape_text</tt> </tt>
+<a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">Template</tt><tt class="py-op">(</tt><tt class="py-name">tmpl_str</tt><tt class="py-op">,</tt> <tt class="py-name">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 15:58:32 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

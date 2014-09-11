@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Timer block
+###################################################
+ -->
+<block>
+	<name>GNURadio Tx/Rx PSK Interface</name>
+	<key>psk</key>
+     <category>Interfaces</category>
+	<import>import blocks.libio.gnuradio.psk as psk</import>
+	<make>psk.PSK($sps, $version, $antenna, $rx_freq, $rx_gain, $spec, $tx_gain, '$modulation', $args,  $bitrate, $tx_freq, $tx_amplitude)</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+  
+	<param>
+		<name>gnuradio version 3.(6 or 7)</name>
+		<key>version</key>
+		<value>6</value>
+		<type>string</type>
+    </param>      
+
+	<param>
+		<name>USRP Address</name>
+		<key>args</key>
+		<value>serial=E0R11Y0B1</value>
+		<type>string</type>
+    </param>      	
+
+	<param>
+		<name>antenna</name>
+		<key>antenna</key>
+		<value>'TX/RX'</value>
+		<type>string</type>
+    </param>      
+
+	<param>
+		<name>spec</name>
+		<key>spec</key>
+		<value>A:0</value>
+		<type>string</type>
+    </param>      
+
+	<param>
+		<name>Rx Frequency band(Hz)</name>
+		<key>rx_freq</key>
+		<value>850000000.0</value>
+		<type>real</type>
+    </param>      	
+
+    <param>
+		<name>Rx Gain</name>
+		<key>rx_gain</key>
+		<value>15</value>
+		<type>real</type>
+    </param>      
+
+	<param>
+		<name>Tx Gain</name>
+		<key>tx_gain</key>
+		<value>15</value>
+		<type>real</type>
+    </param>      
+
+    <param>
+		<name>Tx Frequency band(Hz)</name>
+		<key>tx_freq</key>
+		<value>851000000.0</value>
+		<type>real</type>
+    </param>      	
+
+    <param>      	
+		<name>Tx Amplitude </name>
+		<key>tx_amplitude</key>
+		<value>0.25</value>
+		<type>real</type>
+    </param>      	
+
+    <param>      	
+		<name>Bit rate (bps)</name>
+		<key>bitrate</key>
+		<value>100000</value>
+		<type>int</type>
+    </param>      	
+
+	<param>
+		<name>samples per symbol</name>
+		<key>sps</key>
+		<value>2</value>
+		<type>int</type>
+    </param>      
+
+    <param>      	
+		<name>Modulation</name>
+		<key>modulation</key>
+		<value>bpsk</value>
+		<type>enum</type>
+                <option>
+        			<name>BPSK</name>
+        			<key>bpsk</key>
+            	</option>
+                <option>
+        			<name>DBPSK</name>
+        			<key>dbpsk</key>
+        	     </option>
+                <option>
+        			<name>QPSK</name>
+        			<key>qpsk</key>
+        		</option>
+                <option>
+        			<name>DQPSK</name>
+        			<key>dqpsk</key>
+        	     </option>
+                <option>
+        			<name>16 QAM</name>
+        			<key>qam</key>
+        		</option>
+                <option>
+        			<name>GMSK</name>
+        			<key>gmsk</key>
+        	     </option>
+                <option>
+        			<name>GFSK</name>
+        			<key>gsfk</key>
+        	     </option>
+    </param>      	
+
+    <sink>
+		<name>in</name>
+		<type>Event</type>            
+	</sink>
+
+   	<source>
+		<name>out</name>
+		<type>Event</type>
+	</source>
+
+    <doc>
+        TODO
+    </doc>
+</block>

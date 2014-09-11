@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>gwn.blocks.libio.gnuradio.gwngnuradiopsk</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="gwn-module.html">Package&nbsp;gwn</a> ::
+        <a href="gwn.blocks-module.html">Package&nbsp;blocks</a> ::
+        <a href="gwn.blocks.libio-module.html">Package&nbsp;libio</a> ::
+        <a href="gwn.blocks.libio.gnuradio-module.html">Package&nbsp;gnuradio</a> ::
+        Module&nbsp;gwngnuradiopsk
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="gwn.blocks.libio.gnuradio.gwngnuradiopsk-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="gwn.blocks.libio.gnuradio.gwngnuradiopsk-module.html">Module gwn.blocks.libio.gnuradio.gwngnuradiopsk</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">Created on Thu Dec 13 14:31:45 2012</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">@author: belza</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt> <tt class="py-op">+=</tt><tt class="py-op">[</tt><tt class="py-string">'..'</tt><tt class="py-op">]</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># From gr-digital</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package gwn.blocks.libio.gnuradio=gwn.blocks.libio.gnuradio-module.html"><a title="gwn.blocks.libio.gnuradio" class="py-name" href="#" onclick="return doclink('link-0', 'gnuradio', 'link-0');">gnuradio</a></tt> <tt class="py-keyword">import</tt> <tt class="py-name">digital</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">Queue</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">threading</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">libevents</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module gwn.gwnevents.if_events=gwn.gwnevents.if_events-module.html"><a title="gwn.gwnevents.if_events" class="py-name" href="#" onclick="return doclink('link-1', 'if_events', 'link-1');">if_events</a></tt> <tt class="py-keyword">as</tt> <tt id="link-2" class="py-name"><a title="gwn.gwnevents.if_events" class="py-name" href="#" onclick="return doclink('link-2', 'if_events', 'link-1');">if_events</a></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module gwn.blocks.libio.gnuradio.TxRxLayer1=gwn.blocks.libio.gnuradio.TxRxLayer1-module.html"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1" class="py-name" href="#" onclick="return doclink('link-3', 'TxRxLayer1', 'link-3');">TxRxLayer1</a></tt> <tt class="py-keyword">as</tt> <tt id="link-4" class="py-name"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1" class="py-name" href="#" onclick="return doclink('link-4', 'TxRxLayer1', 'link-3');">TxRxLayer1</a></tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">libgwnBlocks</tt><tt class="py-op">.</tt><tt class="py-name">gwnBlock</tt> <tt class="py-keyword">as</tt> <tt id="link-5" class="py-name" targets="Package gwn=gwn-module.html"><a title="gwn" class="py-name" href="#" onclick="return doclink('link-5', 'gwn', 'link-5');">gwn</a></tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">         </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># /////////////////////////////////////////////////////////////////////////////</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment">#                                   main</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment"># /////////////////////////////////////////////////////////////////////////////</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="GWNGnuRadioPSK"></a><div id="GWNGnuRadioPSK-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK-toggle" onclick="return toggle('GWNGnuRadioPSK');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html">GWNGnuRadioPSK</a><tt class="py-op">(</tt><tt class="py-base-class">gwn</tt><tt class="py-op">.</tt><tt class="py-base-class">gwnBlock</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="GWNGnuRadioPSK-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="GWNGnuRadioPSK.__init__"></a><div id="GWNGnuRadioPSK.__init__-def"><a name="L30"></a><tt class="py-lineno"> 30</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.__init__-toggle" onclick="return toggle('GWNGnuRadioPSK.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt>  <tt class="py-param">samples_per_symbol</tt><tt class="py-op">=</tt> <tt class="py-number">2</tt><tt class="py-op">,</tt> <tt class="py-param">version</tt><tt class="py-op">=</tt> <tt class="py-string">'6'</tt><tt class="py-op">,</tt> <tt class="py-param">antenna</tt><tt class="py-op">=</tt> <tt class="py-string">'TX/RX'</tt><tt class="py-op">,</tt> <tt class="py-param">rx_freq</tt><tt class="py-op">=</tt> <tt class="py-number">850000000.0</tt><tt class="py-op">,</tt> <tt class="py-param">rx_gain</tt><tt class="py-op">=</tt> <tt class="py-number">15.0</tt><tt class="py-op">,</tt> <tt class="py-param">spec</tt><tt class="py-op">=</tt> <tt class="py-string">'A:0'</tt><tt class="py-op">,</tt> <tt class="py-param">tx_gain</tt><tt class="py-op">=</tt> <tt class="py-number">15.0</tt><tt class="py-op">,</tt> <tt class="py-param">modulation</tt><tt class="py-op">=</tt> <tt class="py-string">'bpsk'</tt><tt class="py-op">,</tt> <tt class="py-param">args</tt><tt class="py-op">=</tt> <tt class="py-string">'serial=E0R11Y0B1'</tt><tt class="py-op">,</tt>  <tt class="py-param">bitrate</tt><tt class="py-op">=</tt> <tt class="py-number">100000.0</tt><tt class="py-op">,</tt> <tt class="py-param">tx_freq</tt><tt class="py-op">=</tt> <tt class="py-number">851000000.0</tt><tt class="py-op">,</tt>  <tt class="py-param">tx_amplitude</tt><tt class="py-op">=</tt> <tt class="py-number">0.25</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GWNGnuRadioPSK.__init__-expanded"><a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-6" class="py-name" targets="Class gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK=gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html"><a title="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK" class="py-name" href="#" onclick="return doclink('link-6', 'GWNGnuRadioPSK', 'link-6');">GWNGnuRadioPSK</a></tt><tt class="py-op">,</tt><tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method gwn.blocks.framers.ieee80211.deframer.Deframer.__init__()=gwn.blocks.framers.ieee80211.deframer.Deframer-class.html#__init__,Method gwn.blocks.framers.ieee80211.framer.Framer.__init__()=gwn.blocks.framers.ieee80211.framer.Framer-class.html#__init__,Method gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1.__init__()=gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1-class.html#__init__,Method gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx.__init__()=gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx-class.html#__init__,Method gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx.__init__()=gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx-class.html#__init__,Method gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2.__init__()=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2-class.html#__init__,Method gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.__init__()=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk-class.html#__init__,Method gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2.__init__()=gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2-class.html#__init__,Method gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.__init__()=gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#__init__,Method gwn.blocks.libio.gnuradio.receive_path.receive_path.__init__()=gwn.blocks.libio.gnuradio.receive_path.receive_path-class.html#__init__,Method gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.__init__()=gwn.blocks.libio.gnuradio.receive_path3_7.receive_path-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.__init__()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.__init__()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.__init__()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_node.StartL1.__init__()=gwn.blocks.libio.gnuradio.run_node.StartL1-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_node.StartL2.__init__()=gwn.blocks.libio.gnuradio.run_node.StartL2-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx.__init__()=gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx.__init__()=gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx.__init__()=gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx.__init__()=gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.__init__()=gwn.blocks.libio.gnuradio.run_nodeL3.StartL1-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.__init__()=gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.__init__()=gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.__init__()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.__init__()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt-class.html#__init__,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.__init__()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2-class.html#__init__,Method gwn.blocks.libio.gnuradio.transmit_path.transmit_path.__init__()=gwn.blocks.libio.gnuradio.transmit_path.transmit_path-class.html#__init__,Method gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.__init__()=gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path-class.html#__init__,Method gwn.blocks.libio.gnuradio.uhd_interface.uhd_interface.__init__()=gwn.blocks.libio.gnuradio.uhd_interface.uhd_interface-class.html#__init__,Method gwn.blocks.libio.gnuradio.uhd_interface.uhd_receiver.__init__()=gwn.blocks.libio.gnuradio.uhd_interface.uhd_receiver-class.html#__init__,Method gwn.blocks.libio.gnuradio.uhd_interface.uhd_transmitter.__init__()=gwn.blocks.libio.gnuradio.uhd_interface.uhd_transmitter-class.html#__init__,Method gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.__init__()=gwn.blocks.libio.tuntap.tuntap.ATunTapConnector-class.html#__init__,Method gwn.blocks.libio.tuntap.tuntap.TunTapInterface.__init__()=gwn.blocks.libio.tuntap.tuntap.TunTapInterface-class.html#__init__,Method gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA.__init__()=gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA-class.html#__init__,Method gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.__init__()=gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.MacTdma-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents-class.html#__init__,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.__init__()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events-class.html#__init__,Method gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel.__init__()=gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel-class.html#__init__,Method gwn.blocks.simulators.consumers.eventconsumer.EventConsumer.__init__()=gwn.blocks.simulators.consumers.eventconsumer.EventConsumer-class.html#__init__,Method gwn.blocks.simulators.generators.eventsimulator.EventSimulator.__init__()=gwn.blocks.simulators.generators.eventsimulator.EventSimulator-class.html#__init__,Method gwn.blocks.utilblocks.timer.timer.Timer.__init__()=gwn.blocks.utilblocks.timer.timer.Timer-class.html#__init__,Method gwn.epydoc_doc.epydoc_example.ClassA.__init__()=gwn.epydoc_doc.epydoc_example.ClassA-class.html#__init__,Method gwn.gwnblocks.gwnblock.GWNBlock.__init__()=gwn.gwnblocks.gwnblock.GWNBlock-class.html#__init__,Method gwn.gwnblocks.gwninport.AListConnector.__init__()=gwn.gwnblocks.gwninport.AListConnector-class.html#__init__,Method gwn.gwnblocks.gwninport.AQueueConnector.__init__()=gwn.gwnblocks.gwninport.AQueueConnector-class.html#__init__,Method gwn.gwnblocks.gwninport.InPort.__init__()=gwn.gwnblocks.gwninport.InPort-class.html#__init__,Method gwn.gwnblocks.gwnintimer.InTimer.__init__()=gwn.gwnblocks.gwnintimer.InTimer-class.html#__init__,Method gwn.gwnblocks.gwntopblock.GWNTopBlock.__init__()=gwn.gwnblocks.gwntopblock.GWNTopBlock-class.html#__init__,Method gwn.gwnblocks.gwntopblock.top_block_test.__init__()=gwn.gwnblocks.gwntopblock.top_block_test-class.html#__init__,Method gwn.gwnevents.events.Event.__init__()=gwn.gwnevents.events.Event-class.html#__init__,Method gwn.gwnevents.evframes80211.EventFrame.__init__()=gwn.gwnevents.evframes80211.EventFrame-class.html#__init__,Method gwn.gwnevents.evframes80211.EventFrameMgmt.__init__()=gwn.gwnevents.evframes80211.EventFrameMgmt-class.html#__init__,Method gwn.gwnevents.evrequest.EventRequest.__init__()=gwn.gwnevents.evrequest.EventRequest-class.html#__init__,Method gwn.gwnevents.evtimer.EventTimer.__init__()=gwn.gwnevents.evtimer.EventTimer-class.html#__init__,Method gwn.utils.framers.ieee80211.frames.Frame.__init__()=gwn.utils.framers.ieee80211.frames.Frame-class.html#__init__,Method gwn.utils.framers.ieee80211.frames.FrameException.__init__()=gwn.utils.framers.ieee80211.frames.FrameException-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrame.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrame-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException.__init__()=gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException-class.html#__init__,Method gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException.__init__()=gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException-class.html#__init__,Method gwn.utils.libfsm.fsm.ExceptionFSM.__init__()=gwn.utils.libfsm.fsm.ExceptionFSM-class.html#__init__,Method gwn.utils.libfsm.fsm.FSM.__init__()=gwn.utils.libfsm.fsm.FSM-class.html#__init__,Method gwn.utils.logger.gnlogger_test.Auxiliary.__init__()=gwn.utils.logger.gnlogger_test.Auxiliary-class.html#__init__,Method gwn.utils.testing.exampletest.AClass.__init__()=gwn.utils.testing.exampletest.AClass-class.html#__init__"><a title="gwn.blocks.framers.ieee80211.deframer.Deframer.__init__
+gwn.blocks.framers.ieee80211.framer.Framer.__init__
+gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1.__init__
+gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx.__init__
+gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx.__init__
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2.__init__
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.__init__
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2.__init__
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.__init__
+gwn.blocks.libio.gnuradio.receive_path.receive_path.__init__
+gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.__init__
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.__init__
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.__init__
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.__init__
+gwn.blocks.libio.gnuradio.run_node.StartL1.__init__
+gwn.blocks.libio.gnuradio.run_node.StartL2.__init__
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx.__init__
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx.__init__
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx.__init__
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.__init__
+gwn.blocks.libio.gnuradio.transmit_path.transmit_path.__init__
+gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.__init__
+gwn.blocks.libio.gnuradio.uhd_interface.uhd_interface.__init__
+gwn.blocks.libio.gnuradio.uhd_interface.uhd_receiver.__init__
+gwn.blocks.libio.gnuradio.uhd_interface.uhd_transmitter.__init__
+gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.__init__
+gwn.blocks.libio.tuntap.tuntap.TunTapInterface.__init__
+gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA.__init__
+gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.__init__
+gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel.__init__
+gwn.blocks.simulators.consumers.eventconsumer.EventConsumer.__init__
+gwn.blocks.simulators.generators.eventsimulator.EventSimulator.__init__
+gwn.blocks.utilblocks.timer.timer.Timer.__init__
+gwn.epydoc_doc.epydoc_example.ClassA.__init__
+gwn.gwnblocks.gwnblock.GWNBlock.__init__
+gwn.gwnblocks.gwninport.AListConnector.__init__
+gwn.gwnblocks.gwninport.AQueueConnector.__init__
+gwn.gwnblocks.gwninport.InPort.__init__
+gwn.gwnblocks.gwnintimer.InTimer.__init__
+gwn.gwnblocks.gwntopblock.GWNTopBlock.__init__
+gwn.gwnblocks.gwntopblock.top_block_test.__init__
+gwn.gwnevents.events.Event.__init__
+gwn.gwnevents.evframes80211.EventFrame.__init__
+gwn.gwnevents.evframes80211.EventFrameMgmt.__init__
+gwn.gwnevents.evrequest.EventRequest.__init__
+gwn.gwnevents.evtimer.EventTimer.__init__
+gwn.utils.framers.ieee80211.frames.Frame.__init__
+gwn.utils.framers.ieee80211.frames.FrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrame.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException.__init__
+gwn.utils.libfsm.fsm.ExceptionFSM.__init__
+gwn.utils.libfsm.fsm.FSM.__init__
+gwn.utils.logger.gnlogger_test.Auxiliary.__init__
+gwn.utils.testing.exampletest.AClass.__init__" class="py-name" href="#" onclick="return doclink('link-7', '__init__', 'link-7');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mods</tt> <tt class="py-op">=</tt> <tt class="py-name">digital</tt><tt class="py-op">.</tt><tt class="py-name">modulation_utils</tt><tt class="py-op">.</tt><tt class="py-name">type_1_mods</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">demods</tt> <tt class="py-op">=</tt> <tt class="py-name">digital</tt><tt class="py-op">.</tt><tt class="py-name">modulation_utils</tt><tt class="py-op">.</tt><tt class="py-name">type_1_demods</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-name">opt</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-string">'verbose'</tt><tt class="py-op">:</tt> <tt class="py-name">True</tt><tt class="py-op">,</tt>  <tt class="py-string">'samples_per_symbol'</tt><tt class="py-op">:</tt> <tt class="py-number">2</tt><tt class="py-op">,</tt> <tt class="py-string">'chbw_factor'</tt><tt class="py-op">:</tt> <tt class="py-number">1.0</tt><tt class="py-op">,</tt>  <tt class="py-string">'log'</tt><tt class="py-op">:</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt>  <tt class="py-string">'version'</tt><tt class="py-op">:</tt> <tt class="py-string">'6'</tt><tt class="py-op">,</tt> <tt class="py-string">'antenna'</tt><tt class="py-op">:</tt> <tt class="py-string">'TX/RX'</tt><tt class="py-op">,</tt> <tt class="py-string">'rx_freq'</tt><tt class="py-op">:</tt> <tt class="py-number">850000000.0</tt><tt class="py-op">,</tt> <tt class="py-string">'version'</tt><tt class="py-op">:</tt> <tt class="py-string">'6'</tt><tt class="py-op">,</tt>  <tt class="py-string">'rx_gain'</tt><tt class="py-op">:</tt> <tt class="py-number">15.0</tt><tt class="py-op">,</tt> <tt class="py-string">'spec'</tt><tt class="py-op">:</tt> <tt class="py-string">'A:0'</tt><tt class="py-op">,</tt> <tt class="py-string">'tx_gain'</tt><tt class="py-op">:</tt> <tt class="py-number">15.0</tt><tt class="py-op">,</tt> <tt class="py-string">'modulation'</tt><tt class="py-op">:</tt> <tt class="py-string">'bpsk'</tt><tt class="py-op">,</tt> <tt class="py-string">'args'</tt><tt class="py-op">:</tt> <tt class="py-string">'serial=E0R11Y0B1'</tt><tt class="py-op">,</tt>  <tt class="py-string">'freq'</tt><tt class="py-op">:</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-string">'bitrate'</tt><tt class="py-op">:</tt> <tt class="py-number">100000.0</tt><tt class="py-op">,</tt>  <tt class="py-string">'from_file'</tt><tt class="py-op">:</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-string">'to_file'</tt><tt class="py-op">:</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt>  <tt class="py-string">'tx_freq'</tt><tt class="py-op">:</tt> <tt class="py-number">851000000.0</tt><tt class="py-op">,</tt> <tt class="py-string">'tx_amplitude'</tt><tt class="py-op">:</tt> <tt class="py-number">0.25</tt><tt class="py-op">}</tt>         </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-comment">#self.mods = {'psk': &lt;class 'gnuradio.digital.psk.psk_mod'&gt;, 'cpm': &lt;class 'gnuradio.digital.cpm.cpm_mod'&gt;, 'qpsk': &lt;class 'gnuradio.digital.qpsk.qpsk_mod'&gt;, 'dqpsk': &lt;class 'gnuradio.digital.qpsk.dqpsk_mod'&gt;, 'gfsk': &lt;class 'gnuradio.digital.gfsk.gfsk_mod'&gt;, 'qam': &lt;class 'gnuradio.digital.qam.qam_mod'&gt;, 'dbpsk': &lt;class 'gnuradio.digital.bpsk.dbpsk_mod'&gt;, 'bpsk': &lt;class 'gnuradio.digital.bpsk.bpsk_mod'&gt;, 'gmsk': &lt;class 'gnuradio.digital.gmsk.gmsk_mod'&gt;}</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-comment">#self.demods = {'psk': &lt;class 'gnuradio.digital.psk.psk_demod'&gt;, 'qpsk': &lt;class 'gnuradio.digital.qpsk.qpsk_demod'&gt;, 'dqpsk': &lt;class 'gnuradio.digital.qpsk.dqpsk_demod'&gt;, 'gfsk': &lt;class 'gnuradio.digital.gfsk.gfsk_demod'&gt;, 'qam': &lt;class 'gnuradio.digital.qam.qam_demod'&gt;, 'dbpsk': &lt;class 'gnuradio.digital.bpsk.dbpsk_demod'&gt;, 'bpsk': &lt;class 'gnuradio.digital.bpsk.bpsk_demod'&gt;, 'gmsk': &lt;class 'gnuradio.digital.gmsk.gmsk_demod'&gt;}</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-comment">#self.default_options()</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name" targets="Class gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.dotdict=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.dotdict-class.html,Class gwn.blocks.libio.gnuradio.gwngnuradiopsk.dotdict=gwn.blocks.libio.gnuradio.gwngnuradiopsk.dotdict-class.html"><a title="gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.dotdict
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.dotdict" class="py-name" href="#" onclick="return doclink('link-8', 'dotdict', 'link-8');">dotdict</a></tt><tt class="py-op">(</tt><tt class="py-name">opt</tt><tt class="py-op">)</tt>         </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method gwn.blocks.libio.gnuradio.receive_path.receive_path.samples_per_symbol()=gwn.blocks.libio.gnuradio.receive_path.receive_path-class.html#samples_per_symbol,Method gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.samples_per_symbol()=gwn.blocks.libio.gnuradio.receive_path3_7.receive_path-class.html#samples_per_symbol,Method gwn.blocks.libio.gnuradio.transmit_path.transmit_path.samples_per_symbol()=gwn.blocks.libio.gnuradio.transmit_path.transmit_path-class.html#samples_per_symbol,Method gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.samples_per_symbol()=gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path-class.html#samples_per_symbol"><a title="gwn.blocks.libio.gnuradio.receive_path.receive_path.samples_per_symbol
+gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.samples_per_symbol
+gwn.blocks.libio.gnuradio.transmit_path.transmit_path.samples_per_symbol
+gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.samples_per_symbol" class="py-name" href="#" onclick="return doclink('link-9', 'samples_per_symbol', 'link-9');">samples_per_symbol</a></tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name"><a title="gwn.blocks.libio.gnuradio.receive_path.receive_path.samples_per_symbol
+gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.samples_per_symbol
+gwn.blocks.libio.gnuradio.transmit_path.transmit_path.samples_per_symbol
+gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.samples_per_symbol" class="py-name" href="#" onclick="return doclink('link-10', 'samples_per_symbol', 'link-9');">samples_per_symbol</a></tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">version</tt> <tt class="py-op">=</tt> <tt class="py-name">version</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">antenna</tt> <tt class="py-op">=</tt> <tt class="py-name">antenna</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">rx_freq</tt> <tt class="py-op">=</tt> <tt class="py-name">rx_freq</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">rx_gain</tt> <tt class="py-op">=</tt> <tt class="py-name">rx_gain</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">spec</tt> <tt class="py-op">=</tt> <tt class="py-name">spec</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">tx_gain</tt> <tt class="py-op">=</tt> <tt class="py-name">tx_gain</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">modulation</tt> <tt class="py-op">=</tt> <tt class="py-name">modulation</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">args</tt> <tt class="py-op">=</tt> <tt class="py-name">args</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method gwn.blocks.libio.gnuradio.receive_path.receive_path.bitrate()=gwn.blocks.libio.gnuradio.receive_path.receive_path-class.html#bitrate,Method gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.bitrate()=gwn.blocks.libio.gnuradio.receive_path3_7.receive_path-class.html#bitrate,Method gwn.blocks.libio.gnuradio.transmit_path.transmit_path.bitrate()=gwn.blocks.libio.gnuradio.transmit_path.transmit_path-class.html#bitrate,Method gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.bitrate()=gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path-class.html#bitrate"><a title="gwn.blocks.libio.gnuradio.receive_path.receive_path.bitrate
+gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.bitrate
+gwn.blocks.libio.gnuradio.transmit_path.transmit_path.bitrate
+gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.bitrate" class="py-name" href="#" onclick="return doclink('link-11', 'bitrate', 'link-11');">bitrate</a></tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="gwn.blocks.libio.gnuradio.receive_path.receive_path.bitrate
+gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.bitrate
+gwn.blocks.libio.gnuradio.transmit_path.transmit_path.bitrate
+gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.bitrate" class="py-name" href="#" onclick="return doclink('link-12', 'bitrate', 'link-11');">bitrate</a></tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">tx_freq</tt> <tt class="py-op">=</tt> <tt class="py-name">tx_freq</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">tx_amplitude</tt> <tt class="py-op">=</tt> <tt class="py-name">tx_amplitude</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">         </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">rx_queue</tt> <tt class="py-op">=</tt> <tt class="py-name">Queue</tt><tt class="py-op">.</tt><tt class="py-name">Queue</tt><tt class="py-op">(</tt><tt class="py-number">12</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tx_queue</tt> <tt class="py-op">=</tt> <tt class="py-name">Queue</tt><tt class="py-op">.</tt><tt class="py-name">Queue</tt><tt class="py-op">(</tt><tt class="py-number">12</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">     </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mods</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">demodulator</tt> <tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">demods</tt><tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">modulation</tt><tt class="py-op">]</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">modulator</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">mods</tt><tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">.</tt><tt class="py-name">modulation</tt><tt class="py-op">]</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_rx</tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1" class="py-name" href="#" onclick="return doclink('link-13', 'TxRxLayer1', 'link-3');">TxRxLayer1</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Class gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx=gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx-class.html"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx" class="py-name" href="#" onclick="return doclink('link-14', 'my_top_block_rx', 'link-14');">my_top_block_rx</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">demodulator</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">,</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">rx_queue</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_tx</tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1" class="py-name" href="#" onclick="return doclink('link-15', 'TxRxLayer1', 'link-3');">TxRxLayer1</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Class gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx=gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx-class.html"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx" class="py-name" href="#" onclick="return doclink('link-16', 'my_top_block_tx', 'link-16');">my_top_block_tx</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">modulator</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">options</tt><tt class="py-op">,</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tx_queue</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_rx</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.start()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1-class.html#start,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.start()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt-class.html#start,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.start()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2-class.html#start,Method gwn.blocks.libio.gnuradio.run_node.StartL1.start()=gwn.blocks.libio.gnuradio.run_node.StartL1-class.html#start,Method gwn.blocks.libio.gnuradio.run_node.StartL2.start()=gwn.blocks.libio.gnuradio.run_node.StartL2-class.html#start,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.start()=gwn.blocks.libio.gnuradio.run_nodeL3.StartL1-class.html#start,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.start()=gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt-class.html#start,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.start()=gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2-class.html#start,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.start()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1-class.html#start,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.start()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt-class.html#start,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.start()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2-class.html#start"><a title="gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.start
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.start
+gwn.blocks.libio.gnuradio.run_node.StartL1.start
+gwn.blocks.libio.gnuradio.run_node.StartL2.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.start" class="py-name" href="#" onclick="return doclink('link-17', 'start', 'link-17');">start</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt>        <tt class="py-comment"># start flow graph</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_tx</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.start
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.start
+gwn.blocks.libio.gnuradio.run_node.StartL1.start
+gwn.blocks.libio.gnuradio.run_node.StartL2.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.start" class="py-name" href="#" onclick="return doclink('link-18', 'start', 'link-17');">start</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"> </tt>
+<a name="GWNGnuRadioPSK.run"></a><div id="GWNGnuRadioPSK.run-def"><a name="L64"></a><tt class="py-lineno"> 64</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.run-toggle" onclick="return toggle('GWNGnuRadioPSK.run');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK.run-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GWNGnuRadioPSK.run-expanded"><a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">readl2</tt><tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Class gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2-class.html,Class gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2=gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2-class.html"><a title="gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2" class="py-name" href="#" onclick="return doclink('link-19', 'ReadLayer2', 'link-19');">ReadLayer2</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ports_in</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tx_queue</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">readl2</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.start
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.start
+gwn.blocks.libio.gnuradio.run_node.StartL1.start
+gwn.blocks.libio.gnuradio.run_node.StartL2.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.start
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.start" class="py-name" href="#" onclick="return doclink('link-20', 'start', 'link-17');">start</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-keyword">while</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt> <tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">            <tt class="py-name">frame</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">rx_queue</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.get()=gwn.blocks.libio.tuntap.tuntap.ATunTapConnector-class.html#get,Method gwn.gwnblocks.gwninport.AListConnector.get()=gwn.gwnblocks.gwninport.AListConnector-class.html#get,Method gwn.gwnblocks.gwninport.AQueueConnector.get()=gwn.gwnblocks.gwninport.AQueueConnector-class.html#get,Method gwn.gwnblocks.gwninport.Connector.get()=gwn.gwnblocks.gwninport.Connector-class.html#get"><a title="gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.get
+gwn.gwnblocks.gwninport.AListConnector.get
+gwn.gwnblocks.gwninport.AQueueConnector.get
+gwn.gwnblocks.gwninport.Connector.get" class="py-name" href="#" onclick="return doclink('link-21', 'get', 'link-21');">get</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">frame</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                <tt class="py-keyword">print</tt> <tt class="py-string">' an empty frame from  L1 '</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-name">event</tt> <tt class="py-op">=</tt> <tt id="link-22" class="py-name"><a title="gwn.gwnevents.if_events" class="py-name" href="#" onclick="return doclink('link-22', 'if_events', 'link-1');">if_events</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Function gwn.gwnevents.evstrframes.mkevent()=gwn.gwnevents.evstrframes-module.html#mkevent,Function gwn.gwnevents.if_events.mkevent()=gwn.gwnevents.if_events-module.html#mkevent"><a title="gwn.gwnevents.evstrframes.mkevent
+gwn.gwnevents.if_events.mkevent" class="py-name" href="#" onclick="return doclink('link-23', 'mkevent', 'link-23');">mkevent</a></tt><tt class="py-op">(</tt><tt class="py-string">"DataData"</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">frmpkt</tt> <tt class="py-op">=</tt> <tt class="py-name">frame</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                    <tt class="py-keyword">for</tt> <tt class="py-name">q</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ports_out</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                        <tt class="py-name">q</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.put()=gwn.blocks.libio.tuntap.tuntap.ATunTapConnector-class.html#put,Method gwn.gwnblocks.gwninport.AListConnector.put()=gwn.gwnblocks.gwninport.AListConnector-class.html#put,Method gwn.gwnblocks.gwninport.AQueueConnector.put()=gwn.gwnblocks.gwninport.AQueueConnector-class.html#put,Method gwn.gwnblocks.gwninport.Connector.put()=gwn.gwnblocks.gwninport.Connector-class.html#put"><a title="gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.put
+gwn.gwnblocks.gwninport.AListConnector.put
+gwn.gwnblocks.gwninport.AQueueConnector.put
+gwn.gwnblocks.gwninport.Connector.put" class="py-name" href="#" onclick="return doclink('link-24', 'put', 'link-24');">put</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">,</tt> <tt class="py-name">False</tt><tt class="py-op">)</tt>   <tt class="py-comment"># add to queue, don't block  </tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt> <tt class="py-name">Queue</tt><tt class="py-op">.</tt><tt class="py-name">Full</tt><tt class="py-op">:</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                        <tt class="py-keyword">print</tt> <tt class="py-string">' Layer 1 to Layer 2 queue is full, packet loss   '</tt>  </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="GWNGnuRadioPSK.set_rx_freq"></a><div id="GWNGnuRadioPSK.set_rx_freq-def"><a name="L83"></a><tt class="py-lineno"> 83</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.set_rx_freq-toggle" onclick="return toggle('GWNGnuRadioPSK.set_rx_freq');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#set_rx_freq">set_rx_freq</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>             </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_rx</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx.set_freq()=gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx-class.html#set_freq,Method gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx.set_freq()=gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx-class.html#set_freq,Method gwn.blocks.libio.gnuradio.uhd_interface.uhd_interface.set_freq()=gwn.blocks.libio.gnuradio.uhd_interface.uhd_interface-class.html#set_freq"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx.set_freq
+gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx.set_freq
+gwn.blocks.libio.gnuradio.uhd_interface.uhd_interface.set_freq" class="py-name" href="#" onclick="return doclink('link-25', 'set_freq', 'link-25');">set_freq</a></tt><tt class="py-op">(</tt><tt class="py-name">value</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"> </tt>
+<a name="GWNGnuRadioPSK.set_tx_freq"></a><div id="GWNGnuRadioPSK.set_tx_freq-def"><a name="L86"></a><tt class="py-lineno"> 86</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.set_tx_freq-toggle" onclick="return toggle('GWNGnuRadioPSK.set_tx_freq');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#set_tx_freq">set_tx_freq</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>             </tt>
+</div><a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx.set_freq
+gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx.set_freq
+gwn.blocks.libio.gnuradio.uhd_interface.uhd_interface.set_freq" class="py-name" href="#" onclick="return doclink('link-26', 'set_freq', 'link-25');">set_freq</a></tt><tt class="py-op">(</tt><tt class="py-name">value</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="GWNGnuRadioPSK.sense_carrier"></a><div id="GWNGnuRadioPSK.sense_carrier-def"><a name="L89"></a><tt class="py-lineno"> 89</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.sense_carrier-toggle" onclick="return toggle('GWNGnuRadioPSK.sense_carrier');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#sense_carrier">sense_carrier</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK.sense_carrier-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GWNGnuRadioPSK.sense_carrier-expanded"><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_rx</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx.sense_carrier()=gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx-class.html#sense_carrier,Method gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.sense_carrier()=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk-class.html#sense_carrier,Method gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.sense_carrier()=gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#sense_carrier,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.sense_carrier()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1-class.html#sense_carrier,Method gwn.blocks.libio.gnuradio.run_node.StartL1.sense_carrier()=gwn.blocks.libio.gnuradio.run_node.StartL1-class.html#sense_carrier,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.sense_carrier()=gwn.blocks.libio.gnuradio.run_nodeL3.StartL1-class.html#sense_carrier,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.sense_carrier()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1-class.html#sense_carrier"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx.sense_carrier
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.sense_carrier
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.sense_carrier
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.sense_carrier
+gwn.blocks.libio.gnuradio.run_node.StartL1.sense_carrier
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.sense_carrier
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.sense_carrier" class="py-name" href="#" onclick="return doclink('link-27', 'sense_carrier', 'link-27');">sense_carrier</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="GWNGnuRadioPSK.stop"></a><div id="GWNGnuRadioPSK.stop-def"><a name="L93"></a><tt class="py-lineno"> 93</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.stop-toggle" onclick="return toggle('GWNGnuRadioPSK.stop');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#stop">stop</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK.stop-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GWNGnuRadioPSK.stop-expanded"><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">readl2</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1.stop()=gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1-class.html#stop,Method gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2.stop()=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2-class.html#stop,Method gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.stop()=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk-class.html#stop,Method gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2.stop()=gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2-class.html#stop,Method gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.stop()=gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK-class.html#stop,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.stop()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1-class.html#stop,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.stop()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt-class.html#stop,Method gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.stop()=gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2-class.html#stop,Method gwn.blocks.libio.gnuradio.run_node.StartL1.stop()=gwn.blocks.libio.gnuradio.run_node.StartL1-class.html#stop,Method gwn.blocks.libio.gnuradio.run_node.StartL2.stop()=gwn.blocks.libio.gnuradio.run_node.StartL2-class.html#stop,Method gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx.stop()=gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx-class.html#stop,Method gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx.stop()=gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx-class.html#stop,Method gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx.stop()=gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx-class.html#stop,Method gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx.stop()=gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx-class.html#stop,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.stop()=gwn.blocks.libio.gnuradio.run_nodeL3.StartL1-class.html#stop,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.stop()=gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt-class.html#stop,Method gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.stop()=gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2-class.html#stop,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.stop()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1-class.html#stop,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.stop()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt-class.html#stop,Method gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.stop()=gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2-class.html#stop,Method gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.stop()=gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel-class.html#stop,Method gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.stop()=gwn.blocks.mac.generic_tdma.MacTdma.MacTdma-class.html#stop,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.stop()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents-class.html#stop,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.stop()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents-class.html#stop,Method gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.stop()=gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events-class.html#stop,Method gwn.gwnblocks.gwnblock.GWNBlock.stop()=gwn.gwnblocks.gwnblock.GWNBlock-class.html#stop,Method gwn.gwnblocks.gwninport.InPort.stop()=gwn.gwnblocks.gwninport.InPort-class.html#stop,Method gwn.gwnblocks.gwnintimer.InTimer.stop()=gwn.gwnblocks.gwnintimer.InTimer-class.html#stop"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1.stop
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2.stop
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.stop
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2.stop
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.stop
+gwn.blocks.libio.gnuradio.run_node.StartL1.stop
+gwn.blocks.libio.gnuradio.run_node.StartL2.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.stop
+gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.stop
+gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.stop
+gwn.gwnblocks.gwnblock.GWNBlock.stop
+gwn.gwnblocks.gwninport.InPort.stop
+gwn.gwnblocks.gwnintimer.InTimer.stop" class="py-name" href="#" onclick="return doclink('link-28', 'stop', 'link-28');">stop</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_tx</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1.stop
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2.stop
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.stop
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2.stop
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.stop
+gwn.blocks.libio.gnuradio.run_node.StartL1.stop
+gwn.blocks.libio.gnuradio.run_node.StartL2.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.stop
+gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.stop
+gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.stop
+gwn.gwnblocks.gwnblock.GWNBlock.stop
+gwn.gwnblocks.gwninport.InPort.stop
+gwn.gwnblocks.gwnintimer.InTimer.stop" class="py-name" href="#" onclick="return doclink('link-29', 'stop', 'link-28');">stop</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_tx</tt><tt class="py-op">.</tt><tt class="py-name">wait</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>    </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">"tx top block stopped"</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_rx</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1.stop
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2.stop
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.stop
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2.stop
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.stop
+gwn.blocks.libio.gnuradio.run_node.StartL1.stop
+gwn.blocks.libio.gnuradio.run_node.StartL2.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx.stop
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.stop
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.stop
+gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.stop
+gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.stop
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.stop
+gwn.gwnblocks.gwnblock.GWNBlock.stop
+gwn.gwnblocks.gwninport.InPort.stop
+gwn.gwnblocks.gwnintimer.InTimer.stop" class="py-name" href="#" onclick="return doclink('link-30', 'stop', 'link-28');">stop</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt>                    <tt class="py-comment"># wait for it to finis</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tb_rx</tt><tt class="py-op">.</tt><tt class="py-name">wait</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>         <tt class="py-comment"># wait for it to finish</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">"rx top block stopped"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"> </tt>
+<a name="GWNGnuRadioPSK.ReadLayer2"></a><div id="GWNGnuRadioPSK.ReadLayer2-def"><a name="L102"></a><tt class="py-lineno">102</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.ReadLayer2-toggle" onclick="return toggle('GWNGnuRadioPSK.ReadLayer2');">-</a><tt class="py-line">    <tt class="py-keyword">class</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2-class.html">ReadLayer2</a><tt class="py-op">(</tt><tt class="py-base-class">threading</tt><tt class="py-op">.</tt><tt class="py-base-class">Thread</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK.ReadLayer2-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GWNGnuRadioPSK.ReadLayer2-expanded"><a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">         </tt>
+<a name="GWNGnuRadioPSK.ReadLayer2.__init__"></a><div id="GWNGnuRadioPSK.ReadLayer2.__init__-def"><a name="L106"></a><tt class="py-lineno">106</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.ReadLayer2.__init__-toggle" onclick="return toggle('GWNGnuRadioPSK.ReadLayer2.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">in_queue</tt><tt class="py-op">,</tt><tt class="py-param">out_queue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK.ReadLayer2.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++++++"></div><div id="GWNGnuRadioPSK.ReadLayer2.__init__-expanded"><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">            <tt class="py-docstring">'''  </tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring">            Constructor</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">            </tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">            '''</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">            <tt class="py-name">threading</tt><tt class="py-op">.</tt><tt class="py-name">Thread</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="gwn.blocks.framers.ieee80211.deframer.Deframer.__init__
+gwn.blocks.framers.ieee80211.framer.Framer.__init__
+gwn.blocks.libio.gnuradio.TxRxLayer1.TxL1.__init__
+gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_rx.__init__
+gwn.blocks.libio.gnuradio.TxRxLayer1.my_top_block_tx.__init__
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.ReadLayer2.__init__
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk.__init__
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2.__init__
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.__init__
+gwn.blocks.libio.gnuradio.receive_path.receive_path.__init__
+gwn.blocks.libio.gnuradio.receive_path3_7.receive_path.__init__
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL1.__init__
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartL2Mgmt.__init__
+gwn.blocks.libio.gnuradio.run_TDMA_L3.StartSchedL1_L2.__init__
+gwn.blocks.libio.gnuradio.run_node.StartL1.__init__
+gwn.blocks.libio.gnuradio.run_node.StartL2.__init__
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Rx.__init__
+gwn.blocks.libio.gnuradio.run_node.TestLayer1Tx.__init__
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Rx.__init__
+gwn.blocks.libio.gnuradio.run_node.TestLayer2Tx.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL1.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3.StartL2Mgmt.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3.StartSchedL1_L2.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL1.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartL2Mgmt.__init__
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.StartSchedL1_L2.__init__
+gwn.blocks.libio.gnuradio.transmit_path.transmit_path.__init__
+gwn.blocks.libio.gnuradio.transmit_path3_7.transmit_path.__init__
+gwn.blocks.libio.gnuradio.uhd_interface.uhd_interface.__init__
+gwn.blocks.libio.gnuradio.uhd_interface.uhd_receiver.__init__
+gwn.blocks.libio.gnuradio.uhd_interface.uhd_transmitter.__init__
+gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.__init__
+gwn.blocks.libio.tuntap.tuntap.TunTapInterface.__init__
+gwn.blocks.mac.generic_fdma.genericfdma.GenericFDMA.__init__
+gwn.blocks.mac.generic_tdma.ControlChannel.ControlChannel.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.MacTdma.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1CtrlEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL1DataEvents.__init__
+gwn.blocks.mac.generic_tdma.MacTdma.ProcessingL2Events.__init__
+gwn.blocks.simulators.channels.virtualchannel.GWNVirtualChannel.__init__
+gwn.blocks.simulators.consumers.eventconsumer.EventConsumer.__init__
+gwn.blocks.simulators.generators.eventsimulator.EventSimulator.__init__
+gwn.blocks.utilblocks.timer.timer.Timer.__init__
+gwn.epydoc_doc.epydoc_example.ClassA.__init__
+gwn.gwnblocks.gwnblock.GWNBlock.__init__
+gwn.gwnblocks.gwninport.AListConnector.__init__
+gwn.gwnblocks.gwninport.AQueueConnector.__init__
+gwn.gwnblocks.gwninport.InPort.__init__
+gwn.gwnblocks.gwnintimer.InTimer.__init__
+gwn.gwnblocks.gwntopblock.GWNTopBlock.__init__
+gwn.gwnblocks.gwntopblock.top_block_test.__init__
+gwn.gwnevents.events.Event.__init__
+gwn.gwnevents.evframes80211.EventFrame.__init__
+gwn.gwnevents.evframes80211.EventFrameMgmt.__init__
+gwn.gwnevents.evrequest.EventRequest.__init__
+gwn.gwnevents.evtimer.EventTimer.__init__
+gwn.utils.framers.ieee80211.frames.Frame.__init__
+gwn.utils.framers.ieee80211.frames.FrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrame.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameBody.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.AFrameControl.__init__
+gwn.utils.framers.ieee80211.mac_frmbld.MacFrameException.__init__
+gwn.utils.framers.ieee80211.mac_frmspecs.FrameSpecsException.__init__
+gwn.utils.libfsm.fsm.ExceptionFSM.__init__
+gwn.utils.libfsm.fsm.FSM.__init__
+gwn.utils.logger.gnlogger_test.Auxiliary.__init__
+gwn.utils.testing.exampletest.AClass.__init__" class="py-name" href="#" onclick="return doclink('link-31', '__init__', 'link-7');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">in_queue</tt> <tt class="py-op">=</tt> <tt class="py-name">in_queue</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">out_queue</tt> <tt class="py-op">=</tt> <tt class="py-name">out_queue</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt>             </tt>
+</div><a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">             </tt>
+<a name="GWNGnuRadioPSK.ReadLayer2.run"></a><div id="GWNGnuRadioPSK.ReadLayer2.run-def"><a name="L116"></a><tt class="py-lineno">116</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.ReadLayer2.run-toggle" onclick="return toggle('GWNGnuRadioPSK.ReadLayer2.run');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2-class.html#run">run</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK.ReadLayer2.run-collapsed" style="display:none;" pad="+++" indent="++++++++++++++++"></div><div id="GWNGnuRadioPSK.ReadLayer2.run-expanded"><a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">            <tt class="py-docstring">''' reads events, outputs frames.</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">            '''</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">            <tt class="py-keyword">while</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt> <tt class="py-op">:</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">                <tt class="py-name">event</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">in_queue</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.get
+gwn.gwnblocks.gwninport.AListConnector.get
+gwn.gwnblocks.gwninport.AQueueConnector.get
+gwn.gwnblocks.gwninport.Connector.get" class="py-name" href="#" onclick="return doclink('link-32', 'get', 'link-21');">get</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">                <tt class="py-name">frame</tt> <tt class="py-op">=</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">frmpkt</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">out_queue</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.put
+gwn.gwnblocks.gwninport.AListConnector.put
+gwn.gwnblocks.gwninport.AQueueConnector.put
+gwn.gwnblocks.gwninport.Connector.put" class="py-name" href="#" onclick="return doclink('link-33', 'put', 'link-24');">put</a></tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> </tt>
+</div><a name="GWNGnuRadioPSK.ReadLayer2.stop"></a><div id="GWNGnuRadioPSK.ReadLayer2.stop-def"><a name="L124"></a><tt class="py-lineno">124</tt> <a class="py-toggle" href="#" id="GWNGnuRadioPSK.ReadLayer2.stop-toggle" onclick="return toggle('GWNGnuRadioPSK.ReadLayer2.stop');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.GWNGnuRadioPSK.ReadLayer2-class.html#stop">stop</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GWNGnuRadioPSK.ReadLayer2.stop-collapsed" style="display:none;" pad="+++" indent="++++++++++++++++"></div><div id="GWNGnuRadioPSK.ReadLayer2.stop-expanded"><a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">finished</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_Thread__stop</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div></div><a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="dotdict"></a><div id="dotdict-def"><a name="L129"></a><tt class="py-lineno">129</tt> <a class="py-toggle" href="#" id="dotdict-toggle" onclick="return toggle('dotdict');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.dotdict-class.html">dotdict</a><tt class="py-op">(</tt><tt class="py-base-class">dict</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="dotdict-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="dotdict-expanded"><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-docstring">"""dot.notation access to dictionary attributes"""</tt> </tt>
+<a name="dotdict.__getattr__"></a><div id="dotdict.__getattr__-def"><a name="L131"></a><tt class="py-lineno">131</tt> <a class="py-toggle" href="#" id="dotdict.__getattr__-toggle" onclick="return toggle('dotdict.__getattr__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk.dotdict-class.html#__getattr__">__getattr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">attr</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="dotdict.__getattr__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="dotdict.__getattr__-expanded"><a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="gwn.blocks.libio.tuntap.tuntap.ATunTapConnector.get
+gwn.gwnblocks.gwninport.AListConnector.get
+gwn.gwnblocks.gwninport.AQueueConnector.get
+gwn.gwnblocks.gwninport.Connector.get" class="py-name" href="#" onclick="return doclink('link-34', 'get', 'link-21');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">attr</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">        <tt class="py-name">__setattr__</tt><tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">.</tt><tt class="py-name">__setitem__</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-name">__delattr__</tt><tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">.</tt><tt class="py-name">__delitem__</tt>         </tt>
+</div><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">         </tt>
+<a name="main"></a><div id="main-def"><a name="L136"></a><tt class="py-lineno">136</tt> <a class="py-toggle" href="#" id="main-toggle" onclick="return toggle('main');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="gwn.blocks.libio.gnuradio.gwngnuradiopsk-module.html#main">main</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="main-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="main-expanded"><a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">    <tt class="py-name">g</tt> <tt class="py-op">=</tt> <tt id="link-35" class="py-name" targets="Module gwn.blocks.libio.gnuradio.gwnGnuRadiopsk=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk-module.html,Class gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk-class.html"><a title="gwn.blocks.libio.gnuradio.gwnGnuRadiopsk
+gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.gwnGnuRadiopsk" class="py-name" href="#" onclick="return doclink('link-35', 'gwnGnuRadiopsk', 'link-35');">gwnGnuRadiopsk</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt id="link-36" class="py-name" targets="Function gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.main()=gwn.blocks.libio.gnuradio.gwnGnuRadiopsk-module.html#main,Function gwn.blocks.libio.gnuradio.gwngnuradiopsk.main()=gwn.blocks.libio.gnuradio.gwngnuradiopsk-module.html#main,Function gwn.blocks.libio.gnuradio.run_TDMA_L3.main()=gwn.blocks.libio.gnuradio.run_TDMA_L3-module.html#main,Function gwn.blocks.libio.gnuradio.run_node.main()=gwn.blocks.libio.gnuradio.run_node-module.html#main,Function gwn.blocks.libio.gnuradio.run_nodeL3.main()=gwn.blocks.libio.gnuradio.run_nodeL3-module.html#main,Function gwn.blocks.libio.gnuradio.run_nodeL3_80211.main()=gwn.blocks.libio.gnuradio.run_nodeL3_80211-module.html#main,Function gwn.utils.libfsm.fsm.main()=gwn.utils.libfsm.fsm-module.html#main"><a title="gwn.blocks.libio.gnuradio.gwnGnuRadiopsk.main
+gwn.blocks.libio.gnuradio.gwngnuradiopsk.main
+gwn.blocks.libio.gnuradio.run_TDMA_L3.main
+gwn.blocks.libio.gnuradio.run_node.main
+gwn.blocks.libio.gnuradio.run_nodeL3.main
+gwn.blocks.libio.gnuradio.run_nodeL3_80211.main
+gwn.utils.libfsm.fsm.main" class="py-name" href="#" onclick="return doclink('link-36', 'main', 'link-36');">main</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt> <tt class="py-name">KeyboardInterrupt</tt><tt class="py-op">:</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="gwn-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >GNUWiNnetwork</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jul 21 16:00:16 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

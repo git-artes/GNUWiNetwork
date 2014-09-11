@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## EventSimulator block
+###################################################
+ -->
+<block>
+	<name>Event Simulator</name>
+	<key>eventsim</key>
+     <category>Sources</category>
+	<import>import blocks.simulators.generators.eventsimulator as simulator </import>
+	<make>simulator.EventSimulator($interval, $retry, '$nick', $param1, $param2, $param3)</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+
+	<param>
+		<name>Output Event Type</name>
+		<key>nick</key>
+		<type>enum</type>
+                <option>
+        			<name>Timer Config</name>
+        			<key>TimerConfig</key>
+            	</option>
+                <option>
+        			<name>Data</name>
+        			<key>DataData</key>
+        		</option>
+                <option>
+        			<name>RTS</name>
+        			<key>CtrlRTS</key>
+        		</option>
+                <option>
+        			<name>CTS</name>
+        			<key>CtrlCTS</key>
+        	     </option>
+                <option>
+        			<name>ACK</name>
+        			<key>CtrlACK</key>
+        		</option> 
+	</param>
+
+	<param>
+		<name>interval</name>
+		<key>interval</key>
+		<value>1</value>
+		<type>int</type>
+	</param>
+
+	<param>
+		<name>retry</name>
+		<key>retry</key>
+		<value>1</value>
+		<type>int</type>
+	</param>
+
+	<param>
+		<name>param1</name>
+		<key>param1</key>
+		<value></value>
+		<type>string</type>
+	</param>
+
+	<param>
+		<name>param2</name>
+		<key>param2</key>
+		<value></value>
+		<type>string</type>
+	</param>
+
+  	<param>
+		<name>param3</name>
+		<key>param3</key>
+		<value></value>
+		<type>string</type>
+	</param>
+
+    <param>
+		<name>Output Type</name>
+		<key>otype</key>
+		<type>enum</type>
+           <option>
+			<name>Event</name>
+			<key>Event</key>
+		</option>
+	</param>
+
+   	<source>
+		<name>Event</name>
+		<type>$otype</type>
+	</source>
+
+    <doc>
+    Event Simulator:
+        Each time the Event Simulator block receives a Timer event, 
+        it generates a new output event.
+        The user can select the type of output event and three
+        parameters. These parameters depend on the type of the
+        output event.
+        For Data, Ctrl and Mgmt events the first two parameters are
+        the source address and the destination address. For Data events
+        the third parameter is the length of the paylod. For Ctrl and Mgmt
+        the third parameter is not used.
+        For the TimerConfig event, parameter 1 is the time interval,
+        parameter 2 is the number of retries, and parameter 3 is the 
+        nickname of the timer event that will be generated.
+    </doc>
+</block>

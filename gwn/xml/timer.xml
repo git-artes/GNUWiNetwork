@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Timer block
+###################################################
+ -->
+<block>
+	<name>Timer</name>
+	<key>timer</key>
+     <category>Timers</category>
+	<import>import blocks.utilblocks.timer.timer as timer</import>
+	<make>timer.Timer($interval, $retry, $nickname1)</make>
+	<callback>start()</callback>
+	<callback>stop()</callback>
+	<param>
+		<name>interval</name>
+		<key>interval</key>
+		<value>5</value>
+		<type>real</type>
+	</param>
+	<param>
+		<name>retry</name>
+		<key>retry</key>
+		<value>2</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>nickname1</name>
+		<key>nickname1</key>
+		<value>TimerTimer</value>
+		<type>string</type>
+	</param>
+
+	<sink>
+		<name>Conf(opt)</name>
+		<type>Request</type>
+		<optional>1</optional>         
+	</sink>
+    <source>
+		<name>Tout</name>
+		<type>Timer</type>
+	</source>
+     <doc>
+     Timer:
+	generates Timer Events every @interval in seconds and retries
+	$retry times.
+	The $nickname is the nickname of the event generated  
+    </doc>
+</block>
